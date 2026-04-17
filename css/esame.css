@@ -48,10 +48,13 @@ header {
 #sidebarMenu {
     top: 64px !important;
     height: calc(100% - 64px) !important;
+    width: 300px;
     z-index: 1055 !important;
     border-right: 1px solid #dee2e6;
+    border-top: 2px solid #000000;
     /* Assicura che l'animazione di entrata sia fluida */
     visibility: visible !important;
+
 }
 
 .offcanvas-backdrop {
@@ -91,7 +94,7 @@ header {
 #mega-subscribe-button.btn-custom-herald {
     /* 1. Forza la struttura del blocco */
     display: flex !important;
-    width: 100% !important;
+    width: 230px !important;
     height: 45px !important;
 
     /* 2. Posizionamento testo */
@@ -132,17 +135,49 @@ header {
 }
 
 
+/* ---Stile clima ---*/
 
-/* ---Stile per la data --- */
+.wheater-container {
+    padding: 0 15px 5px 15px;
+    width: 100%;
+}
+
+
+
+/* ---Stile temperatora --- */
+.lefNav--span__temperature {
+    font-size: 1em;
+    font-weight: 700 !important;
+    position: relative;
+    color: #1a1a1a;
+    margin-top: 0px !important;
+    margin-right: 2px !important;
+}
+
+/* ---Stile per contenitore data--- */
+
+.date-container {
+    margin-left: .8em;
+    font: normal 600 .9375em / 1.0666666667 "Noto Sans", Helvetica, sans-serif;
+    color: #1a1a1a;
+}
+
+.dateConatiner__date {
+    font-weight: 700;       /* Rende la data in grassetto (Bold) */
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.dateConatiner--a__E-Edition {
+    font-weight: 400;       /* Rende il testo normale (Regular) */
+    text-transform: none;   /* Assicura che non ci siano maiuscoli forzati */
+    font-size: 0.9rem;      /* Leggermente più piccolo per gerarchia visiva */
+}
 
 
 /* --- Stili Custom per l'allineamento perfetto --- */
 
-.date-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 
 
 /* Stato base: Testo nero e nessuna sottolineatura */
@@ -159,10 +194,16 @@ header {
     text-decoration: underline !important; /* Compare la linea */
 }
 
+
+
 /* Correzione per l'allineamento dell'icona se necessario */
-.bi-clouds {
+
+
+
+.leftNav--i__bi-clouds {
     line-height: 1;
     display: inline-block;
+    font-size: 1.65rem;
 }
 
 /* Forza il colore nero per la data come nell'immagine */

@@ -42,44 +42,47 @@
             <span class="fw-bold d-none d-md-inline ms-2 text-dark">All Sections</span>
         </button>
 
+
         <div class="offcanvas offcanvas-start" data-bs-backdrop="true" tabindex="-1" id="sidebarMenu">
             <div class="offcanvas-body p-0">
 
-                <div class="p-3 border-bottom">
-                    <div class="top-pushnav-container p-3 border-bottom">
+                <div class="p-3">
+
+                    <div class="mb-3 d-flex justify-content-center">
                         <a href="#" id="mega-subscribe-button" class="btn-custom-herald">
                             <span>Subscribe Now</span>
                         </a>
                     </div>
 
+                    <div class="d-flex align-items-start  wheater-container ">
 
-                    <div class="d-flex align-items-start gap-3">
-
-                        <div class="d-flex align-items-center">
-                            <span class="fw-bold fs-4 me-2">48°F</span>
-                            <i class="bi bi-clouds fs-3 text-dark"></i>
+                        <div class="d-flex align-items-start">
+                            <a class="lefNav--span__temperature d-flex align-items-start "   href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F, view full weather conditions in a new window" tabindex="-1" aria-hidden="true">
+                                <span class = "lefNav--span__temperature">48°F</span>
+                                <i class="bi bi-clouds leftNav--i__bi-clouds fs-3 text-dark"></i>
+                            </a>
                         </div>
 
                         <div class="date-container">
-                            <div class="fw-bold fs-5 lh-1 mb-1 text-dark">
+                            <div class="dateConatiner__date">
                                 Friday, April 17th 2026
                             </div>
-                            <a href="#" class="e-edition-link text-decoration-none">
-                                <span class="small text-dark fw-semibold">E-Edition</span>
+                            <a href="#" class="e-edition-link text-decoration-none dateConatiner--a__E-Edition">
+                                <span>E-Edition</span>
                             </a>
                         </div>
                     </div>
 
-                    <a href="#" class="d-flex align-items-center text-decoration-none text-dark py-2 mt-2 border-top">
+                    <a href="#" class="d-flex align-items-center text-decoration-none text-dark py-2">
                         <i class="bi bi-house-door-fill me-2"></i>
                         <span class="fw-bold">Home Page</span>
                     </a>
                 </div>
 
-                <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark">News</a>
-                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark">Opinion</a>
-                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark">Sports</a>
+                <div class="list-group-no-border">
+                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">News</a>
+                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">Opinion</a>
+                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">Sports</a>
                 </div>
 
             </div>
@@ -89,11 +92,7 @@
             Boston Herald
         </div>
 
-        <!--
-        <div class="d-flex align-items-center gap-2">
-            <button class="btn btn-primary btn-sm fw-bold btn-subscribe-menu nav--btn__customSize d-none d-sm-block">Subscribe</button>
-            <button class="btn btn-primary btn-sm fw-bold btn-subscribe-menu nav--btn__customSize d-none d-sm-block text-white">Log in</button>
-        </div> -->
+
         <div class="d-flex align-items-center gap-2">
             <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
                 <span>Subscribe</span>
