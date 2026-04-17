@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Includiamo il charset: il nostro file conterra' caratteri Unicode, superset di ASCII -->
+    <meta charset="utf-8">
+
+    <!-- Forziamo Internet explorer ad usare l'ultimo motore di rendering e non andare
+        in compatibility mode: vecchi motori non supportano tutte le proprieta' css -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Adattiamo la vista al 100% dello spazio disponibile su qualsiasi dispositivo
+        initial-scale=1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Esame PPM</title>
+
+    <!-- Includiamo boostrap css-->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">-->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/esame.css" />
+
+
+
+    <!-- Script da CDN per aggiungere funzionalita' HTML5 e CSS3 a IE6-IE8 -->
+    <script src="http://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+</head>
+
+<body>
+
+
+<header class="navbar navbar-light bg-light sticky-top shadow-sm px-3" style="height: 64px;">
+    <div class="container-fluid d-flex align-items-center">
+
+        <button id="menu-toggle"
+                class="btn nav--leftButton__attributes"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sidebarMenu"
+                aria-controls="sidebarMenu"> <i class="bi menu-icon fs-4"></i>
+            <span class="fw-bold d-none d-md-inline ms-2 text-dark">All Sections</span>
+        </button>
+
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="true" tabindex="-1" id="sidebarMenu">
+            <div class="offcanvas-body p-0">
+
+                <div class="p-3 border-bottom">
+                    <div class="top-pushnav-container p-3 border-bottom">
+                        <a href="#" id="mega-subscribe-button" class="btn-custom-herald">
+                            <span>Subscribe Now</span>
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between small text-secondary mb-2">
+                        <div class="weather-info">
+                            <a href="#" class="text-decoration-none text-secondary fw-bold">
+                                <span>48°F</span>
+                                <i class="bi bi-clouds-fill ms-1"></i>
+                            </a>
+                        </div>
+                        <div class="date-info text-end">
+                            <span class="d-block">Friday, April 17th 2026</span>
+                            <a href="#" class="text-primary text-decoration-none fw-bold" style="font-size: 0.75rem;">E-Edition</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="d-flex align-items-center text-decoration-none text-dark py-2 mt-2 border-top">
+                        <i class="bi bi-house-door-fill me-2"></i>
+                        <span class="fw-bold">Home Page</span>
+                    </a>
+                </div>
+
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark">News</a>
+                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark">Opinion</a>
+                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark">Sports</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="navbar-brand mx-auto fw-bold fs-3" style="font-family: serif;">
+            Boston Herald
+        </div>
+
+        <!--
+        <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-primary btn-sm fw-bold btn-subscribe-menu nav--btn__customSize d-none d-sm-block">Subscribe</button>
+            <button class="btn btn-primary btn-sm fw-bold btn-subscribe-menu nav--btn__customSize d-none d-sm-block text-white">Log in</button>
+        </div> -->
+        <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
+                <span>Subscribe</span>
+            </button>
+
+            <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
+                <span>Log in</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+
+
+    <!-- Includiamo jQuery necessario al javascript di bootstrap per funzionare.
+         Inserendolo nel body si assicura che tutto l'html sia caricato quando si invoca jQuery
+    -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- Includiamo boostrap js-->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

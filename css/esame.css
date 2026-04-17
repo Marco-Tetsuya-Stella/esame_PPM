@@ -1,0 +1,254 @@
+/* --- 1. Gestione Icona Hamburger -> X (Cambio secco) --- */
+
+.menu-icon {
+    font-family: "bootstrap-icons" !important;
+    font-style: normal;
+    display: inline-block;
+}
+
+/* Stato base: Hamburger */
+.menu-icon::before {
+    content: "\f479" !important;
+}
+
+/* Stato APERTO: Sfrutta la classe .show che Bootstrap mette all'offcanvas */
+body:has(.offcanvas.show) .menu-icon::before {
+    content: "\f659" !important;
+}
+
+/* --- 2. Reset Effetti Hover (Niente grigio al passaggio del mouse) --- */
+
+/* Applichiamo il reset a TUTTI i link dentro l'offcanvas, inclusi list-group e meteo */
+.offcanvas-body a,
+.list-group-item-action {
+    background-color: transparent !important;
+    text-decoration: none !important;
+}
+
+.list-group-item-action:hover,
+.list-group-item-action:focus,
+.offcanvas-body a:hover {
+    background-color: transparent !important;
+}
+
+/* Rimuove l'effetto grigio anche durante il click */
+.list-group-item-action:active {
+    background-color: transparent !important;
+}
+
+/* --- 3. Posizionamento Strutturale (Header e Sidebar) --- */
+
+header {
+    height: 64px !important;
+    z-index: 1060 !important;
+    background-color: white !important;
+}
+
+
+#sidebarMenu {
+    top: 64px !important;
+    height: calc(100% - 64px) !important;
+    z-index: 1055 !important;
+    border-right: 1px solid #dee2e6;
+    /* Assicura che l'animazione di entrata sia fluida */
+    visibility: visible !important;
+}
+
+.offcanvas-backdrop {
+    top: 64px !important;
+    z-index: 1040 !important;
+}
+
+/* --- IL BOTTONE "MEGA" NEL MENU --- */
+#mega-subscribe-button.btn-custom-herald {
+    /* 1. Forza la struttura del blocco */
+    display: flex !important;
+    width: 100% !important;
+    height: 45px !important;
+
+    /* 2. Posizionamento testo */
+    justify-content: center;
+    align-items: center;
+
+    /* 3. Colori e Bordi */
+    background-color: #0056b3 !important; /* Blu scuro */
+    color: #ffffff !important;            /* Testo bianco forzato */
+    border-radius: 4px !important;       /* Arrotondamento */
+    border: none !important;
+
+    /* 4. Tipografia */
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;    /* Rimuove sottolineatura base */
+    letter-spacing: 1px;
+
+    /* 5. Transizione */
+    transition: background-color 0.3s ease;
+}
+
+
+/* --- IL BOTTONE "MEGA" NEL MENU --- */
+#mega-subscribe-button.btn-custom-herald {
+    /* 1. Forza la struttura del blocco */
+    display: flex !important;
+    width: 100% !important;
+    height: 45px !important;
+
+    /* 2. Posizionamento testo */
+    justify-content: center;
+    align-items: center;
+
+    /* 3. Colori e Bordi */
+    background-color: #0056b3 !important; /* Blu scuro */
+    color: #ffffff !important;            /* Testo bianco forzato */
+    border-radius: 4px !important;       /* Arrotondamento */
+    border: none !important;
+
+    /* 4. Tipografia */
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;    /* Rimuove sottolineatura base */
+    letter-spacing: 1px;
+
+    /* 5. Transizione */
+    transition: background-color 0.3s ease;
+}
+
+/* --- STATO HOVER (Passaggio Mouse) --- */
+#mega-subscribe-button.btn-custom-herald:hover {
+    background-color: #007bff !important; /* Diventa blu più chiaro */
+    color: #ffffff !important;
+}
+
+/* Sottolineatura solo dello span interno all'hover */
+#mega-subscribe-button.btn-custom-herald:hover span {
+    text-decoration: underline !important;
+}
+
+/* Assicuriamoci che lo span non erediti colori strani */
+#mega-subscribe-button.btn-custom-herald span {
+    color: #ffffff !important;
+    pointer-events: none; /* Evita che lo span interferisca con il click */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- IL BOTTONI A DESTRA NEL MENU --- */
+.navRightBtn-custom-herald {
+    /* 1. Forza la struttura del blocco */
+    display: flex !important;
+    width: 100% !important;
+    height: 45px !important;
+
+    /* 2. Posizionamento testo */
+    justify-content: center;
+    align-items: center;
+
+    /* 3. Colori e Bordi */
+    background-color: #0056b3 !important; /* Blu scuro */
+    color: #ffffff !important;            /* Testo bianco forzato */
+    border-radius: 4px !important;       /* Arrotondamento */
+    border: none !important;
+
+    /* 4. Tipografia */
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;    /* Rimuove sottolineatura base */
+    letter-spacing: 1px;
+
+    /* 5. Transizione */
+    transition: background-color 0.3s ease;
+}
+
+/* --- STATO HOVER (Passaggio Mouse) --- */
+.navRightBtn-custom-herald:hover {
+    background-color: #007bff !important; /* Diventa blu più chiaro */
+    color: #ffffff !important;
+}
+
+/* Sottolineatura solo dello span interno all'hover */
+.navRightBtn-custom-herald:hover span {
+    text-decoration: underline !important;
+}
+
+/* Assicuriamoci che lo span non erediti colori strani */
+.navRightBtn-custom-herald span {
+    color: #ffffff !important;
+    pointer-events: none; /* Evita che lo span interferisca con il click */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- DIMENSIONI SPECIFICHE HEADER --- */
+
+.nav--btn__customSize {
+    width: 110px !important;
+    height: 40px !important;
+    font-size: 0.85rem; /* Testo leggermente più piccolo per l'header */
+}
+
+/* --- FORZA LA COMPARSA DEL MEGA-BUTTON --- */
+#mega-subscribe-button.btn-header-custom {
+    width: 100% !important;   /* Lo rende largo quanto il menu */
+    height: 45px !important;  /* Altezza fissa per farlo vedere */
+    display: flex !important; /* Forza il layout flex */
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+/* --- 4. Componenti Custom (Bottoni e Utility) --- */
+
+.nav--leftButton__attributes {
+    display: flex !important;
+    align-items: center !important;
+    border: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: transparent;
+}
+
+
+.nav--btn__customSize {
+    width: 110px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stile specifico per il bottone Subscribe dentro il menu */
+.offcanvas-body .btn-primary {
+    border-radius: 0; /* Lo rende squadrato come il Boston Herald */
+    background-color: #0056b3;
+    border: none;
+}
+
+.offcanvas-body .btn-primary:hover {
+    background-color: #004494 !important; /* Un blu leggermente più scuro solo per il tasto */
+}
