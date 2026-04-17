@@ -133,9 +133,42 @@ header {
 
 
 
+/* ---Stile per la data --- */
 
 
+/* --- Stili Custom per l'allineamento perfetto --- */
 
+.date-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Stato base: Testo nero e nessuna sottolineatura */
+.e-edition-link span {
+    font-size: 0.85rem;
+    color: #212529 !important; /* Nero Bootstrap */
+    text-decoration: none !important;
+    transition: none; /* Rimuoviamo la transizione colore perché non serve più */
+}
+
+/* Stato Hover: Il testo rimane nero ma appare la sottolineatura */
+.e-edition-link:hover span {
+    color: #212529 !important;      /* Resta nero */
+    text-decoration: underline !important; /* Compare la linea */
+}
+
+/* Correzione per l'allineamento dell'icona se necessario */
+.bi-clouds {
+    line-height: 1;
+    display: inline-block;
+}
+
+/* Forza il colore nero per la data come nell'immagine */
+.text-dark {
+    color: #212529 !important;
+}
 
 
 
