@@ -6,14 +6,40 @@
     display: inline-block;
 }
 
-/* Stato base: Hamburger */
-.menu-icon::before {
-    content: "\f479" !important;
+
+
+/*-- LATO SINISTRO--*/
+/* --- CONFIGURAZIONE CURSORE E BOTTONE --- */
+#menu-toggle {
+    cursor: pointer !important;
+    display: flex;
+    align-items: center;
+    z-index: 1100; /* Sopra a tutto */
+    position: relative;
 }
 
-/* Stato APERTO: Sfrutta la classe .show che Bootstrap mette all'offcanvas */
-body:has(.offcanvas.show) .menu-icon::before {
-    content: "\f659" !important;
+/* Forza cursore puntatore anche sull'icona specifica */
+#menu-toggle .menu-icon,
+#menu-toggle .menu-icon::before {
+    cursor: pointer !important;
+}
+
+/* --- CAMBIO ICONA (Hamburger -> Croce) --- */
+.menu-icon::before {
+    display: inline-block;
+    /*font-family: "bootstrap-icons" !important;*/
+    content: "\f479" !important; /* Hamburger */
+    transition: transform 0.2s;
+}
+
+/* Quando la checkbox è spuntata (Menu Aperto) */
+#menu-switcher:checked + #menu-toggle .menu-icon::before {
+    content: "\f62a" !important;
+}
+
+/* Nascondi il testo quando aperto */
+#menu-switcher:checked + #menu-toggle span {
+    display: none !important;
 }
 
 /* --- 2. Reset Effetti Hover (Niente grigio al passaggio del mouse) --- */
@@ -45,29 +71,64 @@ header {
 }
 
 
-/* Se il bottone ha aria-expanded="true", nascondi lo span interno */
-/* Metodo infallibile: se il Body ha la classe offcanvas-open (vecchie versioni)
-   o se il canvas ha la classe .show */
-body:has(#sidebarMenu.show) #menu-toggle span {
+
+/* =========================================
+   SISTEMA MENU OFF-CANVAS (Puro CSS)
+   ========================================= */
+
+/* --- 1. NASCONDI TESTO BOTTONE QUANDO APERTO --- */
+#menu-switcher:checked + #menu-toggle span {
     display: none !important;
 }
 
-
-
-#sidebarMenu {
-    top: 64px !important;
-    height: calc(100% - 64px) !important;
+/* --- 2. STILE BASE DEL MENU (Stato Chiuso) --- */
+.custom-sidebar {
+    position: fixed;
+    top: 64px;
+    left: -320px; /* Spostato fuori dallo schermo a sinistra */
     width: 300px;
-    z-index: 1055 !important;
+    height: calc(100vh - 64px);
+    background-color: #ffffff;
+    z-index: 1060;
     border-right: 1px solid #dee2e6;
     border-top: 2px solid #000000;
+
+    /* Nessuna transizione qui: quando si chiude, sparisce DI SCATTO */
+    transition: none;
 }
 
-.offcanvas-backdrop {
-    top: 64px !important;
-    z-index: 1050 !important;
+/* --- 3. ANIMAZIONE MENU (Stato Aperto) --- */
+#menu-switcher:checked ~ .custom-sidebar {
+    left: 0; /* Entra nello schermo */
+
+    /* Transizione morbida SOLO in entrata */
+    transition: left 0.3s ease-out;
 }
 
+/* --- 4. STILE BASE DEL BACKDROP (Stato Chiuso) --- */
+.custom-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+
+    /* Il trucco per lasciare visibile l'header ma coprirlo per i click */
+    background-clip: content-box;
+    border-top: 64px solid transparent;
+    cursor: default;
+
+    /* Spento di default */
+    display: none;
+}
+
+/* --- 5. VISIBILITÀ BACKDROP (Stato Aperto) --- */
+#menu-switcher:checked ~ .custom-backdrop {
+    /* Appare all'istante, niente fade in/out fastidiosi */
+    display: block;
+}
 
 
 
