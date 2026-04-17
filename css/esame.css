@@ -45,6 +45,15 @@ header {
 }
 
 
+/* Se il bottone ha aria-expanded="true", nascondi lo span interno */
+/* Metodo infallibile: se il Body ha la classe offcanvas-open (vecchie versioni)
+   o se il canvas ha la classe .show */
+body:has(#sidebarMenu.show) #menu-toggle span {
+    display: none !important;
+}
+
+
+
 #sidebarMenu {
     top: 64px !important;
     height: calc(100% - 64px) !important;
@@ -52,42 +61,41 @@ header {
     z-index: 1055 !important;
     border-right: 1px solid #dee2e6;
     border-top: 2px solid #000000;
-    /* Assicura che l'animazione di entrata sia fluida */
-    visibility: visible !important;
-
 }
 
 .offcanvas-backdrop {
     top: 64px !important;
-    z-index: 1040 !important;
+    z-index: 1050 !important;
 }
 
-/* --- IL BOTTONE "MEGA" NEL MENU --- */
-#mega-subscribe-button.btn-custom-herald {
-    /* 1. Forza la struttura del blocco */
-    display: flex !important;
-    width: 100% !important;
-    height: 45px !important;
 
-    /* 2. Posizionamento testo */
-    justify-content: center;
-    align-items: center;
 
-    /* 3. Colori e Bordi */
-    background-color: #0056b3 !important; /* Blu scuro */
-    color: #ffffff !important;            /* Testo bianco forzato */
-    border-radius: 4px !important;       /* Arrotondamento */
-    border: none !important;
 
-    /* 4. Tipografia */
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;    /* Rimuove sottolineatura base */
-    letter-spacing: 1px;
 
-    /* 5. Transizione */
-    transition: background-color 0.3s ease;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* --- IL BOTTONE "MEGA" NEL MENU --- */
