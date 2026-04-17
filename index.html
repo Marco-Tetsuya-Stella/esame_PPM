@@ -31,66 +31,73 @@
 
 
 <header class="navbar navbar-light bg-light sticky-top shadow-sm px-3" style="height: 64px;">
+
+
+    <!--<div class="row>"> -->
+
     <div class="container-fluid d-flex align-items-center">
 
-        <input type="checkbox" id="menu-switcher" class="d-none">
+        <div class="All-selections-sideBar-container">
+            <input type="checkbox" id="menu-switcher" class="d-none">
 
-        <label for="menu-switcher" id="menu-toggle" class="btn nav--leftButton__attributes mb-0" style="cursor: pointer;">
-            <i class="bi bi-list menu-icon fs-4"></i> <span class="fw-bold d-none d-md-inline ms-2 text-dark">All Sections</span>
-        </label>
+            <label for="menu-switcher" id="menu-toggle" class="btn nav--leftButton__attributes mb-0" style="cursor: pointer;">
+                <i class="bi bi-list menu-icon fs-4"></i> <span class="fw-bold d-none d-md-inline ms-2 text-dark">All Sections</span>
+            </label>
 
-        <label for="menu-switcher" class="custom-backdrop"></label>
+            <label for="menu-switcher" class="custom-backdrop"></label>
 
-        <div id="sidebarMenu" class="custom-sidebar">
+            <div id="sidebarMenu" class="custom-sidebar">
 
-            <div class="h-100 overflow-auto">
+                <div class="h-100 overflow-auto">
 
-                <div class="p-3">
-                    <div class="mb-3 d-flex justify-content-center">
-                        <a href="#" id="mega-subscribe-button" class="btn-custom-herald">
-                            <span>Subscribe Now</span>
+                    <div class="p-3">
+                        <div class="mb-3 d-flex justify-content-center">
+                            <a href="#" id="mega-subscribe-button" class="btn-custom-herald">
+                                <span>Subscribe Now</span>
+                            </a>
+                        </div>
+
+                        <div class="d-flex align-items-start wheater-container mb-3">
+                            <div class="d-flex align-items-start">
+                                <a class="lefNav--span__temperature d-flex align-items-start text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
+                                    <span class="lefNav--span__temperature text-dark">48°F</span>
+                                    <i class="bi bi-clouds leftNav--i__bi-clouds fs-3 text-dark ms-1"></i>
+                                </a>
+                            </div>
+
+                            <div class="date-container ms-3">
+                                <div class="dateConatiner__date small">
+                                    Friday, April 17th 2026
+                                </div>
+                                <a href="#" class="e-edition-link text-decoration-none dateConatiner--a__E-Edition fw-bold">
+                                    <span>E-Edition</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <a href="#" class="d-flex align-items-center text-decoration-none text-dark py-2 border-top border-bottom">
+                            <i class="bi bi-house-door-fill me-2"></i>
+                            <span class="fw-bold">Home Page</span>
                         </a>
                     </div>
 
-                    <div class="d-flex align-items-start wheater-container mb-3">
-                        <div class="d-flex align-items-start">
-                            <a class="lefNav--span__temperature d-flex align-items-start text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
-                                <span class="lefNav--span__temperature text-dark">48°F</span>
-                                <i class="bi bi-clouds leftNav--i__bi-clouds fs-3 text-dark ms-1"></i>
-                            </a>
-                        </div>
-
-                        <div class="date-container ms-3">
-                            <div class="dateConatiner__date small">
-                                Friday, April 17th 2026
-                            </div>
-                            <a href="#" class="e-edition-link text-decoration-none dateConatiner--a__E-Edition fw-bold">
-                                <span>E-Edition</span>
-                            </a>
-                        </div>
+                    <div class="list-group-no-border">
+                        <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">News</a>
+                        <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">Opinion</a>
+                        <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">Sports</a>
                     </div>
 
-                    <a href="#" class="d-flex align-items-center text-decoration-none text-dark py-2 border-top border-bottom">
-                        <i class="bi bi-house-door-fill me-2"></i>
-                        <span class="fw-bold">Home Page</span>
-                    </a>
                 </div>
-
-                <div class="list-group-no-border">
-                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">News</a>
-                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">Opinion</a>
-                    <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">Sports</a>
-                </div>
-
             </div>
         </div>
+
 
         <div class="navbar-brand mx-auto fw-bold fs-3" style="font-family: serif;">
             Boston Herald
         </div>
 
 
-        <div class="d-flex align-items-center gap-2">
+        <div class="d-flex align-items-center gap-2  rightNavBottonsContainer">
             <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
                 <span>Subscribe</span>
             </button>
@@ -100,6 +107,12 @@
             </button>
         </div>
     </div>
+
+    <!--</div> -->
+
+
+
+
 </header>
 
 

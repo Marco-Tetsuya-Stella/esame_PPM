@@ -7,6 +7,68 @@
 }
 
 
+/* --- REGOLE BASE (Header) --- */
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spinge gli elementi ai lati */
+    flex-wrap: nowrap; /* Impedisce assolutamente di andare su due righe */
+    height: 64px;
+    padding: 0 15px;
+}
+
+/* Il titolo Boston Herald */
+.navbar-brand {
+    white-space: nowrap; /* Non spezzare il testo */
+    flex-shrink: 1;      /* Permette al titolo di rimpicciolirsi se lo spazio manca */
+    text-align: center;
+    transition: font-size 0.2s ease;
+    /* Font size fluido: si adatta alla larghezza dello schermo */
+    font-size: clamp(1.2rem, 4vw, 2rem) !important;
+}
+
+/* Il contenitore ora comanda la dimensione di base per i suoi figli */
+.All-selections-sideBar-container {
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    /* Font-size fluido applicato alla radice del blocco menu */
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    transition: all 0.2s ease;
+}
+
+/* L'icona erediterà il font-size dal contenitore (usiamo em per proporzionalità) */
+#menu-toggle .menu-icon {
+    font-size: 1.2em !important; /* Sarà il 20% più grande del testo base del container */
+    line-height: 1;
+}
+
+/* Anche lo span erediterà il font-size */
+#menu-toggle span {
+    font-size: 1em; /* Stessa dimensione del container */
+}
+
+
+/* --- SOGLIA: Sotto i 1040px --- */
+@media (max-width: 1040px) {
+    /* 1. Nascondi i bottoni Subscribe e Log in a destra */
+    .rightNavBottonsContainer{
+        display: none !important;
+    }
+
+    /* 2. Nascondi la scritta "All Sections" (ma lascia l'hamburger) */
+    #menu-toggle span {
+        display: none !important;
+    }
+
+    /* Riduciamo leggermente il contenitore per dare più spazio al logo */
+    .All-selections-sideBar-container {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    }
+}
+
+
+
 
 /*-- LATO SINISTRO--*/
 /* --- CONFIGURAZIONE CURSORE E BOTTONE --- */
