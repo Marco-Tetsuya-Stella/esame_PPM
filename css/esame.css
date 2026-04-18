@@ -7,14 +7,6 @@
 }
 
 
-/* --- REGOLE BASE (Header) --- */
-/*.container-fluid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Spinge gli elementi ai lati */
-   /* flex-wrap: nowrap; /* Impedisce assolutamente di andare su due righe *//*
-    height: 64px;
-}*/
 
 .header-container__height {
     height: 64px;
@@ -22,14 +14,49 @@
 }
 
 /* Il titolo Boston Herald */
-.navbar-brand {
-    white-space: nowrap; /* Non spezzare il testo */
-    flex-shrink: 1;      /* Permette al titolo di rimpicciolirsi se lo spazio manca */
-    text-align: center;
-    transition: font-size 0.2s ease;
-    /* Font size fluido: si adatta alla larghezza dello schermo */
-    font-size: clamp(1.2rem, 4vw, 2rem) !important;
+/* Il contenitore deve espandersi per tutta l'altezza della colonna */
+.navbar-title-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.navbar--title {
+
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    font-size: 3.6rem !important;
+    transition: font-size 0.1s ease;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: #005d9c !important;
+    font-family: "Impact", "Arial Narrow", "Helvetica Inserat", "Franklin Gothic Bold", sans-serif;
+    font-weight: 10!important;
+    text-transform: none;       /* Mantieni maiuscole/minuscole originali */
+    letter-spacing: -2px;     /* Opzionale: stringe leggermente le lettere come nell'originale */
+}
+
+/* Effetto Hover (opzionale ma consigliato per i link) */
+.navbar--title:hover {
+    color: #005d9c !important; /* Mantiene il colore originale */
+}
+
+
+
+
+
+
 
 /* Il contenitore ora comanda la dimensione di base per i suoi figli */
 .All-selections-sideBar-container {
@@ -54,23 +81,14 @@
 }
 
 
-/* --- SOGLIA: Sotto i 1040px --- */
-@media (max-width: 1040px) {
-    /* 1. Nascondi i bottoni Subscribe e Log in a destra */
-    .rightNavBottonsContainer{
-        display: none !important;
-    }
 
-    /* 2. Nascondi la scritta "All Sections" (ma lascia l'hamburger) */
-    #menu-toggle span {
-        display: none !important;
-    }
 
-    /* Riduciamo leggermente il contenitore per dare più spazio al logo */
-    .All-selections-sideBar-container {
-        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-    }
-}
+
+
+
+
+
+
 
 
 
@@ -100,12 +118,12 @@
 }
 
 /* Quando la checkbox è spuntata (Menu Aperto) */
-#menu-switcher:checked + #menu-toggle .menu-icon::before {
+#leftNav-menu-switcher:checked + #menu-toggle .menu-icon::before {
     content: "\f62a" !important;
 }
 
 /* Nascondi il testo quando aperto */
-#menu-switcher:checked + #menu-toggle span {
+#leftNav-menu-switcher:checked + #menu-toggle span {
     display: none !important;
 }
 
@@ -140,16 +158,16 @@ header {
 
 
 /* =========================================
-   SISTEMA MENU OFF-CANVAS (Puro CSS)
+   SISTEMA MENU  OFF-CANVAS SINISTRO (Puro CSS)
    ========================================= */
 
 /* --- 1. NASCONDI TESTO BOTTONE QUANDO APERTO --- */
-#menu-switcher:checked + #menu-toggle span {
+#leftNav-menu-switcher:checked + #menu-toggle span {
     display: none !important;
 }
 
 /* --- 2. STILE BASE DEL MENU (Stato Chiuso) --- */
-.custom-sidebar {
+.leftNav-custom-sidebar {
     position: fixed;
     top: 64px;
     left: -320px; /* Spostato fuori dallo schermo a sinistra */
@@ -164,7 +182,7 @@ header {
 }
 
 /* --- 3. ANIMAZIONE MENU (Stato Aperto) --- */
-#menu-switcher:checked ~ .custom-sidebar {
+#leftNav-menu-switcher:checked ~ .leftNav-custom-sidebar {
     left: 0; /* Entra nello schermo */
 
     /* Transizione morbida SOLO in entrata */
@@ -172,7 +190,7 @@ header {
 }
 
 /* --- 4. STILE BASE DEL BACKDROP (Stato Chiuso) --- */
-.custom-backdrop {
+.leftNav-custom-backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -190,8 +208,10 @@ header {
     display: none;
 }
 
+
+
 /* --- 5. VISIBILITÀ BACKDROP (Stato Aperto) --- */
-#menu-switcher:checked ~ .custom-backdrop {
+#leftNav-menu-switcher:checked ~ .leftNav-custom-backdrop {
     /* Appare all'istante, niente fade in/out fastidiosi */
     display: block;
 }
@@ -199,7 +219,7 @@ header {
 
 
 /* Quando la checkbox è selezionata, blocca lo scroll del body */
-body:has(#menu-switcher:checked) {
+body:has(#leftNav-menu-switcher:checked) {
     overflow: hidden;
 }
 
@@ -262,7 +282,7 @@ body:has(#menu-switcher:checked) {
     align-items: center;
 
     /* 3. Colori e Bordi */
-    background-color: #0056b3 !important; /* Blu scuro */
+    background-color: #00538a !important; /* Blu scuro */
     color: #ffffff !important;            /* Testo bianco forzato */
     border-radius: 4px !important;       /* Arrotondamento */
     border: none !important;
@@ -280,7 +300,7 @@ body:has(#menu-switcher:checked) {
 
 /* --- STATO HOVER (Passaggio Mouse) --- */
 .leftNavbar--btn__custom:hover {
-    background-color: #007bff !important; /* Diventa blu più chiaro */
+    background-color: #2c6fb2 !important; /* Diventa blu più chiaro */
     color: #ffffff !important;
 }
 
@@ -531,7 +551,7 @@ details[open] .arrow-open {
     align-items: center;
 
     /* 3. Colori e Bordi */
-    background-color: #0056b3 !important; /* Blu scuro */
+    background-color: #00538a !important; /* Blu scuro */
     color: #ffffff !important;            /* Testo bianco forzato */
     border-radius: 4px !important;       /* Arrotondamento */
     border: none !important;
@@ -548,7 +568,7 @@ details[open] .arrow-open {
 
 /* --- STATO HOVER (Passaggio Mouse) --- */
 .navRightBtn-custom-herald:hover {
-    background-color: #007bff !important; /* Diventa blu più chiaro */
+    background-color: #2c6fb2 !important; /* Diventa blu più chiaro */
     color: #ffffff !important;
 }
 
@@ -562,6 +582,94 @@ details[open] .arrow-open {
     color: #ffffff !important;
     pointer-events: none; /* Evita che lo span interferisca con il click */
 }
+
+
+
+
+
+
+
+/* Icona a comparsa omino navbar prima riga lato desto*/
+.user-dropdown-icon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Impedisce il rimpicciolimento */
+    white-space: nowrap; /* Evita che freccia e omino vadano su due righe */
+}
+
+.user-dropdown-icon i {
+    font-size: 1.5rem; /* Dimensione fissa dell'omino */
+    flex-shrink: 0;
+}
+
+.navbar--FirstRow--iconaFreccia__dimensioni {
+    font-size: 0.9rem; /* Dimensione fissa della freccia */
+    margin-left: 5px;
+    flex-shrink: 0;
+    -webkit-text-stroke: 1px; /* Trucco per ispessire i bordi */
+    font-weight: 1200 !important;
+}
+
+
+/* =========================================
+   SISTEMA MENU  OFF-CANVAS DESTRO (Puro CSS)
+   ========================================= */
+
+/* --- STILE BASE DELLA SIDEBAR UTENTE (Stato Chiuso) --- */
+.navRight-custom-sidebar {
+    position: fixed;
+    top: 64px; /* Altezza della tua navbar */
+    right: -320px; /* Spostata fuori a DESTRA */
+    width: 300px;
+    height: calc(100vh - 64px);
+    background-color: #ffffff;
+    z-index: 1070;
+    border-top: 1px solid #000000;
+    font-size: 16px !important;
+    transition: none; /* Chiude di scatto come richiesto */
+}
+
+/* --- ANIMAZIONE APERTURA DA DESTRA --- */
+#navRight-menu-switcher:checked ~ .navRight-custom-sidebar {
+    right: 0; /* Entra nello schermo */
+    transition: right 0.3s ease-out; /* Morbida in entrata */
+}
+
+/* --- BACKDROP UTENTE --- */
+.navRight-custom-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+
+    /* Il trucco per lasciare visibile l'header ma coprirlo per i click */
+    background-clip: content-box;
+    border-top: 64px solid transparent;
+    cursor: default;
+
+    /* Spento di default */
+    display: none;
+}
+
+
+#navRight-menu-switcher:checked ~ .navRight-custom-backdrop {
+    display: block;
+}
+
+/* --- BLOCCO SCROLL BODY --- */
+body:has(#navRight-menu-switcher:checked) {
+    overflow: hidden;
+}
+
+/* --- ICONA FRECCIA (Rotation opzionale) --- */
+#navRight-menu-switcher:checked + .user-dropdown-icon .bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+
 
 
 

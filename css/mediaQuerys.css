@@ -1,0 +1,58 @@
+/* --- SOGLIA: Sotto i 1040px --- */
+@media (max-width: 1040px) {
+
+
+    /* 2. Nascondi la scritta "All Sections" (ma lascia l'hamburger) */
+    #menu-toggle span {
+        display: none !important;
+    }
+
+    /* Riduciamo leggermente il contenitore per dare più spazio al logo */
+    .All-selections-sideBar-container {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    }
+}
+
+/* Nascondi i bottoni e mostra l'icona esattamente a 1040px */
+@media (max-width: 1040px) {
+    .d-lg-flex {
+        display: none !important; /* Forza la scomparsa dei bottoni */
+    }
+    .user-dropdown-icon {
+        display: flex !important; /* Forza la comparsa dell'omino */
+        cursor: pointer;
+    }
+}
+
+/* Assicurati che sopra i 1040px l'icona sia nascosta */
+@media (min-width: 1041px) {
+    .user-dropdown-icon {
+        display: none !important;
+    }
+}
+
+
+
+
+
+/*---Visualizzazione del Titolo della navbar---*/
+/* Lo mostriamo di default (per schermi sotto i 1040px) */
+#navbar-title-first-row {
+    display: block; /* O 'flex' / 'inline-block' a seconda del tuo layout */
+}
+
+/* Quando lo schermo è largo ALMENO 1040px, lo nascondiamo */
+@media (min-width: 1040px) {
+    #navbar-title-first-row {
+        display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar--title {
+        /* Il font diventa fluido solo qui o si imposta un valore più piccolo */
+        font-size: clamp(0.0005rem, 8vw, 3rem) !important;
+    }
+}
+
+
