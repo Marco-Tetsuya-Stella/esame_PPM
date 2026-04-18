@@ -30,90 +30,333 @@
 <body>
 
 
-<header class="navbar navbar-light bg-light sticky-top shadow-sm px-3" style="height: 64px;">
+<header class="sticky-part">
+    <div class="container-fluid header-container__height  bg-white">
+        <div class="row h-100 align-items-center g-0 flex-nowrap ">
+
+            <div class="col-3 ">
+                <div class="All-selections-sideBar-container">
+                <input type="checkbox" id="menu-switcher" class="d-none">
+
+                <label for="menu-switcher" id="menu-toggle" class="btn nav--leftButton__attributes mb-0" style="cursor: pointer;">
+                    <i class="bi bi-list menu-icon fs-4"></i> <span class="fw-bold d-none d-md-inline ms-2 text-dark">All Sections</span>
+                </label>
+
+                <label for="menu-switcher" class="custom-backdrop"></label>
+
+                <div id="sidebarMenu" class="custom-sidebar">
+
+                    <div class="h-100 custom-sidebar-div__scrollballHidden">
+
+                        <div class="leftNav--FirstBlock__structure">
+                            <div class="pt-3 d-flex justify-content-center">
+                                <a href="#" id="mega-subscribe-button" class="leftNavbar--btn__custom">
+                                    <span>Subscribe Now</span>
+                                </a>
+                            </div>
+
+                            <div class="d-flex align-items-start wheater-container ">
+                                <div class="d-flex">
+                                    <a class="lefNav--a__meteo text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
+                                        <span class="lefNav--span__temperature text-dark">48°F</span>
+                                        <i class="bi bi-clouds leftNav--i__bi-clouds fs-3 text-dark ms-1"></i>
+                                    </a>
+                                </div>
 
 
-    <!--<div class="row>"> -->
+                                <div class="date-container">
+                                    <div class="dateConatiner__date ">
+                                        Friday, April 17th 2026
+                                    </div>
+                                    <a href="#" class="e-edition-link text-decoration-none dateConatiner--a__E-Edition">
+                                        <span>E-Edition</span>
+                                    </a>
+                                </div>
+                            </div>
 
-    <div class="container-fluid d-flex align-items-center">
-
-        <div class="All-selections-sideBar-container">
-            <input type="checkbox" id="menu-switcher" class="d-none">
-
-            <label for="menu-switcher" id="menu-toggle" class="btn nav--leftButton__attributes mb-0" style="cursor: pointer;">
-                <i class="bi bi-list menu-icon fs-4"></i> <span class="fw-bold d-none d-md-inline ms-2 text-dark">All Sections</span>
-            </label>
-
-            <label for="menu-switcher" class="custom-backdrop"></label>
-
-            <div id="sidebarMenu" class="custom-sidebar">
-
-                <div class="h-100 overflow-auto">
-
-                    <div class="p-3">
-                        <div class="mb-3 d-flex justify-content-center">
-                            <a href="#" id="mega-subscribe-button" class="btn-custom-herald">
-                                <span>Subscribe Now</span>
+                            <a href="#" class=" align-items-center text-decoration-none text-dark ps-1 pe-1 me">
+                                <i class="bi bi-house-door-fill me-2"></i>
+                                <span class="fw-bold">Home Page</span>
                             </a>
                         </div>
 
-                        <div class="d-flex align-items-start wheater-container mb-3">
-                            <div class="d-flex align-items-start">
-                                <a class="lefNav--span__temperature d-flex align-items-start text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
-                                    <span class="lefNav--span__temperature text-dark">48°F</span>
-                                    <i class="bi bi-clouds leftNav--i__bi-clouds fs-3 text-dark ms-1"></i>
+                         <div class="list-group-no-border">
+
+                            <details class="accordion-section">
+                                <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                    News
+                                    <i class="bi bi-chevron-right arrow-closed"></i>
+                                    <i class="bi bi-chevron-down arrow-open d-none"></i>
+                                </summary>
+                                <div class="submenu">
+                                    <a href="#">News</a>
+                                    <a href="#">Local News</a>
+                                    <a href="#">Crime & Public Safety</a>
+                                    <a href="#">Your Tax Dollars At Work</a>
+                                    <a href="#">Massachusetts</a>
+                                    <a href="#">Nation</a>
+                                    <a href="#">World News</a>
+                                    <a href="#">Business</a>
+                                    <a href="#">Best Reviews</a>
+                                    <a href="#">Health</a>
+                                    <a href="#">Columnists</a>
+                                    <a href="#">Traffic</a>
+                                    <a href="#">Espanol</a>
+                                    <a href="#">Automotive</a>
+                                    <a href="#">Real Estate</a>
+                                </div>
+                            </details>
+
+                            <details class="accordion-section">
+                                <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                    Opinion
+                                    <i class="bi bi-chevron-right arrow-closed"></i>
+                                    <i class="bi bi-chevron-down arrow-open d-none"></i>
+                                </summary>
+                                <div class="submenu">
+                                    <a href="#">Opinion</a>
+                                    <a href="#">Editorials</a>
+                                    <a href="#">Letters to the Editor</a>
+                                    <a href="#">Submit a Letter</a>
+                                </div>
+                            </details>
+
+                            <details class="accordion-section">
+                                <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                    Sports
+                                    <i class="bi bi-chevron-right arrow-closed"></i>
+                                    <i class="bi bi-chevron-down arrow-open d-none"></i>
+                                </summary>
+                                <div class="submenu">
+                                    <a href="#">Sports</a>
+                                    <a href="#">Boston Red Sox</a>
+                                    <a href="#">New England Patriots</a>
+                                    <a href="#">Boston Celtics</a>
+                                    <a href="#">Boston Bruins</a>
+                                    <a href="#">Olympics</a>
+                                    <a href="#">College Sports</a>
+                                    <a href="#">High School Sports</a>
+                                </div>
+                            </details>
+
+                            <details class="accordion-section">
+                                <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                    Politics
+                                    <i class="bi bi-chevron-right arrow-closed"></i>
+                                    <i class="bi bi-chevron-down arrow-open d-none"></i>
+                                </summary>
+                                <div class="submenu">
+                                    <a href="#">Politics</a>
+                                    <a href="#">Election 2024</a>
+                                    <a href="#">State House</a>
+                                    <a href="#">Boston City Hall</a>
+                                </div>
+                            </details>
+
+                            <details class="accordion-section">
+                                <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                    Entertainment
+                                    <i class="bi bi-chevron-right arrow-closed"></i>
+                                    <i class="bi bi-chevron-down arrow-open d-none"></i>
+                                </summary>
+                                <div class="submenu">
+                                    <a href="#">Entertainment</a>
+                                    <a href="#">Arts</a>
+                                    <a href="#">Movies</a>
+                                    <a href="#">TV and Streaming</a>
+                                    <a href="#">Music and Concerts</a>
+                                    <a href="#">Events</a>
+                                    <a href="#">Fun & Games</a>
+                                    <a href="#">Contests</a>
+                                    <a href="#">Comics</a>
+                                    <a href="#">Puzzles</a>
+                                    <a href="#">Special Sections</a>
+                                </div>
+                            </details>
+
+                            <details class="accordion-section">
+                                <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                    Lifestyle
+                                    <i class="bi bi-chevron-right arrow-closed"></i>
+                                    <i class="bi bi-chevron-down arrow-open d-none"></i>
+                                </summary>
+                                <div class="submenu">
+                                    <a href="#">Lifestyle</a>
+                                    <a href="#">Restaurants Food & Drink</a>
+                                    <a href="#">Travel</a>
+                                    <a href="#">Fashion</a>
+                                    <a href="#">Boston Herald Store</a>
+                                </div>
+                            </details>
+
+
+                            <div class= "leftNav--listGoroup--a__style">
+                                <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0">
+                                 Photo
+                             </a>
+                            </div>
+
+
+
+                            <details class="accordion-section">
+                                <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                    Orbituaries
+                                    <i class="bi bi-chevron-right arrow-closed"></i>
+                                    <i class="bi bi-chevron-down arrow-open d-none"></i>
+                                </summary>
+                                <div class="submenu">
+                                    <a href="#">Obituaries</a>
+                                    <a href="#">News Obituaries</a>
+                                    <a href="#">Place an Obituary</a>
+                                </div>
+                            </details>
+
+                            <details class="accordion-section">
+                                <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                    Branded Content
+                                    <i class="bi bi-chevron-right arrow-closed"></i>
+                                    <i class="bi bi-chevron-down arrow-open d-none"></i>
+                                </summary>
+                                <div class="submenu">
+                                    <a href="#">Paind Content by Brandpoint</a>
+
+                                </div>
+                            </details>
+
+                            <div class= "leftNav--listGoroup--a__style">
+                                <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0">
+                                    Subscribe
                                 </a>
                             </div>
 
-                            <div class="date-container ms-3">
-                                <div class="dateConatiner__date small">
-                                    Friday, April 17th 2026
-                                </div>
-                                <a href="#" class="e-edition-link text-decoration-none dateConatiner--a__E-Edition fw-bold">
-                                    <span>E-Edition</span>
+
+                            <div class= "leftNav--listGoroup--a__style mt-4">
+                                <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark  border-0">
+                                    Log in
                                 </a>
                             </div>
                         </div>
 
-                        <a href="#" class="d-flex align-items-center text-decoration-none text-dark py-2 border-top border-bottom">
-                            <i class="bi bi-house-door-fill me-2"></i>
-                            <span class="fw-bold">Home Page</span>
-                        </a>
-                    </div>
+                        <div class="leftNav--ThridBlock__structure">
+                            <div class="leftNav--ThridBlock__text">
+                                Sign up for email newsletters
+                            </div>
+                            <div class=" d-flex justify-content-center">
+                                <a href="#"  class="leftNavbar--btn__custom">
+                                    <span>Sign Up</span>
+                                </a>
+                            </div>
 
-                    <div class="list-group-no-border">
-                        <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">News</a>
-                        <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">Opinion</a>
-                        <a href="#" class="list-group-item list-group-item-action fw-bold py-3 text-dark border-0">Sports</a>
-                    </div>
+                        </div>
 
+
+                    </div>
                 </div>
             </div>
-        </div>
+            </div>
+
+            <div class="col-5 text-center">
+                <div class="navbar-brand mx-auto fw-bold fs-3" style="font-family: serif;">
+                Boston Herald
+            </div>
+            </div>
 
 
-        <div class="navbar-brand mx-auto fw-bold fs-3" style="font-family: serif;">
-            Boston Herald
-        </div>
+            <div class="col-3 ">
+                <div class="d-flex justify-content-end gap-2  rightNavBottonsContainer">
+                    <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
+                        <span>Subscribe</span>
+                    </button>
 
+                    <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
+                        <span>Log in</span>
+                    </button>
+                </div>
+            </div>
 
-        <div class="d-flex align-items-center gap-2  rightNavBottonsContainer">
-            <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
-                <span>Subscribe</span>
-            </button>
+            <div class="col-1">
 
-            <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
-                <span>Log in</span>
-            </button>
+            </div>
+
         </div>
     </div>
 
-    <!--</div> -->
+</header>
+
+
+
+
+
+<!--
+<header class="sticky-part">
+    <div class="container-fluid header-container__height  bg-white">
+        <div class="row h-100 align-items-center g-0 flex-nowrap ">
+
+            <div class="col-3  ">
+                <div class="All-selections-sideBar-container">
+                    <input type="checkbox" id="menu-switcher" class="d-none">
+
+                    <label for="menu-switcher" id="menu-toggle" class="btn nav--leftButton__attributes mb-0" style="cursor: pointer;">
+                        <i class="bi bi-list menu-icon fs-4"></i> <span class="fw-bold d-none d-md-inline ms-2 text-dark">All Sections</span>
+                    </label>
+
+                    <label for="menu-switcher" class="custom-backdrop"></label>
+                </div>
+            </div>
+
+            <div class="col-5">
+                <div class="navbar-brand mx-auto fw-bold fs-3" style="font-family: serif;">
+                    Boston Herald
+                </div>
+            </div>
+
+
+            <div class="col-3 ">
+                <div class="d-flex justify-content-end gap-2  rightNavBottonsContainer">
+                    <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
+                        <span>Subscribe</span>
+                    </button>
+
+                    <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald d-none d-sm-block">
+                        <span>Log in</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-1">
+
+            </div>
+
+        </div>
+    </div>-->
 
 
 
 
 </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="container mt-5">
+    <h1>Contenuto Principale</h1>
+    <p>Ora scorri: l'header rimarrà fisso in alto!</p>
+</main>
+
 
 
 
