@@ -11,8 +11,10 @@
    ALTEZZE CONTAINER HEADER
    ========================================= */
 .header-container__height {
-    height: 226px;
+
+    width: 100%;
     margin: 0px 0px 0px 0px;
+    padding: 0;
 }
 
 .headerContainer--FirstRow__height {
@@ -29,6 +31,9 @@
     justify-content: center;
 }
 
+
+
+
 .headerContainer--SecondRow__height {
     height: 64px;
     width: 100%;
@@ -42,6 +47,18 @@
     width: 100%;
     border-bottom: 1px solid #000000;
 }
+
+.headerContainer--FourthRow__height {
+    display: flex;
+    justify-content: start; /* Distribuisce i link uniformemente */
+    height: 49px;
+    width: 100%;
+}
+
+
+
+
+
 
 
 
@@ -551,9 +568,9 @@ details[open] .arrow-open {
 
 
 
-
-
-/* --- IL BOTTONI A DESTRA NEL MENU --- */
+/*-------------------------------
+    BOTTONI A DESTRA NEL MENU
+-------------------------------- */
 .navRightBtn-custom-herald {
     /* 1. Forza la struttura del blocco */
     display: flex !important;
@@ -762,7 +779,7 @@ body:has(#navRight-menu-switcher:checked) {
 /* --- ANIMAZIONE APERTURA DALL'ALTO --- */
 #search-top-switcher:checked ~ .search-custom-topbar {
     top: 64px; /* Scende esattamente sotto la tua navbar (64px) */
-    transition: top 0.3s ease-out; /* Morbida in entrata */
+    transition: top 0.2s ease-out; /* Morbida in entrata */
 }
 
 /* --- BACKDROP DEDICATO --- */
@@ -837,7 +854,7 @@ body:has(#search-top-switcher:checked) {
     color: #ffffff !important;
     border: none;
     height: 30px;
-    width: 40px;
+    width: 50px;
     padding: 0 15px;        /* Spazio orizzontale dentro il bottone */
     font-weight: 700;
     font-size: 0.9rem;
@@ -888,12 +905,53 @@ body:has(#search-top-switcher:checked) {
 }
 
 
+/*--------------------------
+    QUARTA RIGA DELL HEADER
+--------------------------- */
+.fourthRow__linksContainer {
+    display: flex;
+    width: 700px;
+    justify-content: start;
+    gap: 30px
+}
+
+.fourthRow__trendingContainer {
+    width: 150px;
+    align-self: center;
+    justify-self: start;
+    margin: 0;
+}
+
+.fourthRow__trendingText {
+    color: #00538a;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+}
 
 
 
+.fourthRow--linkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
+/* Lo stile del link (ispirato all'immagine) */
+.fourthRow--link {
+    text-decoration: none;
+    color: #000000;                 /* Nero come in foto */
+    font-family: sans-serif;        /* Font pulito */
+    font-weight: 400;               /* Grassetto (Bold) */
+    font-size: 14px;                /* Dimensione indicativa */
+    white-space: nowrap;            /* Evita che il testo vada a capo */
+    transition: color 0.2s;
+}
 
-
+.fourthRow--link:hover {
+    color: #00538a;                 /* Colore al passaggio del mouse */
+}
 
 
 
@@ -1056,7 +1114,31 @@ main {
 
 
 
+/* Questa classe spegne l'elemento e rimuove il suo ingombro dal layout */
+/*.d-none-scroll {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}*/
 
+#headerContainer__disappearingContainer {
+    transition: max-height 0.35s ease-in-out, opacity 0.3s ease;
+    max-height: 500px; /* Un valore sicuro */
+    overflow: hidden;
+}
+
+/* Classe applicata dal JS */
+.d-none-scroll {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none;
+    /* Rimuoviamo eventuali margini o padding che terrebbero lo spazio occupato */
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
 
 
 

@@ -38,13 +38,17 @@
 /*---Visualizzazione del Titolo della navbar---*/
 /* Lo mostriamo di default (per schermi sotto i 1040px) */
 #navbar-title-first-row {
-    display: block; /* O 'flex' / 'inline-block' a seconda del tuo layout */
+    display: block;
 }
 
-/* Quando lo schermo è largo ALMENO 1040px, lo nascondiamo */
 @media (min-width: 1040px) {
     #navbar-title-first-row {
         display: none !important;
+    }
+
+    /* Questa classe verrà aggiunta dal JS per farlo apparire su desktop dopo lo scroll */
+    #navbar-title-first-row.force-show {
+        display: block !important;
     }
 }
 
@@ -63,9 +67,6 @@
         display: flex !important; /* Mostra quello della prima riga/sidebar */
     }
 
-    #secondRow--wheaterContainer {
-        display: none !important; /* Nasconde quello della seconda riga */
-    }
 }
 
 /* --- REGOLA PER IL DESKTOP (Da 1040px in su) --- */
@@ -74,7 +75,18 @@
         display: none !important; /* Nasconde quello della prima riga */
     }
 
-    #secondRow--wheaterContainer {
-        display: flex !important; /* Mostra quello della seconda riga */
+}
+
+
+
+/* 1. Nascondiamo il contenitore di base (per tutti gli schermi sotto i 1040px) */
+#headerContainer__disappearingContainer {
+    display: none !important;
+}
+
+/* 2. Lo mostriamo solo quando la larghezza è di almeno 1040px */
+@media (min-width: 1040px) {
+    #headerContainer__disappearingContainer {
+        display: flex !important; /* Usiamo flex per mantenere le classi flex-nowrap attive */
     }
 }

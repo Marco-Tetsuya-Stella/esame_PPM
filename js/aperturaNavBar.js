@@ -28,3 +28,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+/*-------------------------------------------------------------------------------------------------------------
+    GESTIONE headerContainer__disappearingContainer PER LA SCOMPARSA QUANDO SCENDO SOTTO I 64PX SULLA SCROLL BAR
+ -------------------------------------------------------------------------------------------------------------*/
+/**
+ * Gestione visibilità Header Secondario
+ * Scompare dopo 64px di scroll o sotto i 1040px di larghezza
+ */
+let isTransitioning = false;
+
+function handleHeaderVisibility() {
+    const headerDisappearing = document.getElementById('headerContainer__disappearingContainer');
+    const navbarTitle = document.getElementById('navbar-title-first-row');
+
+    if (!headerDisappearing || isTransitioning) return;
+
+    const isDesktop = window.innerWidth >= 1040;
+    const currentScroll = window.scrollY;
+
+    // SCENDIAMO: Nascondiamo il container grande e MOSTRIAMO il titolo piccolo
+    if (currentScroll > 120) {
+        if (!headerDisappearing.classList.contains('d-none-scroll')) {
+            isTransitioning = true;
+            headerDisappearing.classList.add('d-none-scroll');
+
+            // Su desktop, mostriamo il titolo piccolo
+            if (isDesktop && navbarTitle) {
+                navbarTitle.classList.add('force-show');
+            }
+
+            setTimeout(() => { isTransitioning = false; }, 350);
+        }
+    }
+    // RISALIAMO: Mostriamo il container grande e NASCONDIAMO il titolo piccolo
+    else if (currentScroll < 10) {
+        if (headerDisappearing.classList.contains('d-none-scroll')) {
+            isTransitioning = true;
+            headerDisappearing.classList.remove('d-none-scroll');
+
+            // Rimuoviamo la classe "forza mostra" per farlo tornare al comportamento CSS
+            if (navbarTitle) {
+                navbarTitle.classList.remove('force-show');
+            }
+
+            setTimeout(() => { isTransitioning = false; }, 350);
+        }
+    }
+}
+
+// Ascolta lo scorrimento della pagina
+window.addEventListener('scroll', handleHeaderVisibility);
+
+// Ascolta il cambio di dimensione della finestra
+window.addEventListener('resize', handleHeaderVisibility);
+
+// Esegui al caricamento per impostare lo stato iniziale corretto
+document.addEventListener('DOMContentLoaded', handleHeaderVisibility);
+
+
+
+
+
+
+
