@@ -55,4 +55,26 @@
     }
 }
 
+/*------------------------------
+ VISUALIZZAZIONE WHERTHER CONTAINER 1040PX
+-------------------------------- */
+@media (max-width: 1039px) {
+    #leftNavbar--wheatherContainer {
+        display: flex !important; /* Mostra quello della prima riga/sidebar */
+    }
 
+    #secondRow--wheaterContainer {
+        display: none !important; /* Nasconde quello della seconda riga */
+    }
+}
+
+/* --- REGOLA PER IL DESKTOP (Da 1040px in su) --- */
+@media (min-width: 1040px) {
+    #leftNavbar--wheatherContainer {
+        display: none !important; /* Nasconde quello della prima riga */
+    }
+
+    #secondRow--wheaterContainer {
+        display: flex !important; /* Mostra quello della seconda riga */
+    }
+}

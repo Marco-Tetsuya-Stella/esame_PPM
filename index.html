@@ -31,11 +31,11 @@
 <body>
 
 
-<header class="sticky-part">
+<header class="sticky-part header-container__height">
     <div class="container-fluid header-container__height  bg-white">
-        <div class="row h-100 align-items-center g-0 flex-nowrap ">
+        <div class="row headerContainer--FirstRow__height align-items-center g-0 flex-nowrap ">
 
-            <div class="col-3 ">
+            <div class="" style="width:30% ">
                 <div class="All-selections-sideBar-container">
                     <input type="checkbox" id="leftNav-menu-switcher" class="d-none">
 
@@ -51,15 +51,15 @@
 
                             <div class="leftNav--FirstBlock__structure">
                                 <div class="pt-3 d-flex justify-content-center">
-                                    <a href="#" id="mega-subscribe-button" class="leftNavbar--btn__custom">
+                                    <a href="#" id="mega-subscribe-button" class="sideNavbar--btn__custom">
                                         <span>Subscribe Now</span>
                                     </a>
                                 </div>
 
-                                <div class="d-flex align-items-start wheater-container ">
+                                <div class="d-flex align-items-start wheater-container " id="leftNavbar--wheatherContainer">
                                     <div class="d-flex">
-                                        <a class="lefNav--a__meteo text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
-                                            <span class="lefNav--span__temperature text-dark">48°F</span>
+                                        <a class="wheatherContainer--a__meteo text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
+                                            <span class="wheatherContainer--span__temperature text-dark">48°F</span>
                                             <i class="bi bi-clouds leftNav--i__bi-clouds fs-3 text-dark ms-1"></i>
                                         </a>
                                     </div>
@@ -81,7 +81,7 @@
                                 </a>
                             </div>
 
-                             <div class="list-group-no-border">
+                            <div class="leftNav--SecondBlock__structure">
 
                                 <details class="accordion-section">
                                     <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
@@ -191,7 +191,7 @@
                                 </details>
 
 
-                                <div class= "leftNav--listGoroup--a__style">
+                                <div class= "slideNav--listGoroup--a__style">
                                     <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0">
                                      Photo
                                  </a>
@@ -224,14 +224,14 @@
                                     </div>
                                 </details>
 
-                                <div class= "leftNav--listGoroup--a__style">
+                                <div class= "slideNav--listGoroup--a__style">
                                     <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0">
                                         Subscribe
                                     </a>
                                 </div>
 
 
-                                <div class= "leftNav--listGoroup--a__style mt-4">
+                                <div class= "slideNav--listGoroup--a__style mt-4">
                                     <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark  border-0">
                                         Log in
                                     </a>
@@ -243,7 +243,7 @@
                                     Sign up for email newsletters
                                 </div>
                                 <div class=" d-flex justify-content-center">
-                                    <a href="#"  class="leftNavbar--btn__custom">
+                                    <a href="#"  class="sideNavbar--btn__custom">
                                         <span>Sign Up</span>
                                     </a>
                                 </div>
@@ -256,7 +256,7 @@
                 </div>
             </div>
 
-            <div class="col-5 h-100 align-items-center">
+            <div class=" h-100 align-items-center" style="width: 40%">
                 <div class="navbar-title-container" id="navbar-title-first-row">
                     <h1 class="m-0 h-100 w-100"> <a href="#" class="navbar--title">
                         Boston Herald
@@ -266,8 +266,8 @@
             </div>
 
 
-            <div class="col-3">
-                <div class="d-flex justify-content-end align-items-center gap-2 rightNavBottonsContainer">
+            <div class="" style="width: 25%">
+                <div class="d-flex justify-content-end align-items-center  rightNavBottonsContainer">
 
                     <div class="d-none d-lg-flex gap-2">
                         <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald">
@@ -278,11 +278,6 @@
                         </button>
                     </div>
 
-                    <!--
-                    <div class="user-dropdown-icon d-flex d-lg-none align-items-center cursor-pointer" style="color: #1a1a1a; font-size: 1.2rem;">
-                        <i class="bi bi-person-fill"></i> <i class="bi bi-chevron-down navbar--FirstRow--iconaFreccia__dimensioni  ms-1"></i> </div>
-
-                    </div>-->
                     <div class="user-sidebar-container">
                         <input type="checkbox" id="navRight-menu-switcher" class="d-none">
 
@@ -295,15 +290,33 @@
 
                         <div id="rightSidebarMenu" class="navRight-custom-sidebar">
                             <div class="h-100 custom-sidebar-div__scrollballHidden">
-                                <div class="p-4">
-                                    <h3 class="fw-bold">Il tuo account</h3>
-                                    <hr>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-3"><a href="#" class="text-decoration-none text-dark">Profilo</a></li>
-                                        <li class="mb-3"><a href="#" class="text-decoration-none text-dark">Impostazioni</a></li>
-                                        <li class="mb-3"><a href="#" class="text-decoration-none text-dark text-danger">Logout</a></li>
-                                    </ul>
+                                <div class="rightNav--FirstBlock__structure">
+                                    <div class= "slideNav--listGoroup--a__style">
+                                        <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0 ">
+                                            Subscibe
+                                        </a>
+                                    </div>
+
+                                    <div class= "slideNav--listGoroup--a__style">
+                                        <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0">
+                                            Login
+                                        </a>
+                                    </div>
                                 </div>
+
+                                <div class="rightNav--SecondBlock__structure">
+                                    <div class="rightNav--SecondBlock__text">
+                                        Sign up for email newsletters
+                                    </div>
+                                    <div class=" d-flex justify-content-center">
+                                        <a href="#"  class="sideNavbar--btn__custom">
+                                            <span>Sign Up</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -311,21 +324,121 @@
             </div>
 
 
-            <div class="col-1">
+            <div class="" style="width: 5%">
+                <div class="seacrhNavButtonContainer">
+                    <input type="checkbox" id="search-top-switcher" class="d-none">
+
+                    <label for="search-top-switcher" class="search-icon-botton d-flex align-items-center  ">
+                        <i class="bi bi-search"></i>
+                    </label>
+
+                    <label for="search-top-switcher" class="search-custom-backdrop"></label>
+
+                    <div id="searchTopBar" class="search-custom-topbar">
+
+                            <div class="topSearcher--container__structure">
+                                <div class="topSearcher--searchBar__structure">
+                                    <div class="search-icon-box search-icon-botton">
+                                        <i class="bi bi-search"></i>
+                                    </div>
+
+                                    <input type="text" class="search-custom-input" placeholder="Type your search">
+
+                                    <button type="submit" class="search-custom-btn">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container-fluid headerContainer__disappearingContainer flex-nowrap" id="headerContainer__disappearingContainer">
+            <div class="row headerContainer--SecondRow__height align-items-center g-0 flex-nowrap ">
+                <div class="" style="width:30%">
+                    <div class="d-flex align-items-start wheater-container" id="secondRow--wheaterContainer" style="padding-left: 30px">
+                        <div class="d-flex">
+                            <a class="wheatherContainer--a__meteo text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
+                                <span class="wheatherContainer--span__temperature text-dark">48°F</span>
+                                <i class="bi bi-clouds leftNav--i__bi-clouds fs-3 text-dark ms-1"></i>
+                            </a>
+                        </div>
+
+
+                        <div class="date-container">
+                            <div class="dateConatiner__date ">
+                                Friday, April 17th 2026
+                            </div>
+                            <a href="#" class="e-edition-link text-decoration-none dateConatiner--a__E-Edition">
+                                <span>E-Edition</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="" style="width:40%">
+                    <div class="navbar-title-container" id="navbar-title-second-row">
+                        <h1 class="m-0 h-100 w-100"> <a href="#" class="navbar--title">
+                            Boston Herald
+                        </a>
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="open-space" style="width:30%">
+
+                </div>
+            </div>
+            <div class="row headerContainer--ThirdRow__height align-items-center g-0 flex-nowrap">
+                <div class="container-fluid  thirdRow__linksContainer" >
+                    <div class="thirdRow--linkContainer">
+                        <a href="#" class="thirdRow--link">News</a>
+                    </div>
+                    <div class="thirdRow--linkContainer">
+                        <a href="#" class="thirdRow--link">Opinion</a>
+                    </div>
+                    <div class="thirdRow--linkContainer">
+                        <a href="#" class="thirdRow--link">Sports</a>
+                    </div>
+                    <div class="thirdRow--linkContainer">
+                        <a href="#" class="thirdRow--link">Politics</a>
+                    </div>
+                    <div class="thirdRow--linkContainer">
+                        <a href="#" class="thirdRow--link">Entertainment</a>
+                    </div>
+                    <div class="thirdRow--linkContainer">
+                        <a href="#" class="thirdRow--link">Lifestyle</a>
+                    </div>
+                    <div class="thirdRow--linkContainer">
+                        <a href="#" class="thirdRow--link">Multimedia/Video</a>
+                    </div>
+                    <div class="thirdRow--linkContainer">
+                        <a href="#" class="thirdRow--link">Photo</a>
+                    </div>
+                    <div class="thirdRow--linkContainer">
+                        <a href="#" class="thirdRow--link">Obituaries</a>
+                    </div>
+
+                </div>
+
+
 
             </div>
 
         </div>
+
+
+
     </div>
 
 </header>
 
 
 
-
-
-
-</header>
 
 
 
