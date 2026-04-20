@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <!-- Includiamo il charset: il nostro file conterra' caratteri Unicode, superset di ASCII -->
     <meta charset="utf-8">
@@ -477,9 +477,69 @@
 
 
 
-<main class="container mt-5">
-    <h1>Contenuto Principale</h1>
-    <p>Ora scorri: l'header rimarrà fisso in alto!</p>
+<main class="container-fluid mt-5">
+
+
+
+    <div class="row g-0">
+        <section class="col-12 col-md-9 d-flex flex-wrap border border-dark p-2">
+
+            <div class="col-md-9 col-12 bg-warning p-3 order-1" style="min-height: 150px;">
+                <div class="col-12  ">
+
+                    <div class="row g-0 bg-primary text-white" style="min-height: 150px;">
+
+                        <div class="col-12 col-sm-6 col-md-12 col-xl-6 border d-flex justify-content-center align-items-center p-2">
+                            <strong>Superiore</strong>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-12 col-xl-6 border d-flex justify-content-center align-items-center p-2">
+                            <strong>Centrale</strong>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-12 col-xl-6 border d-flex justify-content-center align-items-center p-2">
+                            <strong>Inferiore</strong>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 d-flex flex-wrap">
+                    <article class="col-12 col-sm-6 bg-success text-white border d-flex align-items-center justify-content-center" style="height: 150px;">
+                        Article 1
+                    </article>
+                    <article class="col-12 col-sm-6 bg-warning text-dark border d-flex align-items-center justify-content-center" style="height: 150px;">
+                        Article 2
+                    </article>
+                    <article class="col-12 col-sm-6 bg-danger text-white border d-flex align-items-center justify-content-center" style="height: 150px;">
+                        Article 3
+                    </article>
+                    <article class="col-12 col-sm-6 bg-info text-white border d-flex align-items-center justify-content-center" style="height: 150px;">
+                        Article 4
+                    </article>
+                </div>
+            </div>
+
+            <div id="sidebar" class="col-md-3 col-12 bg-success text-white p-3 order-md-2 order-3" style="min-height: 100px;">
+                <small>SIDEBAR INTERNA</small>
+                <p>Pos 2 su MD, Pos 3 su SM/XS</p>
+            </div>
+
+            <div id="footer" class="col-md-9 col-12 bg-info text-white p-3 order-MD-3 order-2" style="min-height: 80px;">
+                <small>FOOTER INTERNO</small>
+                <p>Pos 3 su MD, Pos 2 su SM/XS</p>
+            </div>
+
+        </section>
+
+        <aside class="col-12 col-md-3 d-flex p-2">
+            <div class="w-100 bg-danger text-white d-flex align-items-center justify-content-center border border-dark" style="min-height: 200px;">
+                <strong>DIV ASIDE ESTERNO</strong>
+            </div>
+        </aside>
+
+    </div>
+
+
 </main>
 
 
