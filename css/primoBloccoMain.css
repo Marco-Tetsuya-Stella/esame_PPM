@@ -1,0 +1,27 @@
+
+/*-----------------------
+    SECTION MAIN ARTICLE
+ -----------------------*/
+.firstBlock__mainArticle__mainTitle {
+    margin: 0; /* Rimuove margini di default se necessario */
+    width: 100%;
+}
+
+.firstBlock__mainArticle__mainTitle--link {
+    text-decoration: none;
+    color: #000000;                 /* Nero come in foto */
+    font-family: sans-serif;        /* Font pulito */
+    font-weight: 700;               /* Grassetto (Bold) */
+    font-size: 1.5rem;                /* Dimensione indicativa */
+    transition: color 0.2s;
+
+    white-space: normal;     /* Forza il testo ad andare a capo (annulla il nowrap) */
+    word-wrap: break-word;   /* Spezza parole lunghissime se necessario */
+    overflow: visible;       /* Assicura che nulla venga tagliato */
+}
+
+.firstBlock__mainArticle__mainTitle--link:hover {
+    color: #00538a;
+}
+
+
