@@ -6,7 +6,7 @@
     background-color: #ffffff;
     width: 100%;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 5rem auto;
 }
 
 
@@ -229,7 +229,7 @@
     background-color: #ffffff;
     width: 100%;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 10rem auto;
 }
 
 .secondBlock__section {
@@ -281,7 +281,7 @@
     background-color: #005689;
     color: white;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 
     min-width: 32px;
     height: 32px;
@@ -311,61 +311,80 @@
     background-color: #ffffff;
     width: 100%;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 10rem auto;
 }
 
-.thirdBlock__category {
+.commonBlock__category {
     border-bottom: 2px solid #00538a;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    cursor:pointer;
 }
 
-.thirdBlock__categoryText {
+.commonBlock__categoryText {
+    margin: 0;
+}
+
+.commonBlock__categoryText--link {
     font-family: 'Georgia', serif;
     font-size: 1.5rem;
     color: #777777;
     margin: 0;
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
-.thirdBlock__category:hover .thirdBlock__categoryText{
+.commonBlock__category:hover .commonBlock__categoryText--link{
     color: #00538a;
+    text-decoration: none;
 }
 
-.thirdBlock__categoryIcon {
+.commonBlock__categoryIcon {
     color: #777777;
     font-size: 1.2rem;
     margin-left: 0.5rem;
     -webkit-text-stroke: 1.5px #777777;
 }
 
-.thirdBlock__category:hover .thirdBlock__categoryIcon {
+.commonBlock__category:hover .commonBlock__categoryIcon {
     color: #00538a;
     -webkit-text-stroke: 1.5px #00538a;
 }
 
+.thirdBlock__article__image {
+
+}
+
+.thirdBlock__article__image--link {
+    display: block;
+    padding-bottom: 2rem;
+}
+
+
+
 .thirdBlock__article__titleContainer {
-    margin-top: 2rem;
+    padding-bottom: 0.5rem;
 }
 
 .thirdBlock__article__title--link {
-    display: block;
     text-decoration: none;
+    display: inline;
+}
+
+.thirdBlock__article__title {
+    display: inline;
     color: #000000;
     font-family: sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 1.1;
-    transition: color 0.2s;
+    margin: 0;
 
-    white-space: normal;
-    word-wrap: break-word;
-    overflow: visible;
+    overflow-wrap: break-word;
+    transition: color 0.2s ease;
 }
 
-.thirdBlock__article__title--link:hover {
+.thirdBlock__article__title:hover {
     color: #00538a;
 }
 
@@ -396,3 +415,44 @@
 .thirdBlock__article__subTitle--link:hover {
     color: #00538a;
 }
+
+
+/*---------------
+    FOURTH BLOCK
+--------------*/
+
+.fourthBlock__article__image {
+
+}
+
+.fourthBlock__article__image--link {
+
+}
+
+
+.fourthBlock__article__titleContainer {
+    margin-top: 1rem;
+}
+
+.fourthBlock__article__title--link {
+    text-decoration: none;
+    display: inline;
+}
+
+.fourthBlock__article__title {
+    display: inline;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin: 0;
+
+    overflow-wrap: break-word;
+    transition: color 0.2s ease;
+}
+
+.fourthBlock__article__title:hover {
+    color: #00538a;
+}
+
