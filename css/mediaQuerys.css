@@ -52,7 +52,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
     .navbar--title {
         /* Il font diventa fluido solo qui o si imposta un valore più piccolo */
         font-size: clamp(0.0005rem, 8vw, 3rem) !important;
