@@ -94,3 +94,25 @@ document.addEventListener('DOMContentLoaded', handleHeaderVisibility);
 
 
 
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('loadMoreBtn');
+    const extraContent = document.getElementById('extraContent');
+    const wrapper = document.getElementById('showMoreWrapper');
+
+    if (btn) {
+        btn.addEventListener('click', function() {
+            extraContent.classList.remove('d-none');
+            wrapper.classList.add('d-none');
+        });
+    }
+});
+
+
+
+
+
+
+

@@ -217,6 +217,7 @@
 
 .firstBlock__aside__link {
     width: 100%;
+    display: block;
 }
 
 
@@ -421,6 +422,10 @@
     FOURTH BLOCK
 --------------*/
 
+.fourthBlock__article {
+    padding-bottom: 0.5rem;
+}
+
 .fourthBlock__article__image {
 
 }
@@ -456,3 +461,150 @@
     color: #00538a;
 }
 
+.fourthBlock__article__paragrahContainer {
+    padding: 0.5rem 0 0 0;
+}
+
+.fourthBlock__section__subArticles__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fourthBlock__section__subArticles {
+    padding: 0 0.5rem  0 0.5rem;
+
+}
+
+.fourthBlock__section__subArticle {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 0 0 1rem 0;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 0.5rem;
+}
+
+.fourthBlock__subarticle__image {
+    flex: 0 0 90px;
+    width: 90px;
+}
+
+.fourthBlock__subArticle__titleContainer {
+    /* Il titolo prende tutto lo spazio che resta */
+    flex: 1;
+    padding: 0 0 0 1rem;
+    /* Impedisce al titolo di "spingere" l'immagine fuori dallo schermo */
+    min-width: 0;
+}
+
+.fourthBlock__subArticle__title--link {
+    text-decoration: none;
+    display: inline;
+    padding: 0;
+}
+
+.fourthBlock__subArticle__title {
+    display: inline;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+
+    overflow-wrap: break-word;
+    transition: color 0.2s ease;
+}
+
+.fourthBlock__subArticle__title:hover {
+    color: #00538a;
+}
+
+.fourthBlock__aside {
+    padding-top: 2.78rem;
+}
+
+.fourthBlock__aside__container {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fourthBlock__aside__link {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .fourthBlock__aside__container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .fourthBlock__aside__container {
+        width: 100%;
+    }
+}
+
+
+
+
+
+.fourthBlock__showMoreWrapper {
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.fourthBlock__showMoreLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #dee2e6;
+}
+
+.fourthBlock__showMoreBtn {
+    background: #fff;
+    border: none;
+    display: inline-flex;
+    flex-direction: column; /* Mette l'icona sopra e il testo sotto */
+    align-items: center;
+    cursor: default; /* Niente manina qui */
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    margin-top: -10px;
+}
+
+/* Stile per l'icona (sempre fissa e statica) */
+.fourthBlock__showMoreBtn .arrow-icon {
+    color: #00538a;
+    font-size: 1rem; /* Modifica per renderla più grande o più piccola */
+    margin-bottom: 5px; /* Spazio tra freccia e testo */
+}
+
+/* Stile del TESTO (L'unico che reagisce) */
+.fourthBlock__showMoreBtn--text {
+    color: #00538a;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer; /* La manina appare solo sul testo */
+    transition: color 0.2s ease;
+}
+
+/* Solo il testo cambia colore all'hover */
+.fourthBlock__showMoreBtn--text:hover {
+    color: #003d66;
+}
