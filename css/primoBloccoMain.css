@@ -144,7 +144,7 @@
 }
 
 .firstBlock__side__headline__link:hover {
-    color: #00538a;
+    color: #0056b3;
 }
 
 
@@ -316,7 +316,7 @@
 }
 
 .commonBlock__category {
-    border-bottom: 2px solid #00538a;
+    border-bottom: 2px solid #0056b3;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
 }
@@ -336,7 +336,7 @@
 }
 
 .commonBlock__category:hover .commonBlock__categoryText--link{
-    color: #00538a;
+    color: #0056b3;
     text-decoration: none;
 }
 
@@ -348,8 +348,8 @@
 }
 
 .commonBlock__category:hover .commonBlock__categoryIcon {
-    color: #00538a;
-    -webkit-text-stroke: 1.5px #00538a;
+    color: #0056b3;
+    -webkit-text-stroke: 1.5px #0056b3;
 }
 
 .thirdBlock__article__imageContainer {
@@ -434,7 +434,7 @@
     padding-bottom: 0.5rem;
 }
 
-.fourthBlock__article__image {
+.fourthBlock__article__imageContainer {
 
 }
 
@@ -495,7 +495,7 @@
     margin-bottom: 0.5rem;
 }
 
-.fourthBlock__subarticle__image {
+.fourthBlock__subarticle__imageContainer {
     flex: 0 0 90px;
     width: 90px;
 }
@@ -570,7 +570,7 @@
     position: relative;
     text-align: center;
     margin-top: 50px;
-    border-top: 2px solid #dee2e6; /* La linea grigia */
+    border-top: 3px solid #dee2e6; /* La linea grigia */
 }
 
 .fourthBlock__showMoreButton {
@@ -583,12 +583,12 @@
     width: 100%;
     padding: 0;
     cursor: pointer;
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 .fourthBlock__showMoreButton__arrow-icon {
     color: #dee2e6;
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 1; /* Rimuove lo spazio vuoto extra del font */
     background-color: #ffffff; /* Copre la riga dietro l'icona */
     padding: 0;
@@ -599,7 +599,7 @@
     color: #00538a;
     font-weight: 700;
     font-size: 1rem;
-    letter-spacing: 1px;
+
     text-transform: uppercase;
     background-color: #fff;
     padding: 5px 0; /* Un po' di spazio tra icona e testo */
@@ -650,5 +650,236 @@
 }
 
 .fourthBlock__extraContent__title:hover {
-    color: #00538a;
+    color: #0056b3;
 }
+
+
+/*-----
+    FIFTH BLOCK
+ */
+.fifthBlock {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1300px;
+    margin: 10rem auto;
+}
+
+.fifthBlock__argumentContainer {
+    padding:1rem;
+}
+
+.fifthBlock__argumentContainer__articles {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    align-items: start;
+}
+
+.fifthBlock__mainArticle {
+    padding: 0 0 1rem 1rem;
+}
+
+.fifthBlock__article__imageContainer {
+    padding-bottom: 1rem;
+}
+
+.fifthBlock__article__image--link {
+    display: block;
+    padding-bottom: 2rem;
+}
+
+
+.fifthBlock__article__titleContainer {
+    margin-top: 0.3rem;
+}
+
+.fifthBlock__article__title--link {
+    text-decoration: none;
+    display: inline;
+}
+
+.fifthBlock__article__title {
+    display: inline;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    margin: 0;
+
+    overflow-wrap: break-word;
+    transition: color 0.2s ease;
+}
+
+.fifthBlock__article__title:hover {
+    color: #0056b3;
+}
+
+.fifthBlock__article__paragrahContainer {
+    padding: 0.5rem 0 0 0;
+}
+
+
+.fifthBlock__subArticles{
+    padding: 0 0 0 1rem;
+}
+
+.fifthBlock__subarticle__titleContainer {
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.2rem 0 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.fifthBlock__subarticle__title--link {
+    text-decoration: none;
+    display: inline;
+}
+
+.fifthBlock__subarticle__title {
+    display: inline;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.1;
+    margin: 0;
+
+    overflow-wrap: break-word;
+    transition: color 0.2s ease;
+}
+
+.fifthBlock__subarticle__title:hover {
+    color: #0056b3;
+}
+
+
+/*--------------
+    SIXTH BLOCK
+---------------*/
+
+.sixthBlock{
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1300px;
+    margin: 10rem auto;
+}
+
+
+
+
+/* --- CONTENITORE CAROUSEL --- */
+.eventsWidget__track {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Fa "scattare" le card in posizione */
+    scrollbar-width: none; /* Nasconde la scrollbar su Firefox */
+    -ms-overflow-style: none;  /* Nasconde la scrollbar su IE 10+ */
+    padding-bottom: 10px;
+}
+.eventsWidget__track::-webkit-scrollbar {
+    display: none; /* Nasconde la scrollbar su Chrome/Safari */
+}
+
+/* Frecce Laterali (Posizionate in modo assoluto) */
+.eventsWidget__arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.eventsWidget__arrow--left { left: -15px; }
+.eventsWidget__arrow--right { right: -15px; }
+
+/* --- LE CARD --- */
+.event-card {
+    width: 220px; /* Larghezza fissa per ogni card */
+    scroll-snap-align: start; /* Punto di ancoraggio per lo scroll */
+    position: relative;
+    cursor: pointer;
+}
+
+.event-card__image-area {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3; /* Mantiene le immagini rettangolari */
+    overflow: hidden;
+}
+
+.event-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Il Badge in alto a sinistra (Sat, Apr 25) */
+.event-card__date-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    z-index: 2;
+}
+
+/* --- EFFETTO HOVER BLU (Immagine 2) --- */
+.event-card__hover-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #0056b3; /* Il blu scuro della tua immagine */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Allinea il testo in basso */
+    padding: 10px;
+
+    /* Gestione animazione */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+/* Quando il mouse entra nella card, mostra l'overlay */
+.event-card:hover .event-card__hover-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Testo normale sotto l'immagine */
+.event-card__info-title {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Mette i puntini se il titolo è troppo lungo */
+}
+.event-card__info-location {
+    font-size: 0.8rem;
+}
+
+/* --- DATE SELECTOR --- */
+.eventsWidget__dates-track {
+    scrollbar-width: none;
+}
+.eventsWidget__dates-track::-webkit-scrollbar { display: none; }
+
+.date-item {
+    color: #6c757d;
+    min-width: 40px;
+    transition: color 0.2s ease;
+}
+.date-item:hover, .date-item.active {
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+
