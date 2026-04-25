@@ -98,9 +98,9 @@ document.addEventListener('DOMContentLoaded', handleHeaderVisibility);
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const btn = document.getElementById('loadMoreBtn');
+    const btn = document.getElementById('showMoreButton');
     const extraContent = document.getElementById('extraContent');
-    const wrapper = document.getElementById('showMoreWrapper');
+    const wrapper = document.getElementById('showMoreContainer');
 
     if (btn) {
         btn.addEventListener('click', function() {

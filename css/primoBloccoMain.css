@@ -352,7 +352,7 @@
     -webkit-text-stroke: 1.5px #00538a;
 }
 
-.thirdBlock__article__image {
+.thirdBlock__article__imageContainer {
 
 }
 
@@ -421,6 +421,14 @@
 /*---------------
     FOURTH BLOCK
 --------------*/
+
+.fourthBlock {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1300px;
+    margin: 10rem auto;
+    padding: 0.5rem;
+}
 
 .fourthBlock__article {
     padding-bottom: 0.5rem;
@@ -525,7 +533,7 @@
 }
 
 .fourthBlock__aside {
-    padding-top: 2.78rem;
+    padding: 2.78rem 0.5rem 0 0.5rem;
 }
 
 .fourthBlock__aside__container {
@@ -553,58 +561,94 @@
     }
 }
 
+/*-------------------------------
+    FOURTH BLOCK SHOW MORE BUTTON
+ -------------------------------*/
 
 
-
-
-.fourthBlock__showMoreWrapper {
+.fourthBlock__showMoreContainer {
     position: relative;
     text-align: center;
-    padding-top: 30px;
-    margin-top: 20px;
+    margin-top: 50px;
+    border-top: 2px solid #dee2e6; /* La linea grigia */
 }
 
-.fourthBlock__showMoreLine {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #dee2e6;
-}
-
-.fourthBlock__showMoreBtn {
-    background: #fff;
-    border: none;
-    display: inline-flex;
-    flex-direction: column; /* Mette l'icona sopra e il testo sotto */
+.fourthBlock__showMoreButton {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    cursor: default; /* Niente manina qui */
-    padding: 0 20px;
-    position: relative;
-    z-index: 2;
+    justify-content: flex-start;
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 0;
+    cursor: pointer;
     margin-top: -10px;
 }
 
-/* Stile per l'icona (sempre fissa e statica) */
-.fourthBlock__showMoreBtn .arrow-icon {
-    color: #00538a;
-    font-size: 1rem; /* Modifica per renderla più grande o più piccola */
-    margin-bottom: 5px; /* Spazio tra freccia e testo */
+.fourthBlock__showMoreButton__arrow-icon {
+    color: #dee2e6;
+    font-size: 2rem;
+    line-height: 1; /* Rimuove lo spazio vuoto extra del font */
+    background-color: #ffffff; /* Copre la riga dietro l'icona */
+    padding: 0;
+    margin: 0; /* Azzera margini per massima precisione */
 }
 
-/* Stile del TESTO (L'unico che reagisce) */
-.fourthBlock__showMoreBtn--text {
+.fourthBlock__showMoreButton__text {
     color: #00538a;
-    font-weight: 800;
-    font-size: 0.85rem;
+    font-weight: 700;
+    font-size: 1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    cursor: pointer; /* La manina appare solo sul testo */
+    background-color: #fff;
+    padding: 5px 0; /* Un po' di spazio tra icona e testo */
+    transition: color 0.1s ease;
+}
+
+.fourthBlock__showMoreButton:hover .fourthBlock__showMoreButton__text {
+    color: #1a1a1a;
+}
+
+
+.fourthBlock__extraContent {
+    width: 100%;
+    display: flex;
+}
+
+.fourthBlock__extraContent__article {
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+}
+
+
+
+
+.fourthBlock__extraContent__image--link {
+    display: block;
+
+}
+
+.fourthBlock__extraContent__titleContainer {
+    padding: 0.5rem 0;
+}
+
+.fourthBlock__extraContent__title--link {
+    text-decoration: none;
+    display: inline;
+}
+
+.fourthBlock__extraContent__title {
+    display: inline;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1;
+    margin: 0;
+    overflow-wrap: break-word;
     transition: color 0.2s ease;
 }
 
-/* Solo il testo cambia colore all'hover */
-.fourthBlock__showMoreBtn--text:hover {
-    color: #003d66;
+.fourthBlock__extraContent__title:hover {
+    color: #00538a;
 }
