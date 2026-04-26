@@ -796,25 +796,264 @@
 .eventsWidget__arrow--left { left: -15px; }
 .eventsWidget__arrow--right { right: -15px; }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sixthBlock__header__link {
+    /* 1. Cambiato da block a flex per controllare l'allineamento */
+    display: flex;
+
+    /* 2. Forza l'allineamento in alto (start) */
+    align-items: flex-start;
+    /* 2. Espansione totale */
+    width: 100%;
+    height: 100%;
+
+    /* 3. Stile (opzionale) */
+    text-decoration: none;
+    /* Cruciale: azzera l'interlinea per il perfetto allineamento in alto */
+    line-height: 1;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: visible;
+}
+
+
+
+.eventsWidget__actions{
+    width: 100%;
+    padding: 0 0.5rem 0 0;
+    display: flex;
+}
+
+.sixthBlock__header__calendar--link {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sixthBlock__header__calendar--icon{
+    padding-right: 0.5rem;
+}
+
+.sixthBlock__header__responsive-text{
+    font-size: 0.7rem;
+}
+
+.sixthBlock__header__plus--link {
+    display: flex;
+    align-items: center;
+}
+
+.sixthBlock__header__plus--icon {
+    -webkit-text-stroke:1px #1a1a1a;
+}
+
+
+/* Nascondi il testo nel range 620px - 770px */
+
+@media (min-width: 620px) and (max-width: 770px) {
+    .sixthBlock__header__responsive-text {
+        display: none;
+    }
+}
+
+/* Nascondi il testo sotto i 400px */
+@media (max-width: 399px) {
+    .sixthBlock__header__responsive-text {
+        display: none;
+    }
+}
+
+
+
+
+
+
+.sixthBlock__eventsContainer {
+    height: 220px;
+    overflow: hidden; /* Taglia qualsiasi cosa provi a uscire */
+    padding: 0.75rem;
+    display: flex;
+}
+
+
+/* Stile per i due blocchi laterali */
+.sideBox {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.sixthBlock__section__sideBox__icon {
+    color: #1a1a1a;
+    font-size: 1rem;
+    margin: 0;
+    -webkit-text-stroke: 1.5px #1a1a1a;
+}
+
+.sixthBlock__sideBox__button {
+    padding: 0;
+    border: 0;
+}
+
+.main-center {
+    flex-grow: 1;
+    display: block; /* Cambiato da flex a block per gestire l'overflow-x correttamente */
+    overflow-x: auto; /* Permette lo scroll orizzontale */
+    scroll-behavior: smooth; /* Movimento fluido al click dei bottoni */
+    scrollbar-width: none; /* Nasconde barra scroll su Firefox */
+    -ms-overflow-style: none; /* Nasconde barra scroll su IE/Edge */
+
+    scroll-snap-type: x mandatory;
+
+    overflow-y: hidden; /* Impedisce scroll verticale interno */
+    height: 100%;
+
+}
+
+/* Nasconde barra scroll su Chrome, Safari e Opera */
+.main-center::-webkit-scrollbar {
+    display: none;
+}
+
+.event-slider {
+    /* Mantiene le card in linea senza mandarle a capo */
+    display: flex;
+    height: 100%;
+}
+
 /* --- LE CARD --- */
 .event-card {
-    width: 220px; /* Larghezza fissa per ogni card */
-    scroll-snap-align: start; /* Punto di ancoraggio per lo scroll */
     position: relative;
-    cursor: pointer;
+    flex-shrink: 0; /* Impedisce il collasso */
+    padding: 0;
+    scroll-snap-align: start;
+}
+
+.eventCard--link {
+    display: flex;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    height: 100%;
+    flex-direction: column;
+
+}
+
+
+/* --- LOGICA RESPONSIVE --- */
+
+/* Sopra 1300px: 6 card */
+@media (min-width: 1301px) {
+    .event-card { width: calc((100% / 6) ); }
+}
+
+/* Da 1100px a 1300px: 5 card */
+@media (min-width: 1101px) and (max-width: 1300px) {
+    .event-card { width: calc((100% / 5)); }
+}
+
+/* Da 920px a 1100px: 4 card */
+@media (min-width: 921px) and (max-width: 1100px) {
+    .event-card { width: calc((100% / 4) ); }
+}
+
+/* Da 760px a 920px: 3 card */
+@media (min-width: 761px) and (max-width: 920px) {
+    .event-card { width: calc((100% / 3) ); }
+}
+
+/* Da 620px a 760px: 2 card */
+@media (min-width: 621px) and (max-width: 760px) {
+    .event-card { width: calc((100% / 2) ); }
+}
+
+/* Sotto i 620px: 3 card */
+@media (max-width: 620px) {
+    .event-card { width: calc((100% / 3) ); }
 }
 
 .event-card__image-area {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3; /* Mantiene le immagini rettangolari */
     overflow: hidden;
 }
 
 .event-card__img {
     width: 100%;
-    height: 100%;
+    height: 140px;
     object-fit: cover;
+    display: block;
 }
 
 /* Il Badge in alto a sinistra (Sat, Apr 25) */
@@ -822,6 +1061,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    width:100% ;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     font-size: 0.75rem;
@@ -829,57 +1069,110 @@
     z-index: 2;
 }
 
-/* --- EFFETTO HOVER BLU (Immagine 2) --- */
-.event-card__hover-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #0056b3; /* Il blu scuro della tua immagine */
-    color: white;
+
+
+.event-card__info {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Allinea il testo in basso */
-    padding: 10px;
-
-    /* Gestione animazione */
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 3;
+    flex-direction: column;         /* Dispone gli elementi uno sotto l'altro */
+    justify-content: space-between; /* Spinge il primo in alto e l'ultimo in basso */
+    flex-grow: 1;                   /* OCCUPA TUTTO LO SPAZIO RESTANTE */
 }
 
-/* Quando il mouse entra nella card, mostra l'overlay */
-.event-card:hover .event-card__hover-overlay {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Testo normale sotto l'immagine */
 .event-card__info-title {
     font-size: 0.9rem;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* Mette i puntini se il titolo è troppo lungo */
-}
-.event-card__info-location {
-    font-size: 0.8rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    color: #1a1a1a;
+    /* Assicurati che non ci siano margini che disturbino l'allineamento */
+    margin: 0;
 }
 
+.event-card__info-location {
+    font-size: 0.8rem;
+    margin: 0;
+    color: #6c757d !important;
+}
+
+
+
+
+
+
+
+
+
+
+.sixthBlock__footer__calendar--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.5rem 0 0;
+}
+
+
+.sixthBlock__footer__calendar--icon{
+    padding: 0 0.5rem 0 0.5rem;
+    font-size: 1.75rem;
+    color: #6c757d;
+    align-items: center;
+    justify-content: center;
+}
+
+
 /* --- DATE SELECTOR --- */
-.eventsWidget__dates-track {
+/*.eventsWidget__dates-track {
     scrollbar-width: none;
+    display:flex;
+    flex-grow: 1;
+    flex-direction: row;
+    overflow: hidden;
+    gap:0;
 }
 .eventsWidget__dates-track::-webkit-scrollbar { display: none; }
 
 .date-item {
     color: #6c757d;
     min-width: 40px;
-    transition: color 0.2s ease;
-}
-.date-item:hover, .date-item.active {
-    color: #000;
-    font-weight: bold;
+    text-decoration: none;
+    padding: 0 0.5rem;
+    flex-shrink: 0;
+}*/
+
+.eventsWidget__dates-track {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    overflow: hidden; /* Nasconde l'eccesso */
+    white-space: nowrap; /* Forza gli elementi su una riga */
 }
 
+.date-item {
+    flex-shrink: 0; /* IMPEDISCE di rimpicciolire l'elemento */
+    width: 50px;    /* Larghezza fissa per rendere i calcoli precisi */
+    text-decoration: none;
+    color: #6c757d;
+    visibility: visible;
+    text-align: center;
+}
 
+/* Classe che useremo per nascondere l'elemento tagliato */
+.is-hidden {
+    visibility: hidden;
+    /* Usiamo visibility invece di display:none per non rompere il calcolo degli spazi */
+}
+
+.date-item__day{
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    width: 100%;
+}
+
+.date-item__num {
+    display: block;
+    font-size: 1.5rem;
+}
 
 

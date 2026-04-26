@@ -113,6 +113,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector('.main-center');
+    const btnLeft = document.getElementById('sixthBlock__sideBox__leftButton');
+    const btnRight = document.getElementById('sixthBlock__sideBox__rightButton');
+
+    // Funzione che calcola la larghezza visibile del blocco centrale
+    const getScrollStep = () => {
+        // slider.offsetWidth restituisce la larghezza esatta del div .main-center
+        return slider ? slider.offsetWidth : 300;
+    };
+
+    btnRight.addEventListener('click', () => {
+        // Sposta lo scroll a destra dell'intera larghezza visibile
+        slider.scrollLeft += getScrollStep();
+    });
+
+    btnLeft.addEventListener('click', () => {
+        // Sposta lo scroll a sinistra dell'intera larghezza visibile
+        slider.scrollLeft -= getScrollStep();
+    });
+});
 
 
+function updateVisibleDates() {
+    const track = document.querySelector('.eventsWidget__dates-track');
+    const items = track.querySelectorAll('.date-item');
 
+    // Larghezza totale disponibile nel contenitore
+    const containerWidth = track.offsetWidth;
+    let currentWidth = 0;
+
+    items.forEach(item => {
+        // Calcoliamo la larghezza dell'elemento incluso il margine/gap
+        const itemWidth = item.offsetWidth;
+        currentWidth += itemWidth;
+
+        if (currentWidth > containerWidth) {
+            // Se la somma supera il contenitore, nascondi l'elemento
+            item.style.visibility = 'hidden';
+            item.style.pointerEvents = 'none'; // Rende l'elemento non cliccabile
+        } else {
+            // Altrimenti mostralo
+            item.style.visibility = 'visible';
+            item.style.pointerEvents = 'auto';
+        }
+    });
+}
+
+// Esegui la funzione al caricamento e ogni volta che ridimensioni la finestra
+window.addEventListener('load', updateVisibleDates);
+window.addEventListener('resize', updateVisibleDates);
