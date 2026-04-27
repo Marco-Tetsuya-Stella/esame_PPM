@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector('.main-center');
+    const slider = document.querySelector('.sixthBlock__eventsContainer__mainCenter');
     const btnLeft = document.getElementById('sixthBlock__sideBox__leftButton');
     const btnRight = document.getElementById('sixthBlock__sideBox__rightButton');
 
@@ -137,8 +137,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function updateVisibleDates() {
-    const track = document.querySelector('.eventsWidget__dates-track');
-    const items = track.querySelectorAll('.date-item');
+    const track = document.querySelector('.sixthblock__footer__datesContainer');
+    const items = track.querySelectorAll('.sixthblock__footer__dateItem');
 
     // Larghezza totale disponibile nel contenitore
     const containerWidth = track.offsetWidth;
