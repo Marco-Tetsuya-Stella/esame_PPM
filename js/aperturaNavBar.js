@@ -164,3 +164,30 @@ function updateVisibleDates() {
 // Esegui la funzione al caricamento e ogni volta che ridimensioni la finestra
 window.addEventListener('load', updateVisibleDates);
 window.addEventListener('resize', updateVisibleDates);
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Selezioniamo tutti i trigger (le icone/pulsanti)
+    const triggers = document.querySelectorAll('.menu-trigger');
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+            // 2. Troviamo il contenitore padre più vicino (il div .footer-item)
+            const parent = this.closest('.footerTop__collapseContainer');
+
+            // 3. All'interno di quel padre, cerchiamo il menu e l'icona
+            const menu = parent.querySelector('.customMenuContainer');
+            const icon = this.querySelector('.collapse__icon');
+
+            // 4. Toggle delle classi (Aggiunge se non c'è, toglie se c'è)
+            menu.classList.toggle('is-open');
+            icon.classList.toggle('is-open');
+        });
+    });
+});
+
+
+
+

@@ -91,7 +91,7 @@
     white-space: nowrap;
     flex-shrink: 0;
     color: #005d9c !important;
-    font-family: "Impact", "Arial Narrow", "Helvetica Inserat", "Franklin Gothic Bold", sans-serif;
+    font-family: "Impact", "Arial Narrow", "Helvetica Inserat", sans-serif;
     font-weight: 10!important;
     text-transform: none;       /* Mantieni maiuscole/minuscole originali */
     letter-spacing: -2px;     /* Opzionale: stringe leggermente le lettere come nell'originale */
