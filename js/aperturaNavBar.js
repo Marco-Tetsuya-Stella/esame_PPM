@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Selezioniamo tutti gli switcher (Checkbox) in un'unica costante
     const allSwitchers = document.querySelectorAll(
-        '#leftNav-menu-switcher, #navRight-menu-switcher, #search-top-switcher'
+        '#header__firstBlock__nav-menu-switcher, #navRight-menu-switcher, #search-top-switcher'
     );
 
     allSwitchers.forEach(sw => {

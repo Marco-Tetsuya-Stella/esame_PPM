@@ -1,12 +1,24 @@
+/*===================
+    MAIN CONTAINER
+===================*/
+.main__container{
+
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    /* Un'altezza elevata per forzare la comparsa della barra di scorrimento */
+    background-color: #F9F9F9;
+    margin: 5rem 0 0 0;
+}
+
 /*------------
     FIRST BLOCK
  -------------*/
 
 .firstBlock {
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     width: 100%;
     max-width: 1300px;
-    margin: 5rem auto;
+    margin: 0 auto;
 }
 
 
@@ -104,7 +116,6 @@
     }
 }
 
-
 /*----------------------------
     SECTION SIDE HEADLINE
  ---------------------------*/
@@ -178,7 +189,7 @@
 
 .firstBlock__side__subscribeButton:hover {
     background-color: #005696;
-    color: white;
+    color: #ffffff;
     border-color: #005696;
 }
 
@@ -201,7 +212,7 @@
 
 .firstBlock__aside__container {
     width: 100%;
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -227,7 +238,7 @@
  ------------------*/
 
 .secondBlock {
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     width: 100%;
     max-width: 1300px;
     margin: 10rem auto;
@@ -239,12 +250,14 @@
 
 .secondBlock__recommended {
     display: flex;
+    background-color: #F9F9F9;
     border-bottom: 2px solid #005696;
     align-items: center;
     padding: 0;
 }
 
 .secondBlock__recommended__header {
+
     font-size: 1.5rem;
     color: #005696;
     font-family: sans-serif;
@@ -259,6 +272,7 @@
 }
 
 .secondBlock__recommendedArticles {
+    background-color: #F9F9F9;
     padding: 0.25rem 0.5rem;
     display: flex;
     flex-direction: column;
@@ -280,8 +294,8 @@
     justify-content: center;
 
     background-color: #005689;
-    color: white;
-    font-weight: bold;
+    color: #ffffff;
+    font-weight: 700;
     font-size: 1.2rem;
 
     min-width: 32px;
@@ -309,7 +323,7 @@
     THIRD BLOCK
  -----------------*/
 .thirdBlock {
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     width: 100%;
     max-width: 1300px;
     margin: 10rem auto;
@@ -423,7 +437,7 @@
 --------------*/
 
 .fourthBlock {
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     width: 100%;
     max-width: 1300px;
     margin: 10rem auto;
@@ -538,7 +552,7 @@
 
 .fourthBlock__aside__container {
     width: 100%;
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -590,7 +604,7 @@
     color: #dee2e6;
     font-size: 3rem;
     line-height: 1; /* Rimuove lo spazio vuoto extra del font */
-    background-color: #ffffff; /* Copre la riga dietro l'icona */
+    background-color: #F9F9F9; /* Copre la riga dietro l'icona */
     padding: 0;
     margin: 0; /* Azzera margini per massima precisione */
 }
@@ -601,7 +615,7 @@
     font-size: 1rem;
 
     text-transform: uppercase;
-    background-color: #fff;
+    background-color: #F9F9F9;
     padding: 5px 0; /* Un po' di spazio tra icona e testo */
     transition: color 0.1s ease;
 }
@@ -658,7 +672,7 @@
     FIFTH BLOCK
  */
 .fifthBlock {
-    background-color: #ffffff;
+    background-color: #F9F9F9;
     width: 100%;
     max-width: 1300px;
     margin: 10rem auto;
@@ -758,7 +772,7 @@
 ---------------*/
 
 .sixthBlock{
-    background-color: #ddd;
+    background-color: #F9F9F9;
     width: 100%;
     padding: 1rem 1rem;
 }

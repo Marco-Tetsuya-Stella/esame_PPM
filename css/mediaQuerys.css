@@ -3,12 +3,12 @@
 
 
     /* 2. Nascondi la scritta "All Sections" (ma lascia l'hamburger) */
-    #menu-toggle span {
+    #header__firstBlock__menu-toggle span {
         display: none !important;
     }
 
     /* Riduciamo leggermente il contenitore per dare più spazio al logo */
-    .All-selections-sideBar-container {
+    .header__firstBlock__All-selections-sideBar-container {
         font-size: clamp(0.9rem, 2.5vw, 1.2rem);
     }
 }

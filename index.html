@@ -33,57 +33,57 @@
 <body>
 
 
-<header class="sticky-part header-container__height">
-    <div class="container-fluid header-container__height  bg-white">
-        <div class="row headerContainer--FirstRow__height align-items-center g-0 flex-nowrap ">
+<header class="sticky-part">
+    <div class="container-fluid header-container__height">
+        <div class="row headerContainer__firstRow--height align-items-center g-0 flex-nowrap ">
 
-            <div class="" style="width:30% ">
-                <div class="All-selections-sideBar-container">
-                    <input type="checkbox" id="leftNav-menu-switcher" class="d-none">
+            <div class="header__firstBlock">
+                <div class="header__firstBlock__All-selections-sideBar-container">
+                    <input type="checkbox" id="header__firstBlock__nav-menu-switcher" class="d-none">
 
-                    <label for="leftNav-menu-switcher" id="menu-toggle" class="btn nav--leftButton__attributes mb-0" style="cursor: pointer;position: relative; z-index: 1100;">
-                        <i class="bi bi-list menu-icon fs-4"></i> <span class="fw-bold d-none d-md-inline ms-2 text-dark">All Sections</span>
+                    <label for="header__firstBlock__nav-menu-switcher" id="header__firstBlock__menu-toggle" class="btn header__firstBlock__navOpenButton--attributes">
+                        <i class="bi bi-list header__firstBlock__menuIcon"></i> <span class="header__firstBlock__menuSpan d-none d-md-inline">All Sections</span>
                     </label>
 
-                    <label for="leftNav-menu-switcher" class="leftNav-custom-backdrop"></label>
+                    <label for="header__firstBlock__nav-menu-switcher" class="header__firstBlock__nav-custom-backdrop"></label>
 
-                    <div id="leftSidebarMenu" class="leftNav-custom-sidebar">
+                    <div id="leftSidebarMenu" class="header__firstBlock__nav-custom-sidebar">
 
-                        <div class="h-100 custom-sidebar-div__scrollballHidden">
+                        <div class="header__firstBlcok__custom-sidebar--scrollballHidden">
 
-                            <div class="leftNav--FirstBlock__structure">
+                            <div class="header__firstBlock__nav__firstBlockContainer">
                                 <div class="pt-3 d-flex justify-content-center">
-                                    <a href="#" id="mega-subscribe-button" class="sideNavbar--btn__custom">
+                                    <a href="#" id="mega-subscribe-button" class="sideNavbar__commonButton">
                                         <span>Subscribe Now</span>
                                     </a>
                                 </div>
 
-                                <div class="d-flex align-items-start wheater-container " id="leftNavbar--wheatherContainer">
-                                    <div class="d-flex">
-                                        <a class="wheatherContainer--a__meteo text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
-                                            <span class="wheatherContainer--span__temperature text-dark">48°F</span>
-                                            <i class="bi bi-clouds leftNav--i__bi-clouds fs-3 text-dark ms-1"></i>
-                                        </a>
-                                    </div>
+                                <div class="header__common__wheaterContainer" id="leftNavbar--wheatherContainer">
+
+                                    <a class="wheatherContainer--link" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
+                                        <span class="wheatherContainer__span--temperature ">48°F</span>
+                                        <i class="bi bi-clouds nav__i--bi-clouds"></i>
+                                    </a>
 
 
-                                    <div class="date-container">
+
+                                    <div class="header__common__dateContainer">
                                         <div class="dateConatiner__date ">
                                             Friday, April 17th 2026
                                         </div>
-                                        <a href="#" class="e-edition-link text-decoration-none dateConatiner--a__E-Edition">
+                                        <a href="#" class="dateConatiner--link">
                                             <span>E-Edition</span>
                                         </a>
                                     </div>
                                 </div>
 
-                                <a href="#" class=" align-items-center text-decoration-none text-dark ps-1 pe-1 me">
+                                <a href="#" class="header__firstBlcok__nav__homePage--link">
                                     <i class="bi bi-house-door-fill me-2"></i>
                                     <span class="fw-bold">Home Page</span>
                                 </a>
                             </div>
 
-                            <div class="leftNav--SecondBlock__structure">
+                            <div class="header__firstBlock__nav__secondBlockContainer">
 
                                 <details class="accordion-section">
                                     <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
@@ -245,7 +245,7 @@
                                     Sign up for email newsletters
                                 </div>
                                 <div class=" d-flex justify-content-center">
-                                    <a href="#"  class="sideNavbar--btn__custom">
+                                    <a href="#"  class="sideNavbar__commonButton">
                                         <span>Sign Up</span>
                                     </a>
                                 </div>
@@ -291,7 +291,7 @@
                         <label for="navRight-menu-switcher" class="navRight-custom-backdrop"></label>
 
                         <div id="rightSidebarMenu" class="navRight-custom-sidebar">
-                            <div class="h-100 custom-sidebar-div__scrollballHidden">
+                            <div class="h-100 header__firstBlcok__custom-sidebar--scrollballHidden">
                                 <div class="rightNav--FirstBlock__structure">
                                     <div class= "slideNav--listGoroup--a__style">
                                         <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0 ">
@@ -311,7 +311,7 @@
                                         Sign up for email newsletters
                                     </div>
                                     <div class=" d-flex justify-content-center">
-                                        <a href="#"  class="sideNavbar--btn__custom">
+                                        <a href="#"  class="sideNavbar__commonButton">
                                             <span>Sign Up</span>
                                         </a>
                                     </div>
@@ -363,18 +363,18 @@
                 <div class="" style="width:30%">
                     <div class="d-flex align-items-start wheater-container" id="secondRow--wheaterContainer" style="padding-left: 30px">
                         <div class="d-flex">
-                            <a class="wheatherContainer--a__meteo text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
-                                <span class="wheatherContainer--span__temperature text-dark">48°F</span>
-                                <i class="bi bi-clouds leftNav--i__bi-clouds fs-3 text-dark ms-1"></i>
+                            <a class="wheatherContainer--link text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
+                                <span class="wheatherContainer__span--temperature text-dark">48°F</span>
+                                <i class="bi bi-clouds nav__i--bi-clouds fs-3 text-dark ms-1"></i>
                             </a>
                         </div>
 
 
-                        <div class="date-container">
+                        <div class="header__common__dateContainer">
                             <div class="dateConatiner__date ">
                                 Friday, April 17th 2026
                             </div>
-                            <a href="#" class="e-edition-link text-decoration-none dateConatiner--a__E-Edition">
+                            <a href="#" class="e-edition-link text-decoration-none dateConatiner--link">
                                 <span>E-Edition</span>
                             </a>
                         </div>
@@ -458,9 +458,9 @@
 </header>
 
 
-<main class="container-fluid g-0 mt-5">
+<main class="container-fluid g-0 main__container">
 
-    <!--
+
     <div class="row g-0 firstBlock ">
         <section class="col-12 col-md-9 d-flex flex-wrap  p-2">
 
@@ -690,7 +690,7 @@
             <div class="container-fluid col-12 secondBlock__recommendedArticles__container">
 
                 <div class="col-12 col-sm-6 secondBlock__recommendedArticles">
-                    <div class="col-12 bg-white secondBlock__recommendedArticle">
+                    <div class="col-12 secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 1
@@ -700,7 +700,7 @@
                             </h2>
                         </a>
                     </div>
-                    <div class="col-12 bg-white secondBlock__recommendedArticle">
+                    <div class="col-12 secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 2
@@ -710,7 +710,7 @@
                             </h2>
                         </a>
                     </div>
-                    <div class="col-12 bg-white secondBlock__recommendedArticle">
+                    <div class="col-12 secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 3
@@ -720,7 +720,7 @@
                             </h2>
                         </a>
                     </div>
-                    <div class="col-12 bg-white secondBlock__recommendedArticle">
+                    <div class="col-12 secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 4
@@ -730,7 +730,7 @@
                             </h2>
                         </a>
                     </div>
-                    <div class="col-12 bg-white secondBlock__recommendedArticle">
+                    <div class="col-12 secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 5
@@ -743,7 +743,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 secondBlock__recommendedArticles ">
-                    <div class="col-12 bg-white  secondBlock__recommendedArticle">
+                    <div class="col-12  secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 6
@@ -753,7 +753,7 @@
                             </h2>
                         </a>
                     </div>
-                    <div class="col-12 bg-white secondBlock__recommendedArticle">
+                    <div class="col-12 secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 7
@@ -763,7 +763,7 @@
                             </h2>
                         </a>
                     </div>
-                    <div class="col-12 bg-white secondBlock__recommendedArticle">
+                    <div class="col-12 secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 8
@@ -773,7 +773,7 @@
                             </h2>
                         </a>
                     </div>
-                    <div class="col-12 bg-white secondBlock__recommendedArticle">
+                    <div class="col-12 secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 9
@@ -783,7 +783,7 @@
                             </h2>
                         </a>
                     </div>
-                    <div class="col-12 bg-white secondBlock__recommendedArticle">
+                    <div class="col-12 secondBlock__recommendedArticle">
                         <a href="#" class="secondBlock__recommendedArticleLink">
                             <div class="secondBlock__recommendedArticleIcon">
                                 10
@@ -2028,9 +2028,6 @@
         </div>
         </div>
     </div>
-    -->
-
-
 
 
 
@@ -2039,8 +2036,6 @@
 
 
 <footer>
-
-
 
     <div class="row g-0  footerTop">
 
@@ -2285,10 +2280,6 @@
         </div>
 
     </div>
-
-
-
-
 
 
 </footer>

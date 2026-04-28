@@ -1,23 +1,14 @@
-/* --- 1. Gestione Icona Hamburger -> X (Cambio secco) --- */
-
-.menu-icon {
-    font-family: "bootstrap-icons" !important;
-    font-style: normal;
-    display: inline-block;
-}
-
-
-/* =========================================
+/*==========================================
    ALTEZZE CONTAINER HEADER
-   ========================================= */
+============================================ */
 .header-container__height {
-
+    background-color: #F9F9F9;
     width: 100%;
-    margin: 0px 0px 0px 0px;
+    margin: 0;
     padding: 0;
 }
 
-.headerContainer--FirstRow__height {
+.headerContainer__firstRow--height {
     height: 64px;
 }
 
@@ -26,13 +17,10 @@
     flex-direction: column;
     width: 100%;
     height: 162px;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     justify-content: center;
 }
-
-
-
 
 .headerContainer--SecondRow__height {
     height: 64px;
@@ -57,125 +45,236 @@
 
 
 
-
-
-
-
-
-
-/* Il titolo Boston Herald */
-/* Il contenitore deve espandersi per tutta l'altezza della colonna */
-.navbar-title-container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*==========================================================================================
+    FIRST BLOCK
+==========================================================================================*/
+.header__firstBlock {
+    width: 30%;
 }
 
-.navbar--title {
-
-    text-decoration: none !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-
-    font-size: 3.6rem !important;
-    transition: font-size 0.1s ease;
-
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1;
-    white-space: nowrap;
-    flex-shrink: 0;
-    color: #005d9c !important;
-    font-family: "Impact", "Arial Narrow", "Helvetica Inserat", sans-serif;
-    font-weight: 10!important;
-    text-transform: none;       /* Mantieni maiuscole/minuscole originali */
-    letter-spacing: -2px;     /* Opzionale: stringe leggermente le lettere come nell'originale */
-}
-
-/* Effetto Hover (opzionale ma consigliato per i link) */
-.navbar--title:hover {
-    color: #005d9c !important; /* Mantiene il colore originale */
-}
-
-
-
-
-
-
-
-/* Il contenitore ora comanda la dimensione di base per i suoi figli */
-.All-selections-sideBar-container {
+.header__firstBlock__All-selections-sideBar-container {
     flex-shrink: 1;
     display: flex;
     align-items: center;
-    /* Font-size fluido applicato alla radice del blocco menu */
     font-size: clamp(1rem, 3vw, 1.5rem);
     transition: all 0.2s ease;
     padding-left: clamp(5px, 3vw, 25px);
 }
 
-/* L'icona erediterà il font-size dal contenitore (usiamo em per proporzionalità) */
-#menu-toggle .menu-icon {
-    font-size: 1.2em !important; /* Sarà il 20% più grande del testo base del container */
-    line-height: 1;
+.header__firstBlock__navOpenButton--attributes {
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
 }
 
-/* Anche lo span erediterà il font-size */
-#menu-toggle span {
-    font-size: 1em; /* Stessa dimensione del container */
+.header__firstBlock__menuIcon {
+    font-style: normal;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #000000;
 }
 
+.header__firstBlock__menuSpan{
+    font-weight: 700;
+    color: #000000;
+    margin-left: 0.5rem;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*-- LATO SINISTRO--*/
-/* --- CONFIGURAZIONE CURSORE E BOTTONE --- */
-#menu-toggle {
+#header__firstBlock__menu-toggle {
     cursor: pointer !important;
     display: flex;
     align-items: center;
-    z-index: 1100; /* Sopra a tutto */
+    z-index: 1100;
     position: relative;
 }
 
-/* Forza cursore puntatore anche sull'icona specifica */
-#menu-toggle .menu-icon,
-#menu-toggle .menu-icon::before {
-    cursor: pointer !important;
-}
-
-/* --- CAMBIO ICONA (Hamburger -> Croce) --- */
-.menu-icon::before {
-    display: inline-block;
-    /*font-family: "bootstrap-icons" !important;*/
-    content: "\f479" !important; /* Hamburger */
-    transition: transform 0.2s;
-}
-
-/* Quando la checkbox è spuntata (Menu Aperto) */
-#leftNav-menu-switcher:checked + #menu-toggle .menu-icon::before {
+#header__firstBlock__nav-menu-switcher:checked + #header__firstBlock__menu-toggle .header__firstBlock__menuIcon::before {
     content: "\f62a" !important;
 }
 
-/* Nascondi il testo quando aperto */
-#leftNav-menu-switcher:checked + #menu-toggle span {
-    display: none !important;
+/*======================================================================================================
+   SISTEMA MENU  OFF-CANVAS SINISTRO
+=======================================================================================================*/
+.header__firstBlock__nav-custom-sidebar {
+    position: fixed;
+    top: 64px;
+    left: -320px;
+    width: 300px;
+    height: calc(100vh - 64px);
+    background-color: #F9F9F9;
+    z-index: 1060;
+    border-top: 1px solid #000000;
+    font-size: 16px !important;
+    transition: none;
 }
+
+#header__firstBlock__nav-menu-switcher:checked ~ .header__firstBlock__nav-custom-sidebar {
+    left: 0;
+    transition: left 0.3s ease-out;
+}
+
+.header__firstBlock__nav-custom-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    background-clip: content-box;
+    border-top: 64px solid transparent;
+    cursor: default;
+    display: none;
+}
+
+#header__firstBlock__nav-menu-switcher:checked ~ .header__firstBlock__nav-custom-backdrop {
+    display: block;
+}
+
+body:has(#header__firstBlock__nav-menu-switcher:checked) {
+    overflow: hidden;
+}
+
+.header__firstBlcok__custom-sidebar--scrollballHidden {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 100%;
+}
+
+.header__firstBlcok__custom-sidebar--scrollballHidden::-webkit-scrollbar {
+    display: none;
+}
+
+/*===========================================================
+    OFF-CANVAS SINISTRO FIRST BLOCK
+============================================================*/
+.header__firstBlock__nav__firstBlockContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.2rem;
+}
+
+.header__common__wheaterContainer {
+    padding: 0 10px 0 10px;
+    width: 100%;
+    font-size: 0.5rem !important;
+    display: flex;
+    align-items: start;
+}
+
+.wheatherContainer--link {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.wheatherContainer__span--temperature {
+    font-size: 1rem;
+    font-weight: 700 !important;
+    position: relative;
+    color: #000000;
+    margin-top: 0 !important;
+    margin-right: 2px !important;
+}
+
+.nav__i--bi-clouds {
+    line-height: 1;
+    display: inline-block;
+    font-size: 1.75rem;
+    color: #000000;
+    margin-left: 0.25rem;
+}
+
+.header__common__dateContainer {
+    margin-left: 0.8rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1.1;
+    font-family: "Noto Sans", Helvetica, sans-serif;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dateConatiner__date {
+    font-size: 1.05rem ;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.dateConatiner--link {
+    font-weight: 400;
+    text-transform: none;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #000000;
+    text-decoration: none;
+    transition: none;
+}
+
+.dateConatiner--link:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.header__firstBlcok__nav__homePage--link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+
+/*=====================================================
+   SECONDO BLOCCO  OFF-CANVAS SINISTRO (Puro CSS)
+======================================================*/
+.header__firstBlock__nav__secondBlockContainer {
+    display: flex;          /* Attiva il motore per gestire lo spazio */
+    flex-direction: column; /* Mette gli elementi in verticale */
+    gap: 10px;              /* Crea lo spazio tra i vari accordion */
+    flex-shrink: 0;
+    font-size: 15px !important;
+    padding: 0 0 40px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* 1. Blocca la struttura di ogni riga */
+.accordion-section summary,
+.header__common__wheaterContainer,
+#mega-subscribe-button {
+    flex-shrink: 0 !important; /* Impedisce al browser di "schiacciare" l'altezza */
+    min-height: 30px;          /* Altezza minima garantita per ogni riga */
+    display: flex;
+    align-items: center;       /* Mantiene il contenuto centrato verticalmente */
+}
+
+
+
+
+
+
+
+
 
 /* --- 2. Reset Effetti Hover (Niente grigio al passaggio del mouse) --- */
 
@@ -202,218 +301,61 @@
 header {
 
     z-index: 1060 !important;
-    background-color: white !important;
+    background-color: white;
 }
-
-
-
-/* =========================================
-   SISTEMA MENU  OFF-CANVAS SINISTRO (Puro CSS)
-   ========================================= */
-
-/* --- 1. NASCONDI TESTO BOTTONE QUANDO APERTO --- */
-#leftNav-menu-switcher:checked + #menu-toggle span {
-    display: none !important;
-}
-
-/* --- 2. STILE BASE DEL MENU (Stato Chiuso) --- */
-.leftNav-custom-sidebar {
-    position: fixed;
-    top: 64px;
-    left: -320px; /* Spostato fuori dallo schermo a sinistra */
-    width: 300px;
-    height: calc(100vh - 64px);
-    background-color: #ffffff;
-    z-index: 1060;
-    border-top: 1px solid #000000;
-    font-size: 16px !important;
-    /* Nessuna transizione qui: quando si chiude, sparisce DI SCATTO */
-    transition: none;
-}
-
-/* --- 3. ANIMAZIONE MENU (Stato Aperto) --- */
-#leftNav-menu-switcher:checked ~ .leftNav-custom-sidebar {
-    left: 0; /* Entra nello schermo */
-
-    /* Transizione morbida SOLO in entrata */
-    transition: left 0.3s ease-out;
-}
-
-/* --- 4. STILE BASE DEL BACKDROP (Stato Chiuso) --- */
-.leftNav-custom-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1050;
-
-    /* Il trucco per lasciare visibile l'header ma coprirlo per i click */
-    background-clip: content-box;
-    border-top: 64px solid transparent;
-    cursor: default;
-
-    /* Spento di default */
-    display: none;
-}
-
-
-
-/* --- 5. VISIBILITÀ BACKDROP (Stato Aperto) --- */
-#leftNav-menu-switcher:checked ~ .leftNav-custom-backdrop {
-    /* Appare all'istante, niente fade in/out fastidiosi */
-    display: block;
-}
-
-
-
-/* Quando la checkbox è selezionata, blocca lo scroll del body */
-body:has(#leftNav-menu-switcher:checked) {
-    overflow: hidden;
-}
-
-
-
-/* 1. Blocca la struttura di ogni riga */
-.accordion-section summary,
-.wheater-container,
-#mega-subscribe-button {
-    flex-shrink: 0 !important; /* Impedisce al browser di "schiacciare" l'altezza */
-    min-height: 30px;          /* Altezza minima garantita per ogni riga */
-    display: flex;
-    align-items: center;       /* Mantiene il contenuto centrato verticalmente */
-}
-
-
-.leftNav--FirstBlock__structure {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* <--- Questo è il modo moderno per separare i blocchi */
-    padding: 5px;
-}
-
-
-
-
-.custom-sidebar-div__scrollballHidden {
-    overflow-y: auto;            /* Permette lo scorrimento verticale */
-    scrollbar-width: none;       /* Nasconde la barra su Firefox */
-    -ms-overflow-style: none;    /*Nasconde internet expler edge*/
-}
-
-.custom-sidebar-div__scrollballHidden::-webkit-scrollbar {       /*safari,chrome,opera*/
-    display: none;
-}
-
-
 
 /* =========================================
    PRIMO BLOCCO  OFF-CANVAS SINISTRO (Puro CSS)
    ========================================= */
 
-/* =========================================
-   BOTTONI COMUNUNI  OFF-CANVAS SINISTRO/DESTRO (Puro CSS)
-   ========================================= */
-.sideNavbar--btn__custom {
-    /* 1. Forza la struttura del blocco */
-    display: flex !important;
-    width: 230px !important;
-    height: 45px !important;
-
-    /* 2. Posizionamento testo */
+/*================================================================
+   BOTTONI COMUNUNI  OFF-CANVAS SINISTRO/DESTRO
+==================================================================*/
+.sideNavbar__commonButton {
+    display: flex;
+    width: 230px;
+    height: 45px;
     justify-content: center;
     align-items: center;
-
-    /* 3. Colori e Bordi */
-    background-color: #00538a !important; /* Blu scuro */
-    color: #ffffff !important;            /* Testo bianco forzato */
-    border-radius: 4px !important;       /* Arrotondamento */
-    border: none !important;
-
-    /* 4. Tipografia */
-    font-weight: bold !important;
+    background-color: #00538a;
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
     font-size: 14px;
-    text-transform: uppercase !important;
-    text-decoration: none !important;    /* Rimuove sottolineatura base */
+    text-decoration: none;
     letter-spacing: 1px;
-
-    /* 5. Transizione */
     transition: background-color 0.3s ease;
 }
 
-/* --- STATO HOVER (Passaggio Mouse) --- */
-.sideNavbar--btn__custom:hover {
-    background-color: #2c6fb2 !important; /* Diventa blu più chiaro */
+.sideNavbar__commonButton:hover {
+    background-color: #2c6fb2 !important;
     color: #ffffff !important;
 }
 
 /* Sottolineatura solo dello span interno all'hover */
-.sideNavbar--btn__custom:hover span {
+.sideNavbar__commonButton:hover span {
     text-decoration: underline !important;
 }
 
 /* Assicuriamoci che lo span non erediti colori strani */
-.sideNavbar--btn__custom span {
+.sideNavbar__commonButton span {
     color: #ffffff !important;
     pointer-events: none; /* Evita che lo span interferisca con il click */
 }
 
 
-/* ---Stile clima ---*/
-
-.wheater-container {
-    padding: 0 10px 0px 10px;
-    width: 100%;
-    font-size: 16px !important;
-}
 
 
 
-/*---Left nav Meteo---*/
-.wheatherContainer--a__meteo {
-    display: flex;
-    align-items: flex-start; /* Allinea le cime */
-    line-height: 1;
-}
 
 
 
-/* ---Stile temperatora --- */
-.wheatherContainer--span__temperature {
-    font-size: 1em;
-    font-weight: 700 !important;
-    position: relative;
-    color: #1a1a1a;
-    margin-top: 0px !important;
-    margin-right: 2px !important;
-}
 
-/* ---Stile per contenitore data--- */
 
-.date-container {
-    margin-left: .8em;
-    font: normal 600 .9375em / 1.0666666667 "Noto Sans", Helvetica, sans-serif;
-    color: #1a1a1a;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
 
-}
 
-.dateConatiner__date {
-    font-size: 1.05rem !important;
-    font-weight: 700;       /* Rende la data in grassetto (Bold) */
-    color: #1a1a1a;
-    line-height: 1.2;
-}
 
-.dateConatiner--a__E-Edition {
-    font-weight: 400;       /* Rende il testo normale (Regular) */
-    text-transform: none;   /* Assicura che non ci siano maiuscoli forzati */
-    font-size: 0.9rem;      /* Leggermente più piccolo per gerarchia visiva */
-    text-align: left;
-}
 
 
 /* --- Stili Custom per l'allineamento perfetto --- */
@@ -421,42 +363,16 @@ body:has(#leftNav-menu-switcher:checked) {
 
 
 
-/* Stato base: Testo nero e nessuna sottolineatura */
-.e-edition-link span {
-    font-size: 0.85rem;
-    color: #212529 !important; /* Nero Bootstrap */
-    text-decoration: none !important;
-    transition: none; /* Rimuoviamo la transizione colore perché non serve più */
-}
 
-/* Stato Hover: Il testo rimane nero ma appare la sottolineatura */
-.e-edition-link:hover span {
-    color: #212529 !important;      /* Resta nero */
-    text-decoration: underline !important; /* Compare la linea */
-}
 
 
 
 /* Correzione per l'allineamento dell'icona se necessario */
 
 
-.leftNav--i__bi-clouds {
-    line-height: 1;
-    display: inline-block;
-    font-size: 1.65rem !important;
-}
 
-/* =========================================
-   SECONDO BLOCCO  OFF-CANVAS SINISTRO (Puro CSS)
-   ========================================= */
-.leftNav--SecondBlock__structure {
-    display: flex;          /* Attiva il motore per gestire lo spazio */
-    flex-direction: column; /* Mette gli elementi in verticale */
-    gap: 10px;              /* Crea lo spazio tra i vari accordion */
-    flex-shrink: 0;
-    font-size: 15px !important;
-    padding: 0 0 40px 0;
-}
+
+
 
 
 .accordion-section summary {
@@ -989,14 +905,22 @@ body:has(#search-top-switcher:checked) {
 
 /* --- 4. Componenti Custom (Bottoni e Utility) --- */
 
-.nav--leftButton__attributes {
-    display: flex !important;
-    align-items: center !important;
-    border: 0 !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-    background: transparent;
+.header__firstBlock__navOpenButton--attributes {
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
 }
+
+.header__firstBlock__menuIcon {
+    font-style: normal;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
 
 
 .nav--btn__customSize {
@@ -1024,6 +948,40 @@ body:has(#search-top-switcher:checked) {
 
 
 
+.navbar-title-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.navbar--title {
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 3.6rem !important;
+    transition: font-size 0.1s ease;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: #005d9c !important;
+    font-family: "Impact", "Arial Narrow", "Helvetica Inserat", sans-serif;
+    font-weight: 100!important;
+    text-transform: none;
+}
+
+
+.navbar--title:hover {
+    color: #005d9c !important; /* Mantiene il colore originale */
+}
 
 
 
@@ -1073,54 +1031,36 @@ body:has(#search-top-switcher:checked) {
 
 
 
-
-
-
-
+/*
 main {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, sans-serif;
     /* Un'altezza elevata per forzare la comparsa della barra di scorrimento */
     /*min-height: 2000px;*/
-    background-color: #ffffff;
+   /* background-color: #ffffff;
 }
-
+*/
 
 /* Importante: margin e padding vanno sul BODY, non sul main */
-body {
+/*body {
     margin: 0px;
     padding: 0;
     font-family: system-ui, -apple-system, sans-serif;
     background-color: #f0f2f5;
 }
+*/
+
 
 .sticky-part {
-    background-color: #007bff;
+    background-color: #F9F9F9;
     position: sticky; /* L'elemento si ancora */
     top: 0;          /* Si ancora esattamente a 0 pixel dal bordo superiore */
     z-index: 1020;   /* Valore standard Bootstrap per stare sopra tutto */
     width: 100%;     /* Assicura che copra l'intera larghezza */
 }
 
-/*
-main {
-    min-height: 2000px;
-    padding-top: 20px;
-}
-*/
 
-
-
-
-
-/* Questa classe spegne l'elemento e rimuove il suo ingombro dal layout */
-/*.d-none-scroll {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    overflow: hidden !important;
-}*/
 
 #headerContainer__disappearingContainer {
     transition: max-height 0.35s ease-in-out, opacity 0.3s ease;
