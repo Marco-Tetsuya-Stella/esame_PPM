@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     triggers.forEach(trigger => {
         trigger.addEventListener('click', function() {
             // 2. Troviamo il contenitore padre più vicino (il div .footer-item)
-            const parent = this.closest('.footerTop__collapseContainer');
+            const parent = this.closest('.footerTop__first__collapseContainer');
 
             // 3. All'interno di quel padre, cerchiamo il menu e l'icona
             const menu = parent.querySelector('.customMenuContainer');
@@ -189,5 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
+function closeContainer() {
+    document.getElementById('footerContainer').classList.add('is-hidden');
+}
 
