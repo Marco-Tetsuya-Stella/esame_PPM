@@ -193,3 +193,6 @@ function closeContainer() {
     document.getElementById('footerContainer').classList.add('is-hidden');
 }
 
+function dismissBanner() {
+    document.getElementById('yellowBanner').classList.add('is-hidden');
+}

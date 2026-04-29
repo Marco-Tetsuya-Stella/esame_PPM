@@ -457,7 +457,25 @@
 
 <main class="container-fluid g-0 main__container">
 
+    <!--
+    <div id="footerContainer" class="footerBottom__bottomContainer">
+        <span class="footerBottom__bottom__close-icon" onclick="closeContainer()">&#10006;</span>
+    </div>-->
 
+    <div id="yellowBanner" class="banner-yellow">
+        <div class="banner-content-wrapper">
+            <span class="banner-label">BREAKING NEWS</span>
+            <span class="banner-headline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget</span>
+            <span class="banner-date">April 29, 2026 at 11:51 am</span>
+        </div>
+
+        <span class="banner-close-icon" onclick="dismissBanner()">&times;</span>
+    </div>
+
+
+
+
+    <!--
     <div class="row g-0 firstBlock ">
         <section class="col-12 col-md-9 d-flex flex-wrap  p-2">
 
@@ -467,7 +485,7 @@
 
                         <div class="col-12 col-sm-6 col-md-12 col-xl-6 d-flex flex-column order-1">
 
-                            <div class="p-2  order-1">
+                            <div class="firstBlock__mainArticle__mainTitleContainer order-1">
                                 <h2 class="firstBlock__mainArticle__mainTitle">
                                     <a href="#" class="firstBlock__mainArticle__mainTitle--link">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -475,14 +493,16 @@
                                 </h2>
                             </div>
 
-                            <div class="col-12 d-block d-sm-none d-md-block d-xl-none p-2 order-2">
-                                <img src="https://placehold.co/780x450"
-                                     class="img-fluid w-100"
-                                     style="height: auto; display: block;"
-                                     alt="Main Article Image Placeholder">
+                            <div class="col-12 d-block d-sm-none d-md-block d-xl-none firstBlock__mainArticle__mainImageContainer order-2">
+                                <a href="#" class="firstBlock__image--link">
+                                    <img src="https://placehold.co/780x450"
+                                         class="img-fluid w-100"
+                                         style="height: auto; display: block;"
+                                         alt="Main Article Image Placeholder">
+                                </a>
                             </div>
 
-                            <div class="p-2  order-3">
+                            <div class="firstBlock__mainArticle__mainParagraphContainer  order-3">
                                 <p style="margin-bottom: 0.3rem" >
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Duis condimentum dui mauris, id auctor erat iaculis non.
@@ -494,10 +514,12 @@
 
                         <div class="col-12 col-sm-6 col-md-12 col-xl-6 d-none d-sm-block d-md-none d-xl-block align-items-start justify-content-center pt-2 order-2">
                             <div class="firstBlock__mainArticle__imageContainer">
-                                <img src="https://placehold.co/780x450"
-                                     class="img-fluid w-100"
-                                     style="height: auto; display: block;"
-                                     alt="Main Article Image Placeholder">
+                                <a href="#" class="firstBlock__image--link">
+                                    <img src="https://placehold.co/780x450"
+                                         class="img-fluid w-100"
+                                         style="height: auto; display: block;"
+                                         alt="Main Article Image Placeholder">
+                                </a>
                             </div>
                         </div>
 
@@ -508,9 +530,11 @@
 
                         <div class="col-xl-12 col-lg-6 col-md-12 col-4   p-0 overflow-hidden">
                             <div class="firstBlock__article__imageContainer">
-                                <img src="https://placehold.co/300x160"
-                                     class="w-100 h-auto d-block"
-                                     alt="Article 1 Image Placeholder">
+                                <a href="#" class="firstBlock__image--link">
+                                    <img src="https://placehold.co/300x160"
+                                         class="w-100 h-auto d-block"
+                                         alt="Article 1 Image Placeholder">
+                                </a>
                             </div>
                         </div>
 
@@ -527,9 +551,11 @@
 
                         <div class="col-xl-12 col-lg-6 col-md-12 col-4  p-0 overflow-hidden">
                             <div class="firstBlock__article__imageContainer ">
-                                <img src="https://placehold.co/300x160"
-                                     class="w-100 h-auto d-block"
-                                     alt="Article 2 Image Placeholder">
+                                <a href="#" class="firstBlock__image--link">
+                                    <img src="https://placehold.co/300x160"
+                                         class="w-100 h-auto d-block"
+                                         alt="Article 2 Image Placeholder">
+                                </a>
                             </div>
                         </div>
 
@@ -546,9 +572,11 @@
 
                         <div class="col-xl-12 col-lg-6 col-md-12 col-4  p-0 overflow-hidden">
                             <div class="firstBlock__article__imageContainer">
-                                <img src="https://placehold.co/300x160"
-                                     class="w-100 h-auto d-block"
-                                     alt="Article 3 Image Placeholder">
+                                <a href="#" class="firstBlock__image--link">
+                                    <img src="https://placehold.co/300x160"
+                                         class="w-100 h-auto d-block"
+                                         alt="Article 3 Image Placeholder">
+                                </a>
                             </div>
                         </div>
 
@@ -565,9 +593,11 @@
 
                         <div class="col-xl-12 col-lg-6 col-md-12 col-4 p-0 overflow-hidden">
                             <div class="firstBlock__article__imageContainer">
-                                <img src="https://placehold.co/300x160"
+                                <a href="#" class="firstBlock__image--link">
+                                    <img src="https://placehold.co/300x160"
                                      class="w-100 h-auto d-block"
                                      alt="Article 4 Image Placeholder">
+                                </a>
                             </div>
                         </div>
 
@@ -664,7 +694,7 @@
 
         <aside class="col-12 col-md-3 d-flex p-2">
             <div class="firstBlock__aside__container">
-                <a href="#" class="firstBlock__aside__link">
+                <a href="#" class="firstBlock__image--link">
                     <img src="https://placehold.co/770x850"
                          class="img-fluid w-100"
                          alt="Aside Image Placeholder">
@@ -2025,7 +2055,7 @@
         </div>
         </div>
     </div>
-
+    -->
 
 
 </main>
@@ -2250,6 +2280,7 @@
         </div>
     </div>
 
+    <!--
     <div class="col-12 d-block footerBottom">
         <ul class="list-unstyled footerBottom__bottomList">
             <li class=""><a href="#" class="footerBottom__bottomList--link">Lorem ipsum dolor sit amet</a></li>
@@ -2278,7 +2309,7 @@
         </div>
 
     </div>
-
+    -->
 
 </footer>
 
