@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">-->
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="css/esame.css" />
-    <link rel="stylesheet" href="css/mediaQuerys.css" />
-    <link rel="stylesheet" href="css/primoBloccoMain.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/headerMediaQuery.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/footer.css" />
 
 
@@ -35,13 +35,13 @@
 
 <header class="sticky-part">
     <div class="container-fluid header-container__height">
-        <div class="row headerContainer__firstRow--height align-items-center g-0 flex-nowrap ">
+        <div class="row headerContainer__firstRow--height g-0">
 
             <div class="header__firstBlock">
                 <div class="header__firstBlock__All-selections-sideBar-container">
                     <input type="checkbox" id="header__firstBlock__nav-menu-switcher" class="d-none">
 
-                    <label for="header__firstBlock__nav-menu-switcher" id="header__firstBlock__menu-toggle" class="btn header__firstBlock__navOpenButton--attributes">
+                    <label for="header__firstBlock__nav-menu-switcher" id="header__firstBlock__menu-toggle" class="header__firstBlock__navOpenButton--attributes">
                         <i class="bi bi-list header__firstBlock__menuIcon"></i> <span class="header__firstBlock__menuSpan d-none d-md-inline">All Sections</span>
                     </label>
 
@@ -53,19 +53,16 @@
 
                             <div class="header__firstBlock__nav__firstBlockContainer">
                                 <div class="pt-3 d-flex justify-content-center">
-                                    <a href="#" id="mega-subscribe-button" class="sideNavbar__commonButton">
+                                    <a href="#" id="mega-subscribe-button" class="sideNavbar__commonButton--link">
                                         <span>Subscribe Now</span>
                                     </a>
                                 </div>
 
                                 <div class="header__common__wheaterContainer" id="leftNavbar--wheatherContainer">
-
                                     <a class="wheatherContainer--link" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
                                         <span class="wheatherContainer__span--temperature ">48°F</span>
                                         <i class="bi bi-clouds nav__i--bi-clouds"></i>
                                     </a>
-
-
 
                                     <div class="header__common__dateContainer">
                                         <div class="dateConatiner__date ">
@@ -85,167 +82,167 @@
 
                             <div class="header__firstBlock__nav__secondBlockContainer">
 
-                                <details class="accordion-section">
-                                    <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                <details class="header__firstBlock__nav__accordionSectionContainer">
+                                    <summary class="header__firstBlock__nav__accordionSection__main">
                                         News
                                         <i class="bi bi-chevron-right arrow-closed"></i>
                                         <i class="bi bi-chevron-down arrow-open d-none"></i>
                                     </summary>
-                                    <div class="submenu">
-                                        <a href="#">News</a>
-                                        <a href="#">Local News</a>
-                                        <a href="#">Crime & Public Safety</a>
-                                        <a href="#">Your Tax Dollars At Work</a>
-                                        <a href="#">Massachusetts</a>
-                                        <a href="#">Nation</a>
-                                        <a href="#">World News</a>
-                                        <a href="#">Business</a>
-                                        <a href="#">Best Reviews</a>
-                                        <a href="#">Health</a>
-                                        <a href="#">Columnists</a>
-                                        <a href="#">Traffic</a>
-                                        <a href="#">Espanol</a>
-                                        <a href="#">Automotive</a>
-                                        <a href="#">Real Estate</a>
+                                    <div class="header__firstBlock__nav__accordionSection__submenu">
+                                        <a href="#" class="accordionSection__submenu--link">News</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
                                     </div>
                                 </details>
 
-                                <details class="accordion-section">
-                                    <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                <details class="header__firstBlock__nav__accordionSectionContainer">
+                                    <summary class="header__firstBlock__nav__accordionSection__main">
                                         Opinion
                                         <i class="bi bi-chevron-right arrow-closed"></i>
                                         <i class="bi bi-chevron-down arrow-open d-none"></i>
                                     </summary>
-                                    <div class="submenu">
-                                        <a href="#">Opinion</a>
-                                        <a href="#">Editorials</a>
-                                        <a href="#">Letters to the Editor</a>
-                                        <a href="#">Submit a Letter</a>
+                                    <div class="header__firstBlock__nav__accordionSection__submenu">
+                                        <a href="#" class="accordionSection__submenu--link">Opinion</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
                                     </div>
                                 </details>
 
-                                <details class="accordion-section">
-                                    <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                <details class="header__firstBlock__nav__accordionSectionContainer">
+                                    <summary class="header__firstBlock__nav__accordionSection__main">
                                         Sports
                                         <i class="bi bi-chevron-right arrow-closed"></i>
                                         <i class="bi bi-chevron-down arrow-open d-none"></i>
                                     </summary>
-                                    <div class="submenu">
-                                        <a href="#">Sports</a>
-                                        <a href="#">Boston Red Sox</a>
-                                        <a href="#">New England Patriots</a>
-                                        <a href="#">Boston Celtics</a>
-                                        <a href="#">Boston Bruins</a>
-                                        <a href="#">Olympics</a>
-                                        <a href="#">College Sports</a>
-                                        <a href="#">High School Sports</a>
+                                    <div class="header__firstBlock__nav__accordionSection__submenu">
+                                        <a href="#" class="accordionSection__submenu--link">Sports</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
                                     </div>
                                 </details>
 
-                                <details class="accordion-section">
-                                    <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                <details class="header__firstBlock__nav__accordionSectionContainer">
+                                    <summary class="header__firstBlock__nav__accordionSection__main">
                                         Politics
                                         <i class="bi bi-chevron-right arrow-closed"></i>
                                         <i class="bi bi-chevron-down arrow-open d-none"></i>
                                     </summary>
-                                    <div class="submenu">
-                                        <a href="#">Politics</a>
-                                        <a href="#">Election 2024</a>
-                                        <a href="#">State House</a>
-                                        <a href="#">Boston City Hall</a>
+                                    <div class="header__firstBlock__nav__accordionSection__submenu">
+                                        <a href="#" class="accordionSection__submenu--link">Politics</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
                                     </div>
                                 </details>
 
-                                <details class="accordion-section">
-                                    <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                <details class="header__firstBlock__nav__accordionSectionContainer">
+                                    <summary class="header__firstBlock__nav__accordionSection__main">
                                         Entertainment
                                         <i class="bi bi-chevron-right arrow-closed"></i>
                                         <i class="bi bi-chevron-down arrow-open d-none"></i>
                                     </summary>
-                                    <div class="submenu">
-                                        <a href="#">Entertainment</a>
-                                        <a href="#">Arts</a>
-                                        <a href="#">Movies</a>
-                                        <a href="#">TV and Streaming</a>
-                                        <a href="#">Music and Concerts</a>
-                                        <a href="#">Events</a>
-                                        <a href="#">Fun & Games</a>
-                                        <a href="#">Contests</a>
-                                        <a href="#">Comics</a>
-                                        <a href="#">Puzzles</a>
-                                        <a href="#">Special Sections</a>
+                                    <div class="header__firstBlock__nav__accordionSection__submenu">
+                                        <a href="#" class="accordionSection__submenu--link">Entertainment</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
                                     </div>
                                 </details>
 
-                                <details class="accordion-section">
-                                    <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                <details class="header__firstBlock__nav__accordionSectionContainer">
+                                    <summary class="header__firstBlock__nav__accordionSection__main">
                                         Lifestyle
                                         <i class="bi bi-chevron-right arrow-closed"></i>
                                         <i class="bi bi-chevron-down arrow-open d-none"></i>
                                     </summary>
-                                    <div class="submenu">
-                                        <a href="#">Lifestyle</a>
-                                        <a href="#">Restaurants Food & Drink</a>
-                                        <a href="#">Travel</a>
-                                        <a href="#">Fashion</a>
-                                        <a href="#">Boston Herald Store</a>
+                                    <div class="header__firstBlock__nav__accordionSection__submenu">
+                                        <a href="#" class="accordionSection__submenu--link">Lifestyle</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
                                     </div>
                                 </details>
 
 
-                                <div class= "slideNav--listGoroup--a__style">
-                                    <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0">
+                                <div class= "header__slideNav__list__mainTextContainer">
+                                    <a href="#" class="header__slideNav__list__mainTextContainer--link">
                                      Photo
-                                 </a>
+                                    </a>
                                 </div>
 
 
 
-                                <details class="accordion-section">
-                                    <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                <details class="header__firstBlock__nav__accordionSectionContainer">
+                                    <summary class="header__firstBlock__nav__accordionSection__main">
                                         Orbituaries
                                         <i class="bi bi-chevron-right arrow-closed"></i>
                                         <i class="bi bi-chevron-down arrow-open d-none"></i>
                                     </summary>
-                                    <div class="submenu">
-                                        <a href="#">Obituaries</a>
-                                        <a href="#">News Obituaries</a>
-                                        <a href="#">Place an Obituary</a>
+                                    <div class="header__firstBlock__nav__accordionSection__submenu">
+                                        <a href="#" class="accordionSection__submenu--link">Obituaries</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
                                     </div>
                                 </details>
 
-                                <details class="accordion-section">
-                                    <summary class="list-group-item list-group-item-action fw-bold  text-dark border-0 d-flex justify-content-between align-items-center">
+                                <details class="header__firstBlock__nav__accordionSectionContainer">
+                                    <summary class="header__firstBlock__nav__accordionSection__main">
                                         Branded Content
                                         <i class="bi bi-chevron-right arrow-closed"></i>
                                         <i class="bi bi-chevron-down arrow-open d-none"></i>
                                     </summary>
-                                    <div class="submenu">
-                                        <a href="#">Paind Content by Brandpoint</a>
-
+                                    <div class="header__firstBlock__nav__accordionSection__submenu">
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
+                                        <a href="#" class="accordionSection__submenu--link">Lorem ipsum dolor</a>
                                     </div>
                                 </details>
 
-                                <div class= "slideNav--listGoroup--a__style">
-                                    <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0">
+                                <div class= "header__slideNav__list__mainTextContainer">
+                                    <a href="#" class="header__slideNav__list__mainTextContainer--link">
                                         Subscribe
                                     </a>
                                 </div>
 
 
-                                <div class= "slideNav--listGoroup--a__style mt-4">
-                                    <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark  border-0">
+                                <div class= "header__slideNav__list__mainTextContainer mt-4">
+                                    <a href="#" class="header__slideNav__list__mainTextContainer--link">
                                         Log in
                                     </a>
                                 </div>
                             </div>
 
-                            <div class="leftNav--ThridBlock__structure">
-                                <div class="leftNav--ThridBlock__text">
+                            <div class="header__firstBlock__nav__thirdBlockContainer">
+                                <div class="header__nav__commonSignUp--text">
                                     Sign up for email newsletters
                                 </div>
-                                <div class=" d-flex justify-content-center">
-                                    <a href="#"  class="sideNavbar__commonButton">
+                                <div class="header__nav__commonSignUp__buttonContainer">
+                                    <a href="#"  class="sideNavbar__commonButton--link">
                                         <span>Sign Up</span>
                                     </a>
                                 </div>
@@ -258,66 +255,64 @@
                 </div>
             </div>
 
-            <div class=" h-100 align-items-center" style="width: 40%">
-                <div class="navbar-title-container" id="navbar-title-first-row">
-                    <h1 class="m-0 h-100 w-100"> <a href="#" class="navbar--title">
-                        Boston Herald
+            <div class="header__secondBlock">
+                <div class="header__navbar__mainTitleContainer" id="navbar-title-first-row">
+                    <a href="#" class="header__navbar__mainTitle--link">
+                        <h1 class="header__navbar__mainTitle">
+                            Lorem ipsum
+                        </h1>
                     </a>
-                    </h1>
                 </div>
             </div>
 
 
-            <div class="" style="width: 20%">
-                <div class="d-flex justify-content-end align-items-center  rightNavBottonsContainer">
+            <div class="header__thirdBlock">
+                <div class="header__thirdBlock__navButtonsContainer">
 
                     <div class="d-none d-lg-flex gap-2">
-                        <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald">
+                        <a href="#" class=" header__thirdBlock__navButton">
                             <span>Subscribe</span>
-                        </button>
-                        <button class="btn btn-primary btn-sm fw-bold nav--btn__customSize navRightBtn-custom-herald">
+                        </a>
+                        <a href="#" class="header__thirdBlock__navButton">
                             <span>Log in</span>
-                        </button>
+                        </a>
                     </div>
 
-                    <div class="user-sidebar-container">
-                        <input type="checkbox" id="navRight-menu-switcher" class="d-none">
+                    <div class="header__thirdBlock__sideBarContainer">
+                        <input type="checkbox" id="header__thirdBlock__nav-menu-switcher" class="d-none">
 
-                        <label for="navRight-menu-switcher" class="user-dropdown-icon d-flex d-lg-none align-items-center cursor-pointer mb-0" style="color: #1a1a1a; font-size: 1.2rem ;position: relative; z-index: 1100;">
-                            <i class="bi bi-person-fill"></i>
-                            <i class="bi bi-chevron-down navbar--FirstRow--iconaFreccia__dimensioni ms-1"></i>
+                        <label for="header__thirdBlock__nav-menu-switcher" class="header__thirdBlock__navOpenButton--attributes d-flex d-lg-none">
+                            <i class="bi bi-person-fill header__thirdBlock__navOpenButton__pearsonIcon--size"></i>
+                            <i class="bi bi-chevron-down header__thirdBlock__navOpenButton__arrowIcon--size"></i>
                         </label>
 
-                        <label for="navRight-menu-switcher" class="navRight-custom-backdrop"></label>
+                        <label for="header__thirdBlock__nav-menu-switcher" class="header__thirdBlock__nav-custom-backdrop"></label>
 
-                        <div id="rightSidebarMenu" class="navRight-custom-sidebar">
-                            <div class="h-100 header__firstBlcok__custom-sidebar--scrollballHidden">
-                                <div class="rightNav--FirstBlock__structure">
-                                    <div class= "slideNav--listGoroup--a__style">
-                                        <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0 ">
+                        <div id="rightSidebarMenu" class="header__thirdBlock__nav-custom-sidebar">
+                            <div class="header__thirdBlock__custom-sidebar--scrollballHidden">
+                                <div class="header__thirdBlock__nav__firstBlockContainer">
+                                    <div class= "header__slideNav__list__mainTextContainer">
+                                        <a href="#" class="header__slideNav__list__mainTextContainer--link">
                                             Subscibe
                                         </a>
                                     </div>
-
-                                    <div class= "slideNav--listGoroup--a__style">
-                                        <a href="#" class=" list-group-item list-group-item-action fw-bold text-dark border-0">
+                                    <div class= "header__slideNav__list__mainTextContainer">
+                                        <a href="#" class="header__slideNav__list__mainTextContainer--link">
                                             Login
                                         </a>
                                     </div>
                                 </div>
 
-                                <div class="rightNav--SecondBlock__structure">
-                                    <div class="rightNav--SecondBlock__text">
+                                <div class="header__thirdBlock__nav__secondBlockContainer">
+                                    <div class="header__nav__commonSignUp--text">
                                         Sign up for email newsletters
                                     </div>
-                                    <div class=" d-flex justify-content-center">
-                                        <a href="#"  class="sideNavbar__commonButton">
+                                    <div class="header__nav__commonSignUp__buttonContainer">
+                                        <a href="#"  class="sideNavbar__commonButton--link">
                                             <span>Sign Up</span>
                                         </a>
                                     </div>
-
                                 </div>
-
 
                             </div>
                         </div>
@@ -326,29 +321,31 @@
             </div>
 
 
-            <div class="" style="width: 10%">
-                <div class="seacrhNavButtonContainer">
-                    <input type="checkbox" id="search-top-switcher" class="d-none">
+            <div class="header__fourthBlock" >
+                <div class="header__fourthBlock__searchButtonContainer">
+                    <input type="checkbox" id="header__fourthBlock__nav-menu-switcher" class="d-none">
 
-                    <label for="search-top-switcher" class="search-icon-botton d-flex align-items-center  ">
+                    <label for="header__fourthBlock__nav-menu-switcher" class="header__fourthBlock__searchOpenButton--attributes">
                         <i class="bi bi-search"></i>
                     </label>
 
-                    <label for="search-top-switcher" class="search-custom-backdrop"></label>
+                    <label for="header__fourthBlock__nav-menu-switcher" class="header__fourthBlock__nav-custom-backdrop"></label>
 
-                    <div id="searchTopBar" class="search-custom-topbar">
+                    <div id="searchTopBar" class="header__fourthBlock__search-custom-topbar">
 
-                            <div class="topSearcher--container__structure">
-                                <div class="topSearcher--searchBar__structure">
-                                    <div class="search-icon-box search-icon-botton">
+                            <div class="header__fourthBlock__searcher__firstBlockContainer">
+                                <div class="header__fourthBlock__searcher__searchBarContainer">
+                                    <div class="header__fourthBlock__searchOpenButton--attributes" >
                                         <i class="bi bi-search"></i>
                                     </div>
 
-                                    <input type="text" class="search-custom-input" placeholder="Type your search">
+                                    <label>
+                                        <input type="text" class="header__fourthBlock__searcher__searchInput" placeholder="Type your search">
+                                    </label>
 
-                                    <button type="submit" class="search-custom-btn">
-                                        Search
-                                    </button>
+                                    <a href="#" class="header__fourthBlock__searcher__searchButton">
+                                        <span>Search</span>
+                                    </a>
                                 </div>
                             </div>
                     </div>
@@ -358,23 +355,20 @@
         </div>
 
 
-        <div class="container-fluid headerContainer__disappearingContainer flex-nowrap" id="headerContainer__disappearingContainer">
-            <div class="row headerContainer--SecondRow__height align-items-center g-0 flex-nowrap ">
-                <div class="" style="width:30%">
-                    <div class="d-flex align-items-start wheater-container" id="secondRow--wheaterContainer" style="padding-left: 30px">
-                        <div class="d-flex">
-                            <a class="wheatherContainer--link text-decoration-none" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
-                                <span class="wheatherContainer__span--temperature text-dark">48°F</span>
-                                <i class="bi bi-clouds nav__i--bi-clouds fs-3 text-dark ms-1"></i>
-                            </a>
-                        </div>
-
+        <div class="container-fluid headerContainer__disappearingContainer" id="headerContainer__disappearingContainer">
+            <div class="row headerContainer__secondRow--height g-0">
+                <div class="headerContainer__secondRow__firstBlock">
+                    <div class="header__common__wheaterContainer" id="secondRow--wheaterContainer" style="padding-left: 30px">
+                        <a class="wheatherContainer--link" href="#" title="Current Weather Conditions" aria-label="Current temperature is 48°F">
+                            <span class="wheatherContainer__span--temperature ">48°F</span>
+                            <i class="bi bi-clouds nav__i--bi-clouds"></i>
+                        </a>
 
                         <div class="header__common__dateContainer">
                             <div class="dateConatiner__date ">
                                 Friday, April 17th 2026
                             </div>
-                            <a href="#" class="e-edition-link text-decoration-none dateConatiner--link">
+                            <a href="#" class="dateConatiner--link">
                                 <span>E-Edition</span>
                             </a>
                         </div>
@@ -382,76 +376,79 @@
 
                 </div>
 
-                <div class="" style="width:40%">
-                    <div class="navbar-title-container" id="navbar-title-second-row">
-                        <h1 class="m-0 h-100 w-100"> <a href="#" class="navbar--title">
-                            Boston Herald
+                <div class="headerContainer__secondRow__secondBlock">
+                    <div class="header__navbar__mainTitleContainer" id="navbar-title-second-row">
+                        <a href="#" class="header__navbar__mainTitle--link">
+                            <h1 class="header__navbar__mainTitle">
+                                Lorem ipsum
+                            </h1>
                         </a>
-                        </h1>
                     </div>
                 </div>
 
-                <div class="open-space" style="width:30%">
-
-                </div>
-            </div>
-            <div class="row headerContainer--ThirdRow__height g-0 flex-nowrap">
-                <div class="container-fluid  thirdRow__linksContainer" >
-                    <div class="thirdRow--linkContainer">
-                        <a href="#" class="thirdRow--link">News</a>
-                    </div>
-                    <div class="thirdRow--linkContainer">
-                        <a href="#" class="thirdRow--link">Opinion</a>
-                    </div>
-                    <div class="thirdRow--linkContainer">
-                        <a href="#" class="thirdRow--link">Sports</a>
-                    </div>
-                    <div class="thirdRow--linkContainer">
-                        <a href="#" class="thirdRow--link">Politics</a>
-                    </div>
-                    <div class="thirdRow--linkContainer">
-                        <a href="#" class="thirdRow--link">Entertainment</a>
-                    </div>
-                    <div class="thirdRow--linkContainer">
-                        <a href="#" class="thirdRow--link">Lifestyle</a>
-                    </div>
-                    <div class="thirdRow--linkContainer">
-                        <a href="#" class="thirdRow--link">Multimedia/Video</a>
-                    </div>
-                    <div class="thirdRow--linkContainer">
-                        <a href="#" class="thirdRow--link">Photo</a>
-                    </div>
-                    <div class="thirdRow--linkContainer">
-                        <a href="#" class="thirdRow--link">Obituaries</a>
-                    </div>
+                <div class="headerContainer__secondRow__thirdBlock" style="width:30%">
 
                 </div>
             </div>
+            <div class="row headerContainer__thirdRow--height g-0">
+                <div class="container-fluid  header__thirdRow__linksContainer" >
+                    <div class="header__thirdRow__linkContainer">
+                        <a href="#" class="header__thirdRow--link">News</a>
+                    </div>
+                    <div class="header__thirdRow__linkContainer">
+                        <a href="#" class="header__thirdRow--link">Opinion</a>
+                    </div>
+                    <div class="header__thirdRow__linkContainer">
+                        <a href="#" class="header__thirdRow--link">Sports</a>
+                    </div>
+                    <div class="header__thirdRow__linkContainer">
+                        <a href="#" class="header__thirdRow--link">Politics</a>
+                    </div>
+                    <div class="header__thirdRow__linkContainer">
+                        <a href="#" class="header__thirdRow--link">Entertainment</a>
+                    </div>
+                    <div class="header__thirdRow__linkContainer">
+                        <a href="#" class="header__thirdRow--link">Lifestyle</a>
+                    </div>
+                    <div class="header__thirdRow__linkContainer">
+                        <a href="#" class="header__thirdRow--link">Multimedia/Video</a>
+                    </div>
+                    <div class="header__thirdRow__linkContainer">
+                        <a href="#" class="header__thirdRow--link">Photo</a>
+                    </div>
+                    <div class="header__thirdRow__linkContainer">
+                        <a href="#" class="header__thirdRow--link">Obituaries</a>
+                    </div>
 
-            <div class="row headerContainer--FourthRow__height align-items-center g-0 flex-nowrap">
-                <div class="container-fluid  fourthRow__trendingContainer" >
-                    <h2 class="fourthRow__trendingText"> TRENDING: </h2>
-                </div>
-
-                <div class="fourthRow__linksContainer">
-                    <div class="fourthRow--linkContainer">
-                        <a href="#" class="fourthRow--link">Herald’s Howie Carr</a>
-                    </div>
-                    <div class="fourthRow--linkContainer">
-                        <a href="#" class="fourthRow--link">‘Your Tax Dollars at Work’</a>
-                    </div>
-                    <div class="fourthRow--linkContainer">
-                        <a href="#" class="fourthRow--link">Karen Read</a>
-                    </div>
-                    <div class="fourthRow--linkContainer">
-                        <a href="#" class="fourthRow--link">Boston Marathon</a>
-                    </div>
-                    <div class="fourthRow--linkContainer">
-                        <a href="#" class="fourthRow--link">Todd Lyons</a>
-                    </div>
                 </div>
             </div>
+            <div class="row headerContainer--fourthRow--height g-0">
 
+                <div class="header__fourthRow__trendingContainer" >
+                    <h2 class="header__fourthRow__trendingText"> TRENDING: </h2>
+                </div>
+
+
+                <div class="header__fourthRow__linksContainer">
+                    <div class="header__fourthRow--linkContainer">
+                        <a href="#" class="header__fourthRow--link">Lorem ipsum dolor</a>
+                    </div>
+                    <div class="header__fourthRow--linkContainer">
+                        <a href="#" class="header__fourthRow--link">Lorem ipsum dolor</a>
+                    </div>
+                    <div class="header__fourthRow--linkContainer">
+                        <a href="#" class="header__fourthRow--link">Lorem ipsum dolor</a>
+                    </div>
+                    <div class="header__fourthRow--linkContainer">
+                        <a href="#" class="header__fourthRow--link">Lorem ipsum dolor</a>
+                    </div>
+                    <div class="header__fourthRow--linkContainer">
+                        <a href="#" class="header__fourthRow--link">Lorem ipsum dolor</a>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
 
@@ -2271,6 +2268,7 @@
                 Morbi massa libero, molestie non lacus nec, aliquam gravida magna.
                 Duis purus justo, feugiat id metus quis, tincidunt sodales nibh.
                 Phasellus aliquam sodales tellus.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
         </div>
 

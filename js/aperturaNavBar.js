@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Selezioniamo tutti gli switcher (Checkbox) in un'unica costante
     const allSwitchers = document.querySelectorAll(
-        '#header__firstBlock__nav-menu-switcher, #navRight-menu-switcher, #search-top-switcher'
+        '#header__firstBlock__nav-menu-switcher, #header__thirdBlock__nav-menu-switcher, #header__fourthBlock__nav-menu-switcher'
     );
 
     allSwitchers.forEach(sw => {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (this.id === 'search-top-switcher') {
                     // Usiamo un delay per attendere l'animazione CSS (0.3s)
                     setTimeout(() => {
-                        const searchInput = document.querySelector('.search-custom-topbar input');
+                        const searchInput = document.querySelector('.header__fourthBlock__search-custom-topbar input');
                         if (searchInput) searchInput.focus();
                     }, 300);
                 }

@@ -1,0 +1,111 @@
+/*===============================================================
+    HEADER BUTTONS
+=================================================================*/
+@media (max-width: 1040px) {
+    #header__firstBlock__menu-toggle span {
+        display: none !important;
+    }
+    .header__firstBlock__All-selections-sideBar-container {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    }
+}
+
+
+@media (max-width: 1040px) {
+    .d-lg-flex {
+        display: none !important;
+    }
+    .header__thirdBlock__navOpenButton--attributes {
+        display: flex !important;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1041px) {
+    .header__thirdBlock__navOpenButton--attributes {
+        display: none !important;
+    }
+}
+
+#navbar-title-first-row {
+    display: block;
+}
+
+@media (min-width: 1040px) {
+    #navbar-title-first-row {
+        display: none !important;
+    }
+
+    #navbar-title-first-row.force-show {
+        display: block !important;
+    }
+}
+
+/*===============================================================
+    HEADER NAVBAR MAIN TITLE
+=================================================================*/
+@media (max-width: 576px) {
+    .header__navbar__mainTitle {
+        font-size: clamp(0.0005rem, 8vw, 6rem)  !important;
+        letter-spacing: -1px;
+    }
+}
+
+@media (max-width: 200px) {
+    .header__firstBlock {
+        width: 20%;
+    }
+
+    .header__secondBlock {
+        width: 40%;
+    }
+
+    .header__thirdBlock {
+        width: 25%;
+    }
+    .header__fourthBlock {
+        width: 15%;
+    }
+}
+
+@media (min-width: 200px) and (max-width: 768px) {
+    .header__firstBlock {
+        width: 20%;
+    }
+
+    .header__secondBlock {
+        width: 60%;
+    }
+
+    .header__thirdBlock {
+        width: 15%;
+    }
+    .header__fourthBlock {
+        width: 5%;
+    }
+}
+
+@media (max-width: 1039px) {
+    #leftNavbar--wheatherContainer {
+        display: flex !important;
+    }
+
+}
+
+@media (min-width: 1040px) {
+    #leftNavbar--wheatherContainer {
+        display: none !important;
+    }
+
+}
+
+#headerContainer__disappearingContainer {
+    display: none !important;
+}
+
+
+@media (min-width: 1040px) {
+    #headerContainer__disappearingContainer {
+        display: flex !important;
+    }
+}

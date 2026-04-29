@@ -1,0 +1,826 @@
+/*==================================================================
+    GESTIONE HEADER STICKY
+===================================================================*/
+.sticky-part {
+    background-color: #F9F9F9;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    width: 100%;
+}
+
+.d-none-scroll {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/*=====================================================================================
+   ALTEZZE CONTAINER HEADER
+=======================================================================================*/
+.header-container__height {
+    background-color: #F9F9F9;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.headerContainer__firstRow--height {
+    height: 64px;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.headerContainer__disappearingContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 162px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    transition: max-height 0.35s ease-in-out, opacity 0.3s ease;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.headerContainer__secondRow--height {
+    height: 64px;
+    width: 100%;
+    padding: 0 0.5rem;
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.headerContainer__thirdRow--height {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 49px;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    flex-wrap: nowrap;
+    padding: 0 0.5rem;
+}
+
+.headerContainer--fourthRow--height {
+    display: flex;
+    justify-content: start;
+    height: 49px;
+    width: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 0.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*==========================================================================================
+    HEADER FIRST BLOCK
+==========================================================================================*/
+.header__firstBlock {
+    width: 30%;
+}
+
+.header__firstBlock__All-selections-sideBar-container {
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding-left: clamp(0rem, 3vw, 1.5rem);
+}
+
+.header__firstBlock__navOpenButton--attributes {
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
+}
+
+.header__firstBlock__menuIcon {
+    font-style: normal;
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.header__firstBlock__menuSpan{
+    font-weight: 700;
+    color: #000000;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+#header__firstBlock__menu-toggle {
+    cursor: pointer !important;
+    display: flex;
+    align-items: center;
+    z-index: 1100;
+    position: relative;
+}
+
+#header__firstBlock__nav-menu-switcher:checked + #header__firstBlock__menu-toggle .header__firstBlock__menuIcon::before {
+    content: "\f62a" !important;
+}
+
+/*======================================================================================================
+   SISTEMA MENU OFF-CANVAS SINISTRO
+=======================================================================================================*/
+.header__firstBlock__nav-custom-sidebar {
+    position: fixed;
+    top: 64px;
+    left: -320px;
+    width: 300px;
+    height: calc(100vh - 64px);
+    background-color: #F9F9F9;
+    z-index: 1060;
+    border-top: 1px solid #000000;
+    font-size: 16px !important;
+    transition: none;
+}
+
+#header__firstBlock__nav-menu-switcher:checked ~ .header__firstBlock__nav-custom-sidebar {
+    left: 0;
+    transition: left 0.3s ease-out;
+}
+
+.header__firstBlock__nav-custom-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    background-clip: content-box;
+    border-top: 64px solid transparent;
+    cursor: default;
+    display: none;
+}
+
+#header__firstBlock__nav-menu-switcher:checked ~ .header__firstBlock__nav-custom-backdrop {
+    display: block;
+}
+
+body:has(#header__firstBlock__nav-menu-switcher:checked) {
+    overflow: hidden;
+}
+
+.header__firstBlcok__custom-sidebar--scrollballHidden {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 100%;
+}
+
+.header__firstBlcok__custom-sidebar--scrollballHidden::-webkit-scrollbar {
+    display: none;
+}
+
+/*================================================================================================
+    OFF-CANVAS SINISTRO FIRST BLOCK
+====================================================================================================*/
+.header__firstBlock__nav__firstBlockContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.2rem;
+}
+
+.header__common__wheaterContainer {
+    padding: 0 10px 0 10px;
+    width: 100%;
+    font-size: 0.5rem;
+    display: flex;
+    align-items: start;
+}
+
+.wheatherContainer--link {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.wheatherContainer__span--temperature {
+    font-size: 1rem;
+    font-weight: 700 !important;
+    position: relative;
+    color: #000000;
+    margin-top: 0 !important;
+    margin-right: 2px !important;
+}
+
+.nav__i--bi-clouds {
+    line-height: 1;
+    display: inline-block;
+    font-size: 1.75rem;
+    color: #000000;
+    margin-left: 0.25rem;
+}
+
+.header__common__dateContainer {
+    margin-left: 0.8rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1.1;
+    font-family: "Noto Sans", Helvetica, sans-serif;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dateConatiner__date {
+    font-size: 1.05rem ;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.dateConatiner--link {
+    font-weight: 400;
+    text-transform: none;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #000000;
+    text-decoration: none;
+    transition: none;
+}
+
+.dateConatiner--link:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.header__firstBlcok__nav__homePage--link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+
+/*===========================================================================================
+    OFF-CANVAS SINISTRO SECOND BLOCK
+===========================================================================================*/
+.header__firstBlock__nav__secondBlockContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex-shrink: 0;
+    font-size: 1rem !important;
+    padding: 0 0 2.7rem 0;
+}
+
+
+.header__firstBlock__nav__accordionSectionContainer {
+
+}
+
+.header__firstBlock__nav__accordionSection__main {
+    height: 1.875rem;
+    padding: 0 0.625rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: #000000;
+    border: 0;
+}
+
+.header__firstBlock__nav__accordionSection__submenu {
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9F9;
+    font-weight: 700;
+}
+
+details[open] .arrow-closed {
+    display: none !important;
+}
+
+details[open] .arrow-open {
+    display: inline-block !important;
+}
+
+.accordionSection__submenu--link{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 0.95rem;
+}
+
+/*=========================================================================================
+    OFF-CANVAS SINISTRO THIRD BLOCK
+===========================================================================================*/
+.header__firstBlock__nav__thirdBlockContainer {
+    border-top: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 1.25rem 0.3125rem;
+}
+
+.header__nav__commonSignUp--text {
+    color: #000000;
+    font-weight: 700;
+}
+
+.header__nav__commonSignUp__buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+/*==========================================================================================
+    HEADER SECOND BLOCK
+==========================================================================================*/
+.header__secondBlock {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__navbar__mainTitleContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header__navbar__mainTitle--link {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    height: 100%;
+}
+
+.header__navbar__mainTitle {
+    font-size: 3.6rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1;
+    white-space: nowrap;
+    color: #005d9c !important;
+    font-family: "Impact", "Arial Narrow", "Helvetica Inserat", sans-serif;
+    font-weight: 100 !important;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*==================================================================================================
+    HEADER THIRD BLOCK
+====================================================================================================*/
+.header__thirdBlock {
+    width: 25%;
+}
+
+.header__thirdBlock__navButtonsContainer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.header__thirdBlock__navButton {
+    display: flex ;
+    width: 110px ;
+    height: 40px ;
+    font-size: 0.9rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #00538a;
+    color: #ffffff;
+    border-radius: 4px;
+    border: 0;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    z-index: 1100;
+}
+
+.header__thirdBlock__navButton:hover {
+    background-color: #2c6fb2;
+}
+
+.header__thirdBlock__navButton:hover span {
+    text-decoration: underline;
+}
+
+.header__thirdBlock__navOpenButton--attributes {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #000000;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1100;
+}
+
+.header__thirdBlock__navOpenButton__pearsonIcon--size {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.header__thirdBlock__navOpenButton__arrowIcon--size {
+    font-size: 0.9rem;
+    margin-left: 0.25rem;
+    flex-shrink: 0;
+    -webkit-text-stroke: 1px;
+}
+
+/*=================================================================================================
+   SISTEMA MENU OFF-CANVAS DESTRO
+==================================================================================================*/
+.header__thirdBlock__nav-custom-sidebar {
+    position: fixed;
+    top: 64px;
+    right: -320px;
+    width: 300px;
+    height: calc(100vh - 64px);
+    background-color: #F9F9F9;
+    z-index: 1070;
+    border-top: 1px solid #000000;
+    font-size: 16px !important;
+    transition: none;
+}
+
+#header__thirdBlock__nav-menu-switcher:checked ~ .header__thirdBlock__nav-custom-sidebar {
+    right: 0;
+    transition: right 0.3s ease-out;
+}
+
+.header__thirdBlock__nav-custom-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    background-clip: content-box;
+    border-top: 64px solid transparent;
+    cursor: default;
+    display: none;
+}
+
+#header__thirdBlock__nav-menu-switcher:checked ~ .header__thirdBlock__nav-custom-backdrop {
+    display: block;
+}
+
+body:has(#header__thirdBlock__nav-menu-switcher:checked) {
+    overflow: hidden;
+}
+
+#header__thirdBlock__nav-menu-switcher:checked + .header__thirdBlock__navOpenButton--attributes .bi-chevron-down {
+    transform: rotate(180deg);
+}
+
+.header__thirdBlock__custom-sidebar--scrollballHidden {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__thirdBlock__custom-sidebar--scrollballHidden::-webkit-scrollbar {
+    display: none;
+}
+
+/*======================================================================================================
+    OFF-CANVAS DESTRO FIRST BLOCK
+=====================================================================================================*/
+.header__thirdBlock__nav__firstBlockContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 0;
+    font-size: 0.9rem !important;
+    padding-top: 1.25rem;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: clamp(6rem, 5vh, 15rem);
+}
+
+/* ===========================================================================================
+    OFF-CANVAS DESTRO SECOND BLOCK
+   ==========================================================================================*/
+.header__thirdBlock__nav__secondBlockContainer {
+    border-top: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    flex-shrink: 0;
+    align-items: center;
+    padding: 1.25rem 0.3125rem 1.25rem 0.3125rem;
+    margin-top: auto;
+}
+
+/*==========================================================================================
+    HEADER FOURTH BLOCK
+==========================================================================================*/
+.header__fourthBlock {
+    width: 5%
+}
+
+.header__fourthBlock__searchButtonContainer {
+    padding: 0 0 0 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header__fourthBlock__searchOpenButton--attributes {
+    color: #000000;
+    font-size: 1.0rem;
+    position: relative;
+    z-index: 1100;
+    -webkit-text-stroke: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/*==================================================================================
+    SISTEMA TOP BAR
+===================================================================================*/
+.header__fourthBlock__search-custom-topbar {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100vw;
+    height: 80px;
+    background-color: #F9F9F9;
+    z-index: 1080;
+    border-bottom: 2px solid #000000;
+    transition: none;
+}
+
+.header__fourthBlock__nav-custom-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    background-clip: content-box;
+    border-top: 64px solid transparent;
+    display: none;
+}
+
+#header__fourthBlock__nav-menu-switcher:checked ~ .header__fourthBlock__search-custom-topbar {
+    top: 64px;
+    transition: top 0.2s ease-out;
+}
+
+#header__fourthBlock__nav-menu-switcher:checked ~ .header__fourthBlock__nav-custom-backdrop {
+    display: block;
+}
+
+body:has(#header__fourthBlock__nav-menu-switcher:checked) {
+    overflow: hidden;
+}
+
+.header__fourthBlock__search-custom-topbar input:focus {
+    outline: none;
+    box-shadow: none;
+}
+/*==================================================================================
+    SISTEMA TOP BAR FIRST BLOCK
+===================================================================================*/
+.header__fourthBlock__searcher__firstBlockContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #F9F9F9;
+    padding: 0 1.5rem;
+    border-top: 1px solid #000000;
+}
+
+.header__fourthBlock__searcher__searchBarContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: #F9F9F9;
+}
+
+.header__fourthBlock__searcher__searchBarContainer label {
+    flex-grow: 1;
+    display: flex; /* Opzionale, aiuta a gestire l'altezza dell'input */
+    height: 100%;
+}
+
+.header__fourthBlock__searcher__searchInput {
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 50px;
+    border: none !important;
+    outline: none !important;
+    font-size: 1.2rem;
+    height: 100%;
+    background: transparent;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+
+.header__fourthBlock__searcher__searchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 3.825rem;
+    padding: 0 0.9375rem;
+    background-color: #00538a;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1100 !important;
+}
+
+/*===========================================================================================
+   INTERNO COMUNE OFF-CANVAS SINISTRO/DESTRO
+============================================================================================*/
+.header__slideNav__list__mainTextContainer {
+    height: 1.875rem;
+    padding: 0 0.625rem;
+    align-items: center;
+}
+
+.header__slideNav__list__mainTextContainer--link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/*====================================================================================================
+   BOTTONI COMUNUNI  OFF-CANVAS SINISTRO/DESTRO
+=====================================================================================================*/
+.sideNavbar__commonButton--link {
+    display: flex;
+    width: 230px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    background-color: #00538a;
+    color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.sideNavbar__commonButton--link:hover {
+    background-color: #2c6fb2 !important;
+    color: #ffffff !important;
+}
+
+.sideNavbar__commonButton--link:hover span {
+    text-decoration: underline !important;
+}
+
+.sideNavbar__commonButton--link span {
+    color: #ffffff !important;
+    pointer-events: none;
+}
+
+
+/*================================================================================
+    HEADER SECOND ROW
+=================================================================================*/
+.headerContainer__secondRow__firstBlock {
+    width: 30%;
+}
+
+.headerContainer__secondRow__secondBlock {
+    width: 40%;
+}
+
+
+
+/*================================================================================
+    HEADER THIRD ROW
+=================================================================================*/
+.header__thirdRow__linksContainer {
+    display: flex;
+    width: 900px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.header__thirdRow__linkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header__thirdRow--link {
+    text-decoration: none;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.header__thirdRow--link:hover {
+    color: #00538a;
+    text-decoration: underline;
+}
+
+
+/*================================================================================
+    HEADER FOURTH ROW
+=================================================================================*/
+.header__fourthRow__trendingContainer {
+    display: flex;
+    width: 150px;
+    align-content: center;
+    justify-content: start;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.header__fourthRow__trendingText {
+    color: #00538a;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header__fourthRow__linksContainer {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: start;
+    gap: 2rem;
+
+}
+
+.header__fourthRow--linkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header__fourthRow--link {
+    text-decoration: none;
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.header__fourthRow--link:hover {
+    color: #00538a;
+}
