@@ -1,7 +1,7 @@
 /*==================================================================
     GESTIONE HEADER STICKY
 ===================================================================*/
-.sticky-part {
+.header__sticky-part {
     background-color: #F9F9F9;
     position: sticky;
     top: 0;
@@ -167,8 +167,11 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1050;
     background-clip: content-box;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
     border-top: 64px solid transparent;
-    cursor: default;
+    cursor: default!important;
     display: none;
 }
 
@@ -485,8 +488,11 @@ details[open] .arrow-open {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1050;
     background-clip: content-box;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
     border-top: 64px solid transparent;
-    cursor: default;
+    cursor: default!important;
     display: none;
 }
 
@@ -580,7 +586,7 @@ body:has(#header__thirdBlock__nav-menu-switcher:checked) {
     width: 100vw;
     height: 80px;
     background-color: #F9F9F9;
-    z-index: 1080;
+    z-index: 1070;
     border-bottom: 2px solid #000000;
     transition: none;
 }
@@ -591,6 +597,10 @@ body:has(#header__thirdBlock__nav-menu-switcher:checked) {
     left: 0;
     width: 100vw;
     height: 100vh;
+    cursor: default!important;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1050;
     background-clip: content-box;

@@ -1,24 +1,20 @@
-// JavaScript per evitare che entrambe le navbar/offcanvas e search bar siano contemporaneaemente aperte
+/*=======================================================================
+    GESTIONE IMPEDIMENTO DI APERURA CONTEMPORANEA DEI NAVBAR E SEARCH BAR
+========================================================================*/
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Selezioniamo tutti gli switcher (Checkbox) in un'unica costante
     const allSwitchers = document.querySelectorAll(
         '#header__firstBlock__nav-menu-switcher, #header__thirdBlock__nav-menu-switcher, #header__fourthBlock__nav-menu-switcher'
     );
 
     allSwitchers.forEach(sw => {
         sw.addEventListener('change', function() {
-            // Se l'utente ha appena attivato (checked) questo switcher
             if (this.checked) {
-                // Cicliamo su TUTTI e spegniamo quelli che NON sono quello attuale
                 allSwitchers.forEach(other => {
                     if (other !== this) {
                         other.checked = false;
                     }
                 });
-
-                // Gestione specifica per la Search Bar: Focus automatico
                 if (this.id === 'search-top-switcher') {
-                    // Usiamo un delay per attendere l'animazione CSS (0.3s)
                     setTimeout(() => {
                         const searchInput = document.querySelector('.header__fourthBlock__search-custom-topbar input');
                         if (searchInput) searchInput.focus();
@@ -29,15 +25,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/*======================================================
+    GESTIONE CHIUSURA CON BACKDROP
+=======================================================*/
+document.addEventListener('DOMContentLoaded', () => {
+    const backdrop = document.getElementById('leftSidebarBackdrop');
+    const switcher = document.getElementById('header__firstBlock__nav-menu-switcher');
 
+    if (backdrop && switcher) {
+        backdrop.addEventListener('click', () => {
+            switcher.checked = false;
+        });
+    }
+});
 
-/*-------------------------------------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    const backdrop = document.getElementById('rightSidebarBackdrop');
+    const switcher = document.getElementById('header__thirdBlock__nav-menu-switcher');
+
+    if (backdrop && switcher) {
+        backdrop.addEventListener('click', () => {
+            switcher.checked = false;
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchBackdrop = document.getElementById('searchBackdrop');
+    const menuSwitcher = document.getElementById('header__fourthBlock__nav-menu-switcher');
+
+    if (searchBackdrop && menuSwitcher) {
+        searchBackdrop.addEventListener('click', () => {
+            menuSwitcher.checked = false;
+        });
+    }
+});
+
+/*===============================================================================================================
     GESTIONE headerContainer__disappearingContainer PER LA SCOMPARSA QUANDO SCENDO SOTTO I 64PX SULLA SCROLL BAR
- -------------------------------------------------------------------------------------------------------------*/
-/**
- * Gestione visibilità Header Secondario
- * Scompare dopo 64px di scroll o sotto i 1040px di larghezza
- */
+================================================================================================================*/
 let isTransitioning = false;
 
 function handleHeaderVisibility() {
@@ -49,13 +75,11 @@ function handleHeaderVisibility() {
     const isDesktop = window.innerWidth >= 1040;
     const currentScroll = window.scrollY;
 
-    // SCENDIAMO: Nascondiamo il container grande e MOSTRIAMO il titolo piccolo
     if (currentScroll > 120) {
         if (!headerDisappearing.classList.contains('d-none-scroll')) {
             isTransitioning = true;
             headerDisappearing.classList.add('d-none-scroll');
 
-            // Su desktop, mostriamo il titolo piccolo
             if (isDesktop && navbarTitle) {
                 navbarTitle.classList.add('force-show');
             }
@@ -63,40 +87,30 @@ function handleHeaderVisibility() {
             setTimeout(() => { isTransitioning = false; }, 350);
         }
     }
-    // RISALIAMO: Mostriamo il container grande e NASCONDIAMO il titolo piccolo
+
     else if (currentScroll < 10) {
         if (headerDisappearing.classList.contains('d-none-scroll')) {
             isTransitioning = true;
             headerDisappearing.classList.remove('d-none-scroll');
 
-            // Rimuoviamo la classe "forza mostra" per farlo tornare al comportamento CSS
             if (navbarTitle) {
                 navbarTitle.classList.remove('force-show');
             }
-
             setTimeout(() => { isTransitioning = false; }, 350);
         }
     }
 }
 
-// Ascolta lo scorrimento della pagina
 window.addEventListener('scroll', handleHeaderVisibility);
 
-// Ascolta il cambio di dimensione della finestra
 window.addEventListener('resize', handleHeaderVisibility);
 
-// Esegui al caricamento per impostare lo stato iniziale corretto
 document.addEventListener('DOMContentLoaded', handleHeaderVisibility);
 
 
-
-
-
-
-
-
-
-
+/*=================================================================
+    GESTIONE APERTURA DI EXSTRA CONTENT NE FOURTH BLOCK
+====================================================================*/
 document.addEventListener('DOMContentLoaded', function() {
     const btn = document.getElementById('showMoreButton');
     const extraContent = document.getElementById('extraContent');
@@ -111,88 +125,96 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
+/*====================================================================================
+    GESTIONE SPOSTAMENTO CON BOTTONI NEL UPCOMING EVENTS DEL SIXTH BLOCK
+=====================================================================================*/
 document.addEventListener("DOMContentLoaded", function() {
     const slider = document.querySelector('.sixthBlock__eventsContainer__mainCenter');
     const btnLeft = document.getElementById('sixthBlock__sideBox__leftButton');
     const btnRight = document.getElementById('sixthBlock__sideBox__rightButton');
 
-    // Funzione che calcola la larghezza visibile del blocco centrale
     const getScrollStep = () => {
-        // slider.offsetWidth restituisce la larghezza esatta del div .main-center
         return slider ? slider.offsetWidth : 300;
     };
 
     btnRight.addEventListener('click', () => {
-        // Sposta lo scroll a destra dell'intera larghezza visibile
         slider.scrollLeft += getScrollStep();
     });
 
     btnLeft.addEventListener('click', () => {
-        // Sposta lo scroll a sinistra dell'intera larghezza visibile
         slider.scrollLeft -= getScrollStep();
     });
 });
 
-
+/*====================================================================================
+    GESTIONE DATE VISIBILI NEL UPCOMING EVENTS DEL SIXTH BLOCK
+=====================================================================================*/
 function updateVisibleDates() {
     const track = document.querySelector('.sixthblock__footer__datesContainer');
     const items = track.querySelectorAll('.sixthblock__footer__dateItem');
 
-    // Larghezza totale disponibile nel contenitore
     const containerWidth = track.offsetWidth;
     let currentWidth = 0;
 
     items.forEach(item => {
-        // Calcoliamo la larghezza dell'elemento incluso il margine/gap
         const itemWidth = item.offsetWidth;
         currentWidth += itemWidth;
-
         if (currentWidth > containerWidth) {
-            // Se la somma supera il contenitore, nascondi l'elemento
             item.style.visibility = 'hidden';
-            item.style.pointerEvents = 'none'; // Rende l'elemento non cliccabile
+            item.style.pointerEvents = 'none';
         } else {
-            // Altrimenti mostralo
             item.style.visibility = 'visible';
             item.style.pointerEvents = 'auto';
         }
     });
 }
 
-// Esegui la funzione al caricamento e ogni volta che ridimensioni la finestra
 window.addEventListener('load', updateVisibleDates);
 window.addEventListener('resize', updateVisibleDates);
 
 
-
+/*====================================================================
+    GESTIONE DEL COLLAPSE CONTAINER NEL FOOTER TOP
+===========================================================================*/
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Selezioniamo tutti i trigger (le icone/pulsanti)
     const triggers = document.querySelectorAll('.menu-trigger');
 
     triggers.forEach(trigger => {
         trigger.addEventListener('click', function() {
-            // 2. Troviamo il contenitore padre più vicino (il div .footer-item)
             const parent = this.closest('.footerTop__first__collapseContainer');
-
-            // 3. All'interno di quel padre, cerchiamo il menu e l'icona
             const menu = parent.querySelector('.customMenuContainer');
             const icon = this.querySelector('.collapse__icon');
 
-            // 4. Toggle delle classi (Aggiunge se non c'è, toglie se c'è)
             menu.classList.toggle('is-open');
             icon.classList.toggle('is-open');
         });
     });
 });
 
+/*================================================================================
+    CHIUSURA MAIN TOP BANNER E FOOTER BOTTOM CONTAINER
+=================================================================================*/
 
-function closeContainer() {
-    document.getElementById('footerContainer').classList.add('is-hidden');
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const footerContainer = document.getElementById('footerContainer');
+    const closeFooterBtn = document.getElementById('closeFooterButton');
 
-function dismissBanner() {
-    document.getElementById('yellowBanner').classList.add('is-hidden');
-}
+    if (footerContainer && closeFooterBtn) {
+        closeFooterBtn.addEventListener('click', () => {
+            footerContainer.classList.add('is-hidden');
+        });
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('topBanner');
+    const closeBtn = document.getElementById('closeBannerButton');
+
+    if (banner && closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            banner.classList.add('is-hidden');
+        });
+    }
+});

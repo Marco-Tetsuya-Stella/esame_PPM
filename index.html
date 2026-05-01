@@ -16,8 +16,6 @@
     <!-- Includiamo boostrap css-->
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">-->
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/headerMediaQuery.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -33,7 +31,7 @@
 <body>
 
 
-<header class="sticky-part">
+<header class="header__sticky-part">
     <div class="container-fluid header-container__height">
         <div class="row headerContainer__firstRow--height g-0">
 
@@ -51,11 +49,11 @@
 
                     </label>
 
-                    <div class="header__firstBlock__nav-custom-backdrop"
-                         aria-label="Close left sidebar menu"
-                         role="button"
-                         onclick="document.getElementById('header__firstBlock__nav-menu-switcher').checked = false;">
-                    </div>
+                    <button type="button"
+                            id="leftSidebarBackdrop"
+                            class="header__firstBlock__nav-custom-backdrop"
+                            aria-label="Close left sidebar menu">
+                    </button>
 
 
                     <div id="leftSidebarMenu" class="header__firstBlock__nav-custom-sidebar">
@@ -276,7 +274,6 @@
                 </div>
             </div>
 
-
             <div class="header__thirdBlock">
                 <div class="header__thirdBlock__navButtonsContainer">
 
@@ -300,11 +297,11 @@
                             <i class="bi bi-chevron-down header__thirdBlock__navOpenButton__arrowIcon--size"></i>
                         </label>
 
-                        <div class="header__thirdBlock__nav-custom-backdrop"
-                             aria-label="Close right sidebar menu"
-                             role="button"
-                             onclick="document.getElementById('header__thirdBlock__nav-menu-switcher').checked = false;">
-                        </div>
+                        <button type="button"
+                                id="rightSidebarBackdrop"
+                                class="header__thirdBlock__nav-custom-backdrop"
+                                aria-label="Close right sidebar menu">
+                        </button>
 
                         <div id="rightSidebarMenu" class="header__thirdBlock__nav-custom-sidebar">
                             <div class="header__thirdBlock__custom-sidebar--scrollballHidden">
@@ -338,7 +335,6 @@
                 </div>
             </div>
 
-
             <div class="header__fourthBlock" >
                 <div class="header__fourthBlock__searchButtonContainer">
                     <input type="checkbox" id="header__fourthBlock__nav-menu-switcher" class="d-none">
@@ -350,11 +346,11 @@
                         <i class="bi bi-search"></i>
                     </label>
 
-                    <div class="header__fourthBlock__nav-custom-backdrop"
-                         aria-label="Close top search bar"
-                         role="button"
-                         onclick="document.getElementById('header__fourthBlock__nav-menu-switcher').checked = false;">
-                    </div>
+                    <button type="button"
+                            id="searchBackdrop"
+                            class="header__fourthBlock__nav-custom-backdrop"
+                            aria-label="Close top search bar">
+                    </button>
 
                     <div id="searchTopBar" class="header__fourthBlock__search-custom-topbar">
 
@@ -484,23 +480,26 @@
 <main class="container-fluid g-0 main__container">
 
 
+
     <div class="topBannerContainer">
-        <div id="yellowBanner" class="topBanner">
+        <div id="topBanner" class="topBanner">
             <div class="topBanner__spansContainer">
                 <span class="topBanner__title">BREAKING NEWS</span>
                 <a class="topBanner--link" href="#">
-                    <span class="topBanner__headLine">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget</span>
+                    <span class="topBanner__headLine">Questa sezione 'BREAKING NEWS' non è presente in modo sistematico su tutte le pagine principali.</span>
                 </a>
-                <span class="topBanner__date">April 29, 2026 at 11:51 am</span>
+                <date class="topBanner__date">April 29, 2026 at 11:51 am</date>
             </div>
-            <span class="topBanner__closeIcon" aria-label="Close Top Banner" onclick="dismissBanner()">&times;</span>
+
+            <button type="button"
+                    id="closeBannerButton"
+                    class="topBanner__closeIcon"
+                    aria-label="Close Top Banner">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
         </div>
     </div>
-
-
-
-
-
 
     <div class="row g-0 firstBlock ">
         <section class="col-12 col-md-9 d-flex flex-wrap  p-2">
@@ -535,6 +534,20 @@
                                     In at dolor sodales arcu tincidunt rhoncus. Integer id mi eget velit condimentum cursus.
                                     Donec mattis porta tellus et faucibus. Duis bibendum egestas neque sit amet viverra.
                                 </p>
+                                <div class="firstBlock__mainArticle__mainParagraph__relatedConainer">
+                                    <h3 class="firstBlock__mainArticle__mainParagraph__relatedHeader">Related</h3>
+
+                                    <div class="firstBlock__mainArticle__mainParagraph__relatedArticleContainer">
+                                        <a href="#" class="firstBlock__mainArticle__mainParagraph__relatedArticle__title--link">
+                                            <span class="firstBlock__mainArticle__mainParagraph__relatedArticle__dot">&bull;</span>
+                                            <h4 class="firstBlock__mainArticle__mainParagraph__relatedArticle__title">
+                                                Questa sezione 'Related' non è presente in modo sistematico su tutte le pagine principali.
+                                            </h4>
+                                        </a>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
 
@@ -648,7 +661,7 @@
                     </div>
                     <div class="col-12 p-1">
                         <h3 class="firstBlock__side__headline">
-                            <a href="#" class="firstBlock__side__headline__link">
+                            <a href="#" class="firstBlock__side__headline--link">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </a>
                         </h3>
@@ -656,42 +669,42 @@
                     </div>
                     <div class="col-12  p-1">
                         <h3 class="firstBlock__side__headline">
-                            <a href="#" class="firstBlock__side__headline__link">
+                            <a href="#" class="firstBlock__side__headline--link">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </a>
                         </h3>
                     </div>
                     <div class="col-12  p-1">
                         <h3 class="firstBlock__side__headline">
-                            <a href="#" class="firstBlock__side__headline__link">
+                            <a href="#" class="firstBlock__side__headline--link">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </a>
                         </h3>
                     </div>
                     <div class="col-12 p-1">
                         <h3 class="firstBlock__side__headline">
-                            <a href="#" class="firstBlock__side__headline__link">
+                            <a href="#" class="firstBlock__side__headline--link">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </a>
                         </h3>
                     </div>
                     <div class="col-12 p-1">
                         <h3 class="firstBlock__side__headline">
-                            <a href="#" class="firstBlock__side__headline__link">
+                            <a href="#" class="firstBlock__side__headline--link">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </a>
                         </h3>
                     </div>
                     <div class="col-12 p-1">
                         <h3 class="firstBlock__side__headline">
-                            <a href="#" class="firstBlock__side__headline__link">
+                            <a href="#" class="firstBlock__side__headline--link">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </a>
                         </h3>
                     </div>
                     <div class="col-12 p-1">
                         <h3 class="firstBlock__side__headline" style="border-bottom: 0">
-                            <a href="#" class="firstBlock__side__headline__link">
+                            <a href="#" class="firstBlock__side__headline--link">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </a>
                         </h3>
@@ -2329,7 +2342,14 @@
 
 
         <div id="footerContainer" class="footerBottom__bottomContainer">
-            <span class="footerBottom__bottom__close-icon" onclick="closeContainer()">&#10006;</span>
+
+            <button type="button"
+                    id="closeFooterButton"
+                    class="footerBottom__bottom__close-icon"
+                    aria-label="Close empty container">
+                <span aria-hidden="true">&#10006;</span>
+            </button>
+
         </div>
 
     </div>
@@ -2344,7 +2364,7 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <!-- Includiamo boostrap js-->
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/aperturaNavBar.js"></script>
+    <script type="text/javascript" src="js/esame.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
