@@ -39,21 +39,19 @@
 }
 
 .topBanner--link {
-    text-decoration: none; /* Rimuove la sottolineatura di default */
-    color: #000000;        /* Colore nero */
-    display: inline; /* Permette al link di comportarsi bene con i margini se necessario */
+    text-decoration: none;
+    color: #000000;
+    display: inline;
 }
 
-/* Stile al passaggio del mouse (hover) */
 .topBanner--link:hover {
-    text-decoration: underline; /* Aggiunge la sottolineatura */
-    color: #000000;             /* Mantiene il colore nero */
+    text-decoration: underline;
+    color: #000000;
 }
 
-/* Assicuriamoci che lo span eredi il colore dal padre */
 .topBanner__headLine {
     font-weight: 500;
-    color: #000000; /* Eredita il colore nero dal link */
+    color: #000000;
 }
 
 .topBanner__date {
@@ -69,8 +67,6 @@
     padding: 0;
     appearance: none;
     -webkit-appearance: none;
-
-
     margin-left: auto;
     margin-top: -0.5rem;
     margin-bottom: -0.5rem;
@@ -398,12 +394,9 @@
     display: block;
 }
 
-
-
 /*------------------
     SECOND BLOCK
  ------------------*/
-
 .secondBlock {
     background-color: #F9F9F9;
     width: 100%;
@@ -683,10 +676,8 @@
 }
 
 .fourthBlock__subArticle__titleContainer {
-    /* Il titolo prende tutto lo spazio che resta */
     flex: 1;
     padding: 0 0 0 1rem;
-    /* Impedisce al titolo di "spingere" l'immagine fuori dallo schermo */
     min-width: 0;
 }
 
@@ -705,7 +696,6 @@
     line-height: 1.1;
     margin: 0;
     padding: 0;
-
     overflow-wrap: break-word;
     transition: color 0.2s ease;
 }
@@ -747,12 +737,11 @@
     FOURTH BLOCK SHOW MORE BUTTON
  -------------------------------*/
 
-
 .fourthBlock__showMoreContainer {
     position: relative;
     text-align: center;
     margin-top: 50px;
-    border-top: 3px solid #dee2e6; /* La linea grigia */
+    border-top: 3px solid #dee2e6;
 }
 
 .fourthBlock__showMoreButton {
@@ -771,10 +760,10 @@
 .fourthBlock__showMoreButton__arrow-icon {
     color: #dee2e6;
     font-size: 3rem;
-    line-height: 1; /* Rimuove lo spazio vuoto extra del font */
-    background-color: #F9F9F9; /* Copre la riga dietro l'icona */
+    line-height: 1;
+    background-color: #F9F9F9;
     padding: 0;
-    margin: 0; /* Azzera margini per massima precisione */
+    margin: 0;
 }
 
 .fourthBlock__showMoreButton__text {
@@ -784,7 +773,7 @@
 
     text-transform: uppercase;
     background-color: #F9F9F9;
-    padding: 5px 0; /* Un po' di spazio tra icona e testo */
+    padding: 5px 0;
     transition: color 0.1s ease;
 }
 
@@ -836,9 +825,9 @@
 }
 
 
-/*-----
+/*------------
     FIFTH BLOCK
- */
+-------------*/
 .fifthBlock {
     background-color: #F9F9F9;
     width: 100%;
@@ -1059,7 +1048,6 @@
     scroll-snap-type: x mandatory;
     overflow-y: hidden;
     height: 100%;
-
 }
 
 .sixthBlock__eventsContainer__mainCenter::-webkit-scrollbar {
@@ -1073,7 +1061,7 @@
 
 .sixthBlock__eventContainer__eventCard {
     position: relative;
-    flex-shrink: 0; /* Impedisce il collasso */
+    flex-shrink: 0;
     padding: 0;
     scroll-snap-align: start;
 }
@@ -1087,8 +1075,6 @@
 
 }
 
-
-/* --- LOGICA RESPONSIVE --- */
 @media (min-width: 1301px) {
     .sixthBlock__eventContainer__eventCard { width: calc((100% / 6) ); }
 }
@@ -1142,9 +1128,9 @@
 
 .sixthBlcok__eventCard__info {
     display: flex;
-    flex-direction: column;         /* Dispone gli elementi uno sotto l'altro */
-    justify-content: space-between; /* Spinge il primo in alto e l'ultimo in basso */
-    flex-grow: 1;                   /* OCCUPA TUTTO LO SPAZIO RESTANTE */
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .sixthBlcok__eventCard__info--title {
@@ -1154,7 +1140,6 @@
     font-weight: 700;
     text-overflow: ellipsis;
     color: #1a1a1a;
-    /* Assicurati che non ci siano margini che disturbino l'allineamento */
     margin: 0;
 }
 
@@ -1222,5 +1207,3 @@
     margin-top: -0.5rem;
     padding: 0;
 }
-
-
