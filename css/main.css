@@ -737,12 +737,11 @@
 /*-------------------------------
     FOURTH BLOCK SHOW MORE BUTTON
  -------------------------------*/
-
 .fourthBlock__showMoreContainer {
     position: relative;
     text-align: center;
-    margin-top: 50px;
-    border-top: 3px solid #dee2e6;
+    margin-top: 1.2rem;
+    border-top: 1px solid #DED9D4;
 }
 
 .fourthBlock__showMoreButton {
@@ -755,23 +754,24 @@
     width: 100%;
     padding: 0;
     cursor: pointer;
-    margin-top: -15px;
+    margin-top: -17.5px;
 }
 
-.fourthBlock__showMoreButton__arrow-icon {
-    color: #dee2e6;
-    font-size: 3rem;
-    line-height: 1;
+.fourthBlock__custom-arrow {
+    width: 35px;
+    height: 35px;
+    border-right: 1px solid #DED9D4;
+    border-bottom: 1px solid #DED9D4;
+    transform: rotate(45deg);
     background-color: #F9F9F9;
-    padding: 0;
-    margin: 0;
+    margin-bottom: 15px;
+    transition: border-color 0.2s ease;
 }
 
 .fourthBlock__showMoreButton__text {
     color: #00538a;
     font-weight: 700;
     font-size: 1rem;
-
     text-transform: uppercase;
     background-color: #F9F9F9;
     padding: 5px 0;
@@ -793,11 +793,8 @@
 }
 
 
-
-
 .fourthBlock__extraContent__image--link {
     display: block;
-
 }
 
 .fourthBlock__extraContent__titleContainer {
