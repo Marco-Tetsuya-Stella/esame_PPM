@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /*===============================================================================================================
-    GESTIONE headerContainer__disappearingContainer PER LA SCOMPARSA QUANDO SCENDO SOTTO I 64PX SULLA SCROLL BAR
+    GESTIONE headerContainer__disappearingContainer PER LA SCOMPARSA QUANDO SCENDO SOTTO I 54PX SULLA SCROLL BAR
 ================================================================================================================*/
 function handleHeaderVisibility() {
     const header = document.querySelector('.header__sticky-part');
