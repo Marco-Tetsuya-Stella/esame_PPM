@@ -757,13 +757,13 @@
     margin-top: -17.5px;
 }
 
-.fourthBlock__custom-arrow {
+.fourthBlock__customArrow {
     width: 35px;
     height: 35px;
     border-right: 1px solid #DED9D4;
     border-bottom: 1px solid #DED9D4;
     transform: rotate(45deg);
-    background-color: #F9F9F9;
+    background-color: #F2F0EE;
     margin-bottom: 15px;
     transition: border-color 0.2s ease;
 }
