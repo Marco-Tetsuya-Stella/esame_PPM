@@ -1,4 +1,13 @@
 /*===============================================================
+    HEADER BORDER
+=================================================================*/
+@media (max-width: 1040px) {
+    .header-container__height {
+        border-bottom: 1px solid #000000;
+    }
+}
+
+/*===============================================================
     HEADER BUTTONS
 =================================================================*/
 @media (max-width: 1040px) {
@@ -34,6 +43,7 @@
 @media (min-width: 1040px) {
     #navbar-title-first-row {
         display: none !important;
+
     }
 
     #navbar-title-first-row.force-show {

@@ -3,21 +3,29 @@
 ===================================================================*/
 .header__sticky-part {
     background-color: #F9F9F9;
+    width: 100%;
+    z-index: 1020;
+    position: relative; /* O static */
+    transition: background-color 0.3s ease;
+}
+
+.header__sticky-part.is-sticky {
     position: sticky;
     top: 0;
-    z-index: 1020;
-    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.35), 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .d-none-scroll {
-    max-height: 0 !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
     opacity: 0 !important;
     pointer-events: none;
-
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    visibility: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: -1 !important;
 }
 
 /*=====================================================================================

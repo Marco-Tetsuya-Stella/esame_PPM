@@ -4,6 +4,7 @@
 .main__container{
     font-family: system-ui, -apple-system, sans-serif;
     background-color: #F9F9F9;
+    z-index: 20;
 }
 
 .topBannerContainer {

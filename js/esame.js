@@ -64,49 +64,45 @@ document.addEventListener('DOMContentLoaded', () => {
 /*===============================================================================================================
     GESTIONE headerContainer__disappearingContainer PER LA SCOMPARSA QUANDO SCENDO SOTTO I 64PX SULLA SCROLL BAR
 ================================================================================================================*/
-let isTransitioning = false;
-
 function handleHeaderVisibility() {
+    const header = document.querySelector('.header__sticky-part');
     const headerDisappearing = document.getElementById('headerContainer__disappearingContainer');
     const navbarTitle = document.getElementById('navbar-title-first-row');
 
-    if (!headerDisappearing || isTransitioning) return;
+    if (!header || !headerDisappearing) return;
 
     const isDesktop = window.innerWidth >= 1040;
     const currentScroll = window.scrollY;
 
-    if (currentScroll > 120) {
+    if (currentScroll > 54) {
+        header.classList.add('is-sticky');
+    } else {
+        header.classList.remove('is-sticky');
+    }
+
+    if (currentScroll > 54) {
         if (!headerDisappearing.classList.contains('d-none-scroll')) {
-            isTransitioning = true;
             headerDisappearing.classList.add('d-none-scroll');
 
             if (isDesktop && navbarTitle) {
                 navbarTitle.classList.add('force-show');
             }
-
-            setTimeout(() => { isTransitioning = false; }, 350);
         }
     }
-
-    else if (currentScroll < 10) {
+    else if (currentScroll <= 54) {
         if (headerDisappearing.classList.contains('d-none-scroll')) {
-            isTransitioning = true;
             headerDisappearing.classList.remove('d-none-scroll');
 
             if (navbarTitle) {
                 navbarTitle.classList.remove('force-show');
             }
-            setTimeout(() => { isTransitioning = false; }, 350);
         }
     }
 }
 
 window.addEventListener('scroll', handleHeaderVisibility);
-
 window.addEventListener('resize', handleHeaderVisibility);
-
 document.addEventListener('DOMContentLoaded', handleHeaderVisibility);
-
 
 /*=================================================================
     GESTIONE APERTURA DI EXSTRA CONTENT NE FOURTH BLOCK
